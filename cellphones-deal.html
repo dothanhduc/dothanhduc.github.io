@@ -88,7 +88,7 @@
         // Loop through products and add rows to the table
         products.forEach(product => {
             const row = document.createElement('tr');
-            if(product.general.name.includes("galaxy s") || product.general.name.includes("galaxy note")){
+            if(product.general.name.toLowerCase().includes("galaxy s") || product.general.name.toLowerCase().includes("galaxy note")){
 		    row.innerHTML = `
                 	<td>${product.general.name}</td>
                 	<td>${product.general.attributes.memory_internal === undefined ? "" : product.general.attributes.memory_internal}</td>
