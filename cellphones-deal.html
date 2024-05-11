@@ -88,13 +88,15 @@
         // Loop through products and add rows to the table
         products.forEach(product => {
             const row = document.createElement('tr');
-            row.innerHTML = `
-                <td>${product.general.name}</td>
-                <td>${product.general.attributes.memory_internal === undefined ? "" : product.general.attributes.memory_internal}</td>
-                <td>${formatMoney(product.filterable.special_price === 0 ? product.filterable.price : product.filterable.special_price)}</td>
-                <td>${product.province}</td>
-                <td><a  href='https://cellphones.com.vn/${product.general.url_path}' target="_blank">Xem chi tiết</a></td>
-            `;
+            if(product.general.name.includes("galaxy s") || product.general.name.includes("galaxy note")){
+		    row.innerHTML = `
+                	<td>${product.general.name}</td>
+                	<td>${product.general.attributes.memory_internal === undefined ? "" : product.general.attributes.memory_internal}</td>
+                	<td>${formatMoney(product.filterable.special_price === 0 ? product.filterable.price : product.filterable.special_price)}</td>
+                	<td>${product.province}</td>
+                	<td><a  href='https://cellphones.com.vn/${product.general.url_path}' target="_blank">Xem chi tiết</a></td>
+		   `;
+	    }
             productListBody.appendChild(row);
         });
     }
@@ -108,7 +110,7 @@
 			  x.province = provinces[i].name; 
 			  return x
 			});
-			if(pros !== null && (pros.general.name.includes("galaxy s") || pros.general.name.includes("galaxy note"))){
+			if(pros !== null)){
 				products = products.concat(pros);	
 			}
 		}
