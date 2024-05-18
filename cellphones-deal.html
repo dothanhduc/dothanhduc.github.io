@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+		
+		#reload {
+		  
+		}@keyframes rotate {
+			from {
+				transform: rotate(0deg);
+			}
+			to {
+				transform: rotate(360deg);
+			}
+		}
+
+		#reload {
+			display: inline-block;
+			animation: rotate 2s linear infinite;
+			font-family: Lucida Sans Unicode;
+			font-size: 50px;
+			font-weight: bold;
+			color: #babdba;
+		}
+    </style>
+</head>
+<body>
+
+<h2>Product List</h2>
+<div style="display: flex;">
+	<button id="btn-reload">Reload</button>
+	<button id="btn-filter" style="margin-left: 5px;">Filter Samsung S/Note</button>
+</div>
+<table id="table-products">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>RAM</th>
+            <th>Giá</th>
+            <th>Vị trí</th>
+            <th>Link</th>
+        </tr>
+    </thead>
+    <tbody id="productList"></tbody>
+</table>
+
+<div style="text-align: center;"><span id=reload>&#x21bb;</span></div>
+
+<script>
+	const reloadIcon = document.getElementById('reload');
+	const button = document.getElementById('btn-filter');
+	const reload = document.getElementById('btn-reload');
+	const table = document.getElementById('table-products');
+	const productList = document.getElementById('productList');
+	const originalButtonText = button.textContent;
+	let products = [];
+	let provinces = [ {id: 1, name: "An Giang"}, {id: 2, name: "Bà Rịa - Vũng Tàu"}, {id: 5, name: "Bắc Giang"}, {id: 6, name: "Bắc Ninh"}, {id: 7, name: "Bến Tre"}, {id: 8, name: "Bình Dương"}, {id: 11, name: "Bình Thuận"}, {id: 12, name: "Cà Mau"}, {id: 14, name: "Cần Thơ"}, {id: 15, name: "Đà Nẵng"}, {id: 19, name: "Đắk Lắk"}, {id: 20, name: "Đồng Nai"}, {id: 24, name: "Đồng Tháp"}, {id: 26, name: "Hà Nội"}, {id: 27, name: "Hải Dương"}, {id: 28, name: "Hải Phòng"}, {id: 30, name: "Hồ Chí Minh"}, {id: 33, name: "Kiên Giang"}, {id: 38, name: "Lâm Đồng"}, {id: 39, name: "Long An"}, {id: 41, name: "Nghệ An"}, {id: 44, name: "Phú Thọ"}, {id: 46, name: "Quảng Bình"}, {id: 49, name: "Quảng Ninh"}, {id: 51, name: "Sóc Trăng"}, {id: 53, name: "Tây Ninh"}, {id: 55, name: "Thái Nguyên"}, {id: 56, name: "Thanh Hóa"}, {id: 57, name: "Thừa Thiên - Huế"}, {id: 58, name: "Tiền Giang"}, {id: 59, name: "Trà Vinh"}, {id: 62, name: "Vĩnh Phúc"}];
+	
+	reload.addEventListener('click', () => {
+		init();
+    });
+	
+	button.addEventListener('click', () => {
+		const products = productList.getElementsByTagName('tr');		
+		const buttonText = (button.textContent === originalButtonText) ? 'Hide filter' : originalButtonText;
+		button.textContent = buttonText;
+        for (let product of products) {
+			const productName = product.getElementsByTagName('td')[0].textContent;
+            const isSamsung = productName.toLowerCase().includes('galaxy s') || productName.toLowerCase().includes('galaxy note');
+            product.style.display = (buttonText === originalButtonText || isSamsung) ? 'table-row' : 'none';
+		}
+    });
+	
+    // Function to fetch data from the API
+    async function fetchData(province_id) {
+        try {
+            const response = await fetch("https://api.cellphones.com.vn/v2/graphql/query", {
+                method: "POST",
+                headers: {
+                    "accept": "application/json",
+                    "accept-language": "vi-VN,vi;q=0.9,es-ES;q=0.8,es;q=0.7,en-US;q=0.6,en;q=0.5,fr-FR;q=0.4,fr;q=0.3,az;q=0.2",
+                    "content-type": "application/json",
+                    "sec-ch-ua": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\"",
+                    "sec-ch-ua-mobile": "?0",
+                    "sec-ch-ua-platform": "\"Windows\"",
+                    "sec-fetch-dest": "empty",
+                    "sec-fetch-mode": "cors",
+                    "sec-fetch-site": "same-site"
+                },
+                referrer: "https://cellphones.com.vn/",
+                referrerPolicy: "strict-origin-when-cross-origin",
+                body: '{"query":"\\nquery{\\nproducts(\\nfilter: {\\nstatic: {\\ncategories: [\\\"940\\\"],\\nprovince_id: ' + province_id + ', \\nstock: {\\nfrom: 1\\n},\\nstock_available_id: [46]\\nfilter_price: {from:920161to:44990000}\\n},\\ndynamic: {\\n\\n\\n}\\n},\\npage: 1,\\nsize: 10,\\nsort: [{filter_price: asc}]\\n)\\n{\\ngeneral{\\nproduct_id\\nname\\nattributes\\nattributes\\nsku\\ndoc_quyen\\nmanufacturer\\nurl_key\\nurl_path\\ncategories{\\ncategoryId\\n}\\nreview{\\ntotal_count\\naverage_rating\\n}\\n},\\nfilterable{\\nis_installment\\nstock_available_id\\ncompany_stock_id\\nfilter {\\nid\\nLabel\\n}\\nexclusive_prices\\nprice\\nspecial_price\\npromotion_information\\nthumbnail\\npromotion_pack\\nsticker\\nflash_sale{\\nid\\nis_valid\\nshown_at\\n}\\n},\\n}\\n}","variables":{}}',
+                method: "POST",
+                mode: "cors",
+                credentials: "omit"
+            });
+
+            const data = await response.json();
+            return data.data.products;
+        } catch (error) {
+			reload.style.display = 'block';
+            console.error("Error fetching data:", error);
+            return [];			
+        }
+    }
+	
+	function formatMoney(number) {
+	  return number.toLocaleString('en-US', { style: 'currency', currency: 'VND' });
+	}
+
+    // Function to render the product list
+    function renderProductList(products) {
+
+        // Clear existing content
+        productList.innerHTML = '';
+
+        // Loop through products and add rows to the table
+        products.forEach(product => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${product.general.name}</td>
+                <td>${product.general.attributes.memory_internal === undefined ? "" : product.general.attributes.memory_internal}</td>
+                <td>${formatMoney(product.filterable.special_price === 0 ? product.filterable.price : product.filterable.special_price)}</td>
+                <td>${product.province}</td>
+                <td><a  href='https://cellphones.com.vn/${product.general.url_path}' target="_blank">Xem chi tiết</a></td>
+            `;
+            productList.appendChild(row);
+        });
+    }
+
+    // Fetch data and render the initial product list
+    async function init() {		
+		reloadIcon.style.display = 'block';
+		reload.style.display = 'none';
+		button.style.display = 'none';
+		table.style.display = 'none';
+		for( var i = 0; i < provinces.length - 1; i++){
+			const pros = await fetchData(provinces[i].id);
+			pros.map(function(x) { 
+			  x.province = provinces[i].name; 
+			  return x
+			});
+			if(pros !== null){
+				products = products.concat(pros);	
+			}
+		}
+		products = products.sort((a, b) => (a.filterable.special_price === 0 ? a.filterable.price : a.filterable.special_price) > (b.filterable.special_price === 0 ? b.filterable.price : b.filterable.special_price) ? 1 : -1);
+				
+		renderProductList(products);
+		reloadIcon.style.display = 'none';
+		reload.style.display = 'block';
+		button.style.display = 'block';
+		table.style.display = 'block';
+    }
+
+    // Initial render
+    init();
+</script>
+
+</body>
+</html>
