@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product List</title>
+    <title>CellphoneS Deal</title>
     <style>
         table {
             border-collapse: collapse;
@@ -21,36 +21,13 @@
         th {
             background-color: #f2f2f2;
         }
-		
-		#reload {
-		  
-		}@keyframes rotate {
-			from {
-				transform: rotate(0deg);
-			}
-			to {
-				transform: rotate(360deg);
-			}
-		}
-
-		#reload {
-			display: inline-block;
-			animation: rotate 2s linear infinite;
-			font-family: Lucida Sans Unicode;
-			font-size: 50px;
-			font-weight: bold;
-			color: #babdba;
-		}
     </style>
 </head>
 <body>
 
-<h2>Product List</h2>
-<div style="display: flex;">
-	<button id="btn-reload">Reload</button>
-	<button id="btn-filter" style="margin-left: 5px;">Filter Samsung S/Note</button>
-</div>
-<table id="table-products">
+<h2>CellphoneS Deal</h2>
+
+<table>
     <thead>
         <tr>
             <th>Name</th>
@@ -60,36 +37,11 @@
             <th>Link</th>
         </tr>
     </thead>
-    <tbody id="productList"></tbody>
+    <tbody id="productListBody"></tbody>
 </table>
 
-<div style="text-align: center;"><span id=reload>&#x21bb;</span></div>
-
 <script>
-	const reloadIcon = document.getElementById('reload');
-	const button = document.getElementById('btn-filter');
-	const reload = document.getElementById('btn-reload');
-	const table = document.getElementById('table-products');
-	const productList = document.getElementById('productList');
-	const originalButtonText = button.textContent;
-	let products = [];
-	let provinces = [ {id: 1, name: "An Giang"}, {id: 2, name: "Bà Rịa - Vũng Tàu"}, {id: 5, name: "Bắc Giang"}, {id: 6, name: "Bắc Ninh"}, {id: 7, name: "Bến Tre"}, {id: 8, name: "Bình Dương"}, {id: 11, name: "Bình Thuận"}, {id: 12, name: "Cà Mau"}, {id: 14, name: "Cần Thơ"}, {id: 15, name: "Đà Nẵng"}, {id: 19, name: "Đắk Lắk"}, {id: 20, name: "Đồng Nai"}, {id: 24, name: "Đồng Tháp"}, {id: 26, name: "Hà Nội"}, {id: 27, name: "Hải Dương"}, {id: 28, name: "Hải Phòng"}, {id: 30, name: "Hồ Chí Minh"}, {id: 33, name: "Kiên Giang"}, {id: 38, name: "Lâm Đồng"}, {id: 39, name: "Long An"}, {id: 41, name: "Nghệ An"}, {id: 44, name: "Phú Thọ"}, {id: 46, name: "Quảng Bình"}, {id: 49, name: "Quảng Ninh"}, {id: 51, name: "Sóc Trăng"}, {id: 53, name: "Tây Ninh"}, {id: 55, name: "Thái Nguyên"}, {id: 56, name: "Thanh Hóa"}, {id: 57, name: "Thừa Thiên - Huế"}, {id: 58, name: "Tiền Giang"}, {id: 59, name: "Trà Vinh"}, {id: 62, name: "Vĩnh Phúc"}];
-	
-	reload.addEventListener('click', () => {
-		init();
-    });
-	
-	button.addEventListener('click', () => {
-		const products = productList.getElementsByTagName('tr');		
-		const buttonText = (button.textContent === originalButtonText) ? 'Hide filter' : originalButtonText;
-		button.textContent = buttonText;
-        for (let product of products) {
-			const productName = product.getElementsByTagName('td')[0].textContent;
-            const isSamsung = productName.toLowerCase().includes('galaxy s') || productName.toLowerCase().includes('galaxy note');
-            product.style.display = (buttonText === originalButtonText || isSamsung) ? 'table-row' : 'none';
-		}
-    });
-	
+	var provinces = [ {id: 1, name: "An Giang"}, {id: 2, name: "Bà Rịa - Vũng Tàu"}, {id: 5, name: "Bắc Giang"}, {id: 6, name: "Bắc Ninh"}, {id: 7, name: "Bến Tre"}, {id: 8, name: "Bình Dương"}, {id: 11, name: "Bình Thuận"}, {id: 12, name: "Cà Mau"}, {id: 14, name: "Cần Thơ"}, {id: 15, name: "Đà Nẵng"}, {id: 19, name: "Đắk Lắk"}, {id: 20, name: "Đồng Nai"}, {id: 24, name: "Đồng Tháp"}, {id: 26, name: "Hà Nội"}, {id: 27, name: "Hải Dương"}, {id: 28, name: "Hải Phòng"}, {id: 30, name: "Hồ Chí Minh"}, {id: 33, name: "Kiên Giang"}, {id: 38, name: "Lâm Đồng"}, {id: 39, name: "Long An"}, {id: 41, name: "Nghệ An"}, {id: 44, name: "Phú Thọ"}, {id: 46, name: "Quảng Bình"}, {id: 49, name: "Quảng Ninh"}, {id: 51, name: "Sóc Trăng"}, {id: 53, name: "Tây Ninh"}, {id: 55, name: "Thái Nguyên"}, {id: 56, name: "Thanh Hóa"}, {id: 57, name: "Thừa Thiên - Huế"}, {id: 58, name: "Tiền Giang"}, {id: 59, name: "Trà Vinh"}, {id: 62, name: "Vĩnh Phúc"}];
     // Function to fetch data from the API
     async function fetchData(province_id) {
         try {
@@ -117,9 +69,8 @@
             const data = await response.json();
             return data.data.products;
         } catch (error) {
-			reload.style.display = 'block';
             console.error("Error fetching data:", error);
-            return [];			
+            return [];
         }
     }
 	
@@ -129,30 +80,30 @@
 
     // Function to render the product list
     function renderProductList(products) {
+        const productListBody = document.getElementById('productListBody');
 
         // Clear existing content
-        productList.innerHTML = '';
+        productListBody.innerHTML = '';
 
         // Loop through products and add rows to the table
         products.forEach(product => {
             const row = document.createElement('tr');
-            row.innerHTML = `
-                <td>${product.general.name}</td>
-                <td>${product.general.attributes.memory_internal === undefined ? "" : product.general.attributes.memory_internal}</td>
-                <td>${formatMoney(product.filterable.special_price === 0 ? product.filterable.price : product.filterable.special_price)}</td>
-                <td>${product.province}</td>
-                <td><a  href='https://cellphones.com.vn/${product.general.url_path}' target="_blank">Xem chi tiết</a></td>
-            `;
-            productList.appendChild(row);
+            if(product.general.name.toLowerCase().includes("galaxy s") || product.general.name.toLowerCase().includes("galaxy note")){
+		    row.innerHTML = `
+                	<td>${product.general.name}</td>
+                	<td>${product.general.attributes.memory_internal === undefined ? "" : product.general.attributes.memory_internal}</td>
+                	<td>${formatMoney(product.filterable.special_price === 0 ? product.filterable.price : product.filterable.special_price)}</td>
+                	<td>${product.province}</td>
+                	<td><a  href='https://cellphones.com.vn/${product.general.url_path}' target="_blank">Xem chi tiết</a></td>
+		   `;
+	    }
+            productListBody.appendChild(row);
         });
     }
 
     // Fetch data and render the initial product list
     async function init() {		
-		reloadIcon.style.display = 'block';
-		reload.style.display = 'none';
-		button.style.display = 'none';
-		table.style.display = 'none';
+		var products = [];
 		for( var i = 0; i < provinces.length - 1; i++){
 			const pros = await fetchData(provinces[i].id);
 			pros.map(function(x) { 
@@ -164,12 +115,7 @@
 			}
 		}
 		products = products.sort((a, b) => (a.filterable.special_price === 0 ? a.filterable.price : a.filterable.special_price) > (b.filterable.special_price === 0 ? b.filterable.price : b.filterable.special_price) ? 1 : -1);
-				
-		renderProductList(products);
-		reloadIcon.style.display = 'none';
-		reload.style.display = 'block';
-		button.style.display = 'block';
-		table.style.display = 'block';
+		renderProductList(products);	
     }
 
     // Initial render
