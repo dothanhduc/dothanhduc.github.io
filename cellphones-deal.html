@@ -35,7 +35,7 @@
 
 		#reload {
 			display: inline-block;
-			animation: rotate 2s linear infinite;
+			animation: rotate 1.5s linear infinite;
 			font-family: Lucida Sans Unicode;
 			font-size: 50px;
 			font-weight: bold;
@@ -109,7 +109,6 @@
                 referrer: "https://cellphones.com.vn/",
                 referrerPolicy: "strict-origin-when-cross-origin",
                 body: '{"query":"\\nquery{\\nproducts(\\nfilter: {\\nstatic: {\\ncategories: [\\\"940\\\"],\\nprovince_id: ' + province_id + ', \\nstock: {\\nfrom: 1\\n},\\nstock_available_id: [46]\\nfilter_price: {from:920161to:44990000}\\n},\\ndynamic: {\\n\\n\\n}\\n},\\npage: 1,\\nsize: 10,\\nsort: [{filter_price: asc}]\\n)\\n{\\ngeneral{\\nproduct_id\\nname\\nattributes\\nattributes\\nsku\\ndoc_quyen\\nmanufacturer\\nurl_key\\nurl_path\\ncategories{\\ncategoryId\\n}\\nreview{\\ntotal_count\\naverage_rating\\n}\\n},\\nfilterable{\\nis_installment\\nstock_available_id\\ncompany_stock_id\\nfilter {\\nid\\nLabel\\n}\\nexclusive_prices\\nprice\\nspecial_price\\npromotion_information\\nthumbnail\\npromotion_pack\\nsticker\\nflash_sale{\\nid\\nis_valid\\nshown_at\\n}\\n},\\n}\\n}","variables":{}}',
-                method: "POST",
                 mode: "cors",
                 credentials: "omit"
             });
@@ -153,9 +152,11 @@
 		reload.style.display = 'none';
 		button.style.display = 'none';
 		table.style.display = 'none';
+		products = [];
 		for( var i = 0; i < provinces.length - 1; i++){
 			const pros = await fetchData(provinces[i].id);
 			pros.map(function(x) { 
+			  x.province_id = provinces[i].id; 
 			  x.province = provinces[i].name; 
 			  return x
 			});
