@@ -1,27 +1,1062 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta http-equiv="content-language" content="vi">
-        <title>Welcome to my website | Đỗ Thanh Đức website</title>
-        <meta name="description" content="Đỗ Thanh Đức website">
-        <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
-        <style>
-            .center{
-                text-align: center;
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trung Tâm Giáo Dục Nghề Nghiệp Thái Sơn">
+    <meta name="image" content="assets/images/logo_default.png">
+    <title>Trung Tâm Giáo Dục Nghề Nghiệp Thái Sơn</title>
+
+	<link href="assets/css/app.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+	<link href="assets/css/custom.css" rel="stylesheet">
+
+    <style>
+		a {
+		  text-decoration: none !important;
+		}
+        .navbar-topbar .nav-link {
+            position: relative;
+            transition: color 0.2s;
+        }
+
+        .navbar-topbar .nav-link:hover,
+        .navbar-topbar .nav-link:focus {
+            text-decoration: none;
+        }
+
+        .navbar-topbar .nav-link::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 3px;
+            background: #000099;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            color: #ffffff;
+        }
+
+        .navbar-topbar .nav-link:hover::after,
+        .navbar-topbar .nav-link:focus::after {
+            width: 100%;
+        }
+
+        .navbar-main .nav-link {
+            position: relative;
+            transition: color 0.2s;
+        }
+
+        .navbar-main .nav-link:hover,
+        .navbar-main .nav-link:focus {
+            text-decoration: none;
+        }
+
+        .navbar-main .nav-link::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 3px;
+            background: #000099;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            color: #ffffff;
+        }
+
+        .navbar-main .nav-link:hover::after,
+        .navbar-main .nav-link:focus::after {
+            width: 100%;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0;
+            min-width: 300px;
+            width: 100%;
+            max-width: 350px;
+        }
+
+        .fixed-header {
+            position: fixed;
+            top: -100px;
+            left: 0;
+            width: 100%;
+            z-index: 1050;
+            background: #fff;
+            transition: top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .fixed-header.show {
+            top: 0;
+            animation: slideDown 0.8s cubic-bezier(0.8, 0, 0.2, 1);
+        }
+
+        @keyframes slideDown {
+            from {
+                top: -200px;
             }
-        </style>
-    </head>
-    <body>
-        <div class="center" style="margin-top: 100px;">
-            <img src="images/logo.png" alt="Đỗ Thanh Đức website" width="120" height="auto"/>
-            <h1>Welcome to my website</h1>
+
+            to {
+                top: 0;
+            }
+        }
+
+        .custom-submenu {
+            transition: all 0.3s ease-in-out;
+            overflow: hidden;
+        }
+
+        .custom-submenu.d-none {
+            max-height: 0;
+            opacity: 0;
+        }
+
+        .custom-submenu:not(.d-none) {
+            max-height: 200px; /* Adjust as needed */
+            opacity: 1;
+        }
+
+        .custom-toggle-link .fa-angle-down {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .custom-detail-link .custom-underline {
+            height: 1px;
+            width: 60px;
+            transition:
+                width 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                background 0.1s;
+        }
+
+        .custom-detail-link:hover,
+        .custom-detail-link:focus {
+            color: #333333;
+        }
+
+        .custom-detail-link:hover .custom-underline,
+        .custom-detail-link:focus .custom-underline {
+            width: 120px;
+            height: 3px;
+            background: #333333;
+        }
+
+        .custom-more-link .custom-underline {
+            height: 1px;
+            width: 40px;
+            transition:
+                width 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                background 0.1s;
+        }
+
+        .custom-more-link:hover,
+        .custom-more-link:focus {
+            color: #333333;
+        }
+
+        .custom-more-link:hover .custom-underline,
+        .custom-more-link:focus .custom-underline {
+            width: 80px;
+            height: 3px;
+            background: #333333;
+        }
+		
+		/* back to top */
+		a#to-top {
+			 height: 50px;
+			 width: 50px;
+			 position: fixed;
+			 bottom: 80px;
+			 right: 20px;
+			 font-size: 2rem;
+			 visibility: hidden;
+			 opacity: 0;
+			 border-radius: 10px;
+			 z-index: 999999;
+			 cursor: pointer;
+		}
+		 a#to-top:hover {
+			 background-color: #000099 !important;
+			 color: #fff;
+		}
+		 a#to-top.cd-is-visible, a#to-top.cd-fade-out, .no-touch a#to-top:hover {
+			 -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+			 -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+			 transition: opacity 0.3s 0s, visibility 0s 0s;
+		}
+		 a#to-top, a.cd-top:visited, a.cd-top:hover {
+			 color: #ccc;
+			 text-decoration: none;
+		}
+		 a#to-top.cd-is-visible {
+			/* the button becomes visible */
+			 visibility: visible;
+			 opacity: 1;
+		}
+		 a#to-top.cd-fade-out {
+			/* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+			 opacity: 1;
+		}
+		 
+    </style>
+</head>
+<body>
+
+    <!-- Topbar-->
+    <div class="topbar d-none d-lg-flex" style="background: #f9076b; color:rgb(255, 218, 233); font-size: 16px;">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <nav class="navbar-topbar">
+                    <ul class="navbar-nav flex-row align-items-center" style="gap: 15px;">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Thông tin</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Thông tin học sinh</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Tra cứu điểm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Nộp học phí online</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Tuyển dụng</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sing up for Newsletter"
+                    style="cursor: pointer;">
+                    <i class="fa fa-envelope"></i> Newsletter
+                </span>
+                <span class="mx-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Follow us on Facebook"
+                    style="cursor: pointer;">
+                    <i class="fab fa-facebook-f"></i>
+                </span>
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Follow us on Instagram"
+                    style="cursor: pointer;">
+                    <i class="fab fa-instagram"></i>
+                </span>
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Follow us on Twitter"
+                    style="cursor: pointer;">
+                    <i class="fab fa-twitter"></i>
+                </span>
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Send us an email" style="cursor: pointer;">
+                    <i class="fa fa-envelope"></i>
+                </span>
+
+            </div>
         </div>
-        <div class="center">
-                <p><strong>More</strong></p>
-                <div>
-                    <a href="cellphones-deal.html">CellphoneS Deal</a>
+    </div>
+
+    <header class="header d-none d-lg-block" id="mainHeader">
+        <!-- Phần logo, tên trung tâm, hotline, email, nộp hồ sơ -->
+        <div id="infoHeader" style="background-color: transparent;">
+            <div class="container py-3 border-bottom border-2 border-light">
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <div class="text-nowrap d-inline-block">
+                            <div class="d-flex align-items-center" style="min-width: 140px;">
+                                <img src="assets/img/logo_default.png" style="height: 60px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="d-flex justify-content-end flex-shrink-1 min-width-0">
+                            <!-- Hotline -->
+                            <div class="d-flex align-items-center gap-3 border-end px-3">
+                                <i class="fa fa-mobile-alt fa-2x text-muted"></i>
+                                <div class="d-flex flex-column">
+                                    <div class="text-uppercase text-muted">HOTLINE</div>
+                                    <div class="fw-bold fs-5">0968130606 - 0968120606</div>
+                                </div>
+                            </div>
+                            <!-- Email -->
+                            <div class="d-flex align-items-center gap-3 border-end px-3">
+                                <i class="fa-regular fa-envelope fa-2x mr-2 text-muted"></i>
+                                <div class="d-flex flex-column">
+                                    <div class="text-uppercase text-muted">EMAIL</div>
+                                    <div class="fw-bold fs-5">daynghethaishonhcm@gmail.com</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <div class="row align-items-center">
+                    <div class="col">
+                        <div class="d-flex justify-content-end flex-shrink-1 min-width-0">
+                            <a href="#" class="btn btn-primary fw-bold rounded-pill px-4 py-2 text-white">Nộp hồ sơ
+                                online</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </body>
+
+        <!-- Thanh menu chính -->
+        <nav class="navbar-main bg-white justify-content-between navbar-expand-lg shadow-none">
+            <div class="container position-relative">
+                <ul class="navbar-nav flex-row align-items-center w-100 gap-4 py-3">
+                    <li class="nav-item fw-bold fs-5 dropdown">
+                        <a class="nav-link custom-nav-link text-muted" href="#" id="navbarDropdownMenuLink_TrangChu"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Trang chủ
+                            <i class="fa fa-angle-down fs-5"></i>
+                        </a>
+                        <ul class="dropdown-menu p-4" aria-labelledby="navbarDropdownMenuLink_TrangChu">
+                            <li>
+                                <a class="dropdown-item border-bottom fs-5 py-3 text-wrap text-break" href="#">
+                                    Giới thiệu
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item fs-5 py-2 text-wrap text-break" href="#">
+                                    Sự hình thành và phát triển
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item fw-bold fs-5 dropdown">
+                        <a class="nav-link custom-nav-link text-muted" href="#" id="navbarDropdownMenuLink_TSCD"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tuyển sinh Cao đẳng
+                            <i class="fa fa-angle-down fs-5"></i>
+                        </a>
+                        <ul class="dropdown-menu p-4" aria-labelledby="navbarDropdownMenuLink_TSCD">
+                            <li>
+                                <a class="dropdown-item border-bottom fs-5 py-3 text-wrap text-break" href="#">
+                                    Cao đẳng chính quy
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item border-bottom fs-5 py-3 text-wrap text-break" href="#">
+                                    Cao đẳng chất lượng cao
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item fs-5 py-3 text-wrap text-break" href="#">
+                                    Cao đẳng làm việc tại Nhật/Đức
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item fw-bold fs-5">
+                        <a class="nav-link custom-nav-link text-muted" href="#">Tuyển sinh THPT</a>
+                    </li>
+                    <li class="nav-item fw-bold fs-5">
+                        <a class="nav-link custom-nav-link text-muted" href="#">Đăng ký tư vấn</a>
+                    </li>
+                    <li class="nav-item fw-bold fs-5">
+                        <a class="nav-link custom-nav-link text-muted" href="#">Tin tức và sự kiện</a>
+                    </li>
+                    <li class="nav-item fw-bold fs-5">
+                        <a class="nav-link custom-nav-link text-muted" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item fw-bold fs-5">
+                        <a class="nav-link custom-nav-link text-muted" href="#">Liên hệ</a>
+                    </li>
+                    <li class="nav-item fw-bold fs-5 ms-auto dropdown">
+                        <a class="nav-link custom-nav-link text-muted" href="#" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-search fs-5 text-muted"></i>
+                        </a>
+                        <ul class="dropdown-menu p-4 dropdown-menu-end dropdown-menu-lg-start"
+                            aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search..."
+                                        aria-label="Search..." aria-describedby="button-addon2">
+                                    <button class="btn btn-primary" type="button" id="button-addon2">
+                                        <i class="fa fa-search text-white"></i>
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Trigger -->
+    <header class="header d-lg-none" id="mobileHeader">
+        <div class="row">
+            <div class="col-1"></div>        
+            <div class="col-10 p-1">
+                <div class="d-flex align-items-center" style="min-width: 140px;">
+                    <img class="w-100" src="assets/img/logo_default.png" style="height: 60px;">
+                </div>
+            </div>
+            <div class="col-1">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+                    aria-controls="mobileMenu">
+                    <span class="navbar-toggler-icon"></span>
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="mobileMenuLabel"></h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <!-- Search Form -->
+            <div class="input-group flex-nowrap mb-3">
+                <input type="text" class="form-control fw-bold fs-5" placeholder="Search..." aria-label="Search"
+                    aria-describedby="addon-wrapping">
+                <a href="#" class="input-group-text bg-primary" id="addon-wrapping">
+                    <i class="fa fa-search text-white"></i>
+                </a>
+            </div>
+
+            <!-- Menu Items -->
+            <ul class="navbar-nav flex-column">
+                <li class="nav-item fw-bold fs-5">
+					<a class="nav-link custom-toggle-link text-muted" href="#" id="navbarDropdownMenuLink_Home">
+						Trang chủ <i class="fa fa-angle-down fs-5"></i>
+					</a>
+					<ul class="custom-submenu list-unstyled d-none ps-3" aria-labelledby="navbarDropdownMenuLink_Home">
+						<li><a class="text-muted py-2 d-block" href="#">Giới thiệu</a></li>
+						<li><a class="text-muted py-2 d-block" href="#">Sự hình thành và phát triển</a></li>
+					</ul>
+				</li>
+				<li class="nav-item fw-bold fs-5">
+					<a class="nav-link custom-toggle-link text-muted" href="#"  id="navbarDropdownMenuLink_TuyenSinh">
+						Tuyển sinh Cao đẳng <i class="fa fa-angle-down fs-5"></i>
+					</a>
+					<ul class="custom-submenu list-unstyled d-none ps-3"  aria-labelledby="navbarDropdownMenuLink_TuyenSinh">
+						<li><a class="text-muted py-2 d-block" href="#">Cao đẳng chính quy</a></li>
+						<li><a class="text-muted py-2 d-block" href="#">Cao đẳng chất lượng cao</a></li>
+						<li><a class="text-muted py-2 d-block" href="#">Cao đẳng làm việc tại Nhật/Đức</a></li>
+					</ul>
+				</li>
+                <li class="nav-item fw-bold fs-5">
+                    <a class="nav-link text-muted" href="#">Tuyển sinh THPT</a>
+                </li>
+                <li class="nav-item fw-bold fs-5">
+                    <a class="nav-link text-muted" href="#">Đăng ký tư vấn</a>
+                </li>
+                <li class="nav-item fw-bold fs-5">
+                    <a class="nav-link text-muted" href="#">Tin tức và sự kiện</a>
+                </li>
+                <li class="nav-item fw-bold fs-5">
+                    <a class="nav-link text-muted" href="#">Blog</a>
+                </li>
+                <li class="nav-item fw-bold fs-5">
+                    <a class="nav-link text-muted" href="#">Liên hệ</a>
+                </li>
+                <li class="nav-item fw-bold fs-5">
+                    <a class="nav-link text-muted" href="#">WooCommerce not Found</a>
+                </li>
+                <li class="nav-item fw-bold fs-5">
+                    <a class="nav-link text-muted" href="#"><i class="fa fa-envelope me-2"></i> Newsletter</a>
+                </li>
+            </ul>
+
+            <!-- Social Media and Contact -->
+            <div class="mt-auto pt-4 border-top">
+                <div class="d-flex justify-content-center mb-3 gap-3">
+                    <a href="#" class="text-muted fs-4"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-muted fs-4"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-muted fs-4"><i class="fab fa-twitter"></i></a>
+                    <a href="mailto:daynghethaishonhcm@gmail.com" class="text-muted fs-4"><i
+                            class="fa fa-envelope"></i></a>
+                </div>
+                <div class="text-center text-muted fw-bold">
+                    EMAIL: daynghethaishonhcm@gmail.com
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content from index.blade.php -->
+    <div class="banner swiper bannerSwipper w-100">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+				<div class="banner-custom slide-content w-100 min-vh-80 position-relative"
+					style="height: 70vh;">
+					<div class="banner-image">
+						<img class="banner-img w-100 h-100" src="assets/img/banner_girl.png" alt="Đào tạo lái xe Thái Sơn">
+					</div>
+					<div class="banner-content container position-absolute top-50 start-50 translate-middle w-100 h-100">
+						<div class="row gx-5 h-100">
+							<div class="col d-flex align-items-center justify-content-center h-100 w-100">
+								<div class="text-center w-100" style="max-width: 600px; margin: 0 auto;">
+									<div class="banner-title fw-bold text-white"
+										style="font-size: 2.5rem; line-height: 1.2; letter-spacing: 1px; text-transform: uppercase;">
+										ĐÀO TẠO LÁI XE MÔ TÔ<br>VÀ Ô TÔ HẠNG B, C1
+									</div>
+									<div class="banner-desc fw-bold mt-3" style="color: #fff; font-size: 1.5rem;">
+										Đào tạo lái xe chuyên nghiệp
+									</div>
+									<div class="banner-note fw-bold mt-2" style="color: #fff; font-size: 1.5rem;">
+										Dạy lái tận tâm – Vững vàng tay lái
+									</div>
+									<button
+										class="banner-btn btn mt-4 w-100 fw-bold bg-white text-muted rounded-pill py-2 fs-3">
+										Đăng ký ngay
+									</button>
+								</div>
+							</div>
+							<div class="col d-flex align-items-center justify-content-center h-100">
+								<img class="banner-img" src="assets/img/girl.png">
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+			<div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="bg-white h-100 d-flex align-items-center">
+                    <img src="assets/img/gioi-thieu-thai-son.png" alt="Giới thiệu Thái Sơn"
+                        class="img-fluid rounded w-100 h-100 object-fit-cover">
+                </div>
+            </div>
+            <div class="col-md-6 ps-5">
+                <h1 class="fw-bold mb-3 text-primary" style="font-size: 2.2rem;">
+                    Trung tâm Giáo dục Nghề nghiệp Thái Sơn
+                </h1>
+                <p class="fw-bold text-muted" style="font-size: 1.2rem; line-height: 1.6; text-align: justify;"">
+                    Trung tâm Dạy nghề Thái Sơn là đơn vị thành viên trực thuộc Tổng công ty Thái Sơn – Bộ Quốc Phòng, được
+                    thành lập theo Quyết định số 84/2006/QĐ-BQP ngày 20 tháng 3 năm 2006 của Bộ trưởng Bộ Quốc Phòng. Theo
+                    Quyết định số 5068/QĐ-BQP ngày 17 tháng 8 năm 2022, Trung tâm chính thức đổi tên từ Trung tâm nghề Thái
+                    Sơn thành Trung tâm Giáo dục Nghề nghiệp Thái Sơn. Tiếp tục phát huy truyền thống dạy nghề uy tín, chất
+                    lượng, phục vụ nhu cầu học nghề và nâng cao tay nghề lái xe cho nhân dân trên địa bàn thành phố Hồ Chí
+                    Minh và các khu vực lân cận.
+                </p>
+                <a href="#" class="btn btn-primary rounded-pill px-4 py-2 mt-3 fw-bold text-white">
+                    Xem thêm
+                    <i class="fa fa-chevron-right ps-2" style="font-size: 0.8rem;"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="container my-5">
+            <div class="row justify-content-center text-center">
+                <!-- Đào tạo lái xe Mô tô hạng A1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="p-4 h-100 d-flex flex-column align-items-center">
+                        <div class="mb-3 d-flex align-items-center justify-content-center rounded-circle bg-primary"
+                            style="width: 65px; height: 65px;">
+                            <i class="fa fa-motorcycle text-white fs-1"></i>
+                        </div>
+                        <div class="fw-bold mb-3" style="font-size: 1.5rem;">Đào tạo lái xe Mô tô hạng A1
+                        </div>
+                        <div class="fw-600 text-muted" style="font-size: 1.2rem;">
+                            Ngành nghề đa dạng, gắn liền thực tế giúp sinh viên tự tin làm chủ tương lai.
+                        </div>
+                    </div>
+                </div>
+                <!-- Đào tạo lái xe ô tô hạng B số sàn, tự động -->
+                <div class="col-md-4 mb-4 border-start border-end border-1 border-gray">
+                    <div class="p-4 h-100 d-flex flex-column align-items-center">
+                        <div class="mb-3 d-flex align-items-center justify-content-center rounded-circle bg-primary"
+                            style="width: 65px; height: 65px;">
+                            <i class="fa fa-car-side text-white fs-1"></i>
+                        </div>
+                        <div class="fw-bold mb-3" style="font-size: 1.5rem;">Đào tạo lái xe ô tô hạng B số sàn,
+                            tự động</div>
+                        <div class="fw-600 text-muted" style="font-size: 1.2rem;">
+                            Trang thiết bị tiên tiến, không gian mở, khơi nguồn sáng tạo và gắn kết.
+                        </div>
+                    </div>
+                </div>
+                <!-- Đào tạo lái xe ô tô hạng C1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="p-4 h-100 d-flex flex-column align-items-center">
+                        <div class="mb-3 d-flex align-items-center justify-content-center rounded-circle bg-primary"
+                            style="width: 65px; height: 65px;">
+                            <i class="fa fa-truck text-white fs-1"></i>
+                        </div>
+                        <div class="fw-bold mb-3" style="font-size: 1.5rem;">Đào tạo lái xe ô tô hạng C1</div>
+                        <div class="fw-600 text-muted" style="font-size: 1.2rem;">
+                            Kết nối doanh nghiệp, mở rộng cơ hội thực tập, việc làm và hội nhập quốc tế.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="my-5" style="background-color: #f5f5f5;">
+        <div class="container mb-3">
+            <div class="text-primary fw-bold text-center text-uppercase pt-5" style="font-size: 2.5rem;">
+                NGÀNH NGHỀ ĐÀO TẠO
+            </div>
+            <div class="row mt-4">
+                <div class="col-4 position-relative" style="height: 300px;">
+                    <div class="position-relative w-100 h-100">
+                        <div class="rounded-3 bg-white z-2 position-absolute left-0 w-100"
+                            style="top: 30px; height: calc(100% - 30px);"></div>
+                        <div class="bg-white z-3 position-absolute top-0 h-100 d-flex flex-column justify-content-start pt-3"
+                            style="left: 30px; width: calc(100% - 60px);">
+                            <h1 class="fw-bold text-center">Dược</h1>
+                            <div class="text-center mt-2 mb-3" style="font-size: 1.2rem; line-height: 1.4;">
+                                Trang bị kiến thức chuyên sâu về thuốc, tư vấn sử dụng an toàn và hiệu quả.
+                                Mở ra cơ hội nghề nghiệp đa dạng trong ngành y tế và công nghiệp dược phẩm.
+                            </div>
+                            <a href="#" class="fw-bold text-center position-relative custom-detail-link text-primary text-decoration-none d-inline-block ">
+                                Xem chi tiết
+                                <span class="custom-underline d-block bg-primary mt-2 mx-auto"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4" style="height: 300px;">
+                    <div class="position-relative w-100 h-100">
+                        <div class="rounded-3 bg-white z-2 position-absolute left-0 w-100"
+                            style="top: 30px; height: calc(100% - 30px);"></div>
+                        <div class="bg-white z-3 position-absolute top-0 h-100 d-flex flex-column justify-content-start pt-3"
+                            style="left: 30px; width: calc(100% - 60px);">
+                            <h1 class="fw-bold text-center">Điều dưỡng</h1>
+                            <div class="text-center mt-2 mb-3"
+                                style="font-size: 1.2rem; line-height: 1.4;">
+                                Đào tạo kỹ năng chăm sóc sức khỏe toàn diện, từ bệnh viện đến cộng đồng.
+                                Trở thành người đồng hành tin cậy, góp phần nâng cao chất lượng cuộc sống.
+                            </div>
+                            <a href="#" class="fw-bold text-center position-relative custom-detail-link text-primary text-decoration-none d-inline-block ">
+                                Xem chi tiết
+                                <span class="custom-underline d-block bg-primary mt-2 mx-auto"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4" style="height: 300px;">
+                    <div class="position-relative w-100 h-100">
+                        <div class="rounded-3 bg-white z-2 position-absolute left-0 w-100"
+                            style="top: 30px; height: calc(100% - 30px);"></div>
+                        <div class="bg-white z-3 position-absolute top-0 h-100 d-flex flex-column justify-content-start pt-3"
+                            style="left: 30px; width: calc(100% - 60px);">
+                            <h1 class="fw-bold text-center">Chăm sóc sắc đẹp</h1>
+                            <div class="text-center mt-2 mb-3"
+                                style="font-size: 1.2rem; line-height: 1.4;">
+                                Khám phá nghệ thuật làm đẹp chuyên nghiệp, từ chăm sóc da, trang điểm đến các kỹ thuật thẩm
+                                mỹ hiện đại. Hiện thực hóa đam mê và kiến tạo vẻ đẹp hoàn mỹ.
+                            </div>
+                            <a href="#" class="fw-bold text-center position-relative custom-detail-link text-primary text-decoration-none d-inline-block ">
+                                Xem chi tiết
+                                <span class="custom-underline d-block bg-primary mt-2 mx-auto"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4" style="height: 300px;">
+                    <div class="position-relative w-100 h-100">
+                        <div class="rounded-3 bg-white z-2 position-absolute left-0 w-100"
+                            style="top: 30px; height: calc(100% - 30px);"></div>
+                        <div class="bg-white z-3 position-absolute top-0 h-100 d-flex flex-column justify-content-start pt-3"
+                            style="left: 30px; width: calc(100% - 60px);">
+                            <h1 class="fw-bold text-center">Công nghệ ô tô</h1>
+                            <div class="text-center mt-2 mb-3"
+                                style="font-size: 1.2rem; line-height: 1.4;">
+                                Làm chủ công nghệ ô tô hiện đại, từ cơ khí, điện tử đến hệ thống thông minh.
+                                Khám phá cơ hội nghề nghiệp hấp dẫn trong ngành công nghiệp ô tô mới.
+                            </div>
+                            <a href="#" class="fw-bold text-center position-relative custom-detail-link text-primary text-decoration-none d-inline-block ">
+                                Xem chi tiết
+                                <span class="custom-underline d-block bg-primary mt-2 mx-auto"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4" style="height: 300px;">
+                    <div class="position-relative w-100 h-100">
+                        <div class="rounded-3 bg-white z-2 position-absolute left-0 w-100"
+                            style="top: 30px; height: calc(100% - 30px);"></div>
+                        <div class="bg-white z-3 position-absolute top-0 h-100 d-flex flex-column justify-content-start pt-3"
+                            style="left: 30px; width: calc(100% - 60px);">
+                            <h1 class="fw-bold text-center">Quản trị nhà hàng khách sạn</h1>
+                            <div class="text-center mt-2 mb-3"
+                                style="font-size: 1.2rem; line-height: 1.4;">
+                                Kiến tạo trải nghiệm dịch vụ đẳng cấp trong ngành nhà hàng – khách sạn.
+                                Phát triển kỹ năng quản lý, điều hành và nắm bắt xu hướng du lịch toàn cầu.
+                            </div>
+                            <a href="#" class="fw-bold text-center position-relative custom-detail-link text-primary text-decoration-none d-inline-block ">
+                                Xem chi tiết
+                                <span class="custom-underline d-block bg-primary mt-2 mx-auto"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4" style="height: 300px;">
+                    <div class="position-relative w-100 h-100">
+                        <div class="rounded-3 bg-white z-2 position-absolute left-0 w-100"
+                            style="top: 30px; height: calc(100% - 30px);"></div>
+                        <div class="bg-white z-3 position-absolute top-0 h-100 d-flex flex-column justify-content-start pt-3"
+                            style="left: 30px; width: calc(100% - 60px);">
+                            <h1 class="fw-bold text-center">Chất bán dẫn</h1>
+                            <div class="text-center mt-2 mb-3"
+                                style="font-size: 1.2rem; line-height: 1.4;">
+                                Trở thành chuyên gia trong lĩnh vực công nghệ cao, nền tảng của mọi thiết bị điện tử.
+                                Đón đầu xu hướng, tham gia thiết kế và sản xuất vi mạch tương lai.
+                            </div>
+                            <a href="#" class="fw-bold text-center position-relative custom-detail-link text-primary text-decoration-none d-inline-block ">
+                                Xem chi tiết
+                                <span class="custom-underline d-block bg-primary mt-2 mx-auto"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center py-3">
+                <a href="#" class="btn btn-primary rounded-pill px-4 py-2 mt-3 fw-bold text-white">
+                    Xem thêm
+                    <i class="fa fa-chevron-right ps-2" style="font-size: 0.8rem;"></i>
+                </a>
+            </div>
+
+            <div class="container py-3 rounded-4 border border-1 border-white mt-3" style="background-color: #EAEAEA;">
+                <div class="row m-1 bg-primary rounded-3 py-4 align-items-center">
+                    <div class="col-9">
+                        <div class="fw-bold text-white ps-4" style="font-size: 2rem;">
+                            MIỄN, GIẢM HỌC PHÍ CHO BỘ ĐỘI XUẤT NGŨ KHI ĐĂNG KÝ HỌC TẠI TRUNG TÂM
+                        </div>
+                    </div>
+                    <div class="col-3 px-5">
+                        <a href="#" class="btn btn-light px-4 py-3 rounded-3 text-muted fw-bold "
+                            style="font-size: 1.3rem; width: 100%;">
+                            Xem chi tiết
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div style="height:100px"></div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-12 text-center mb-4">
+                <div class="fw-bold text-primary" style="font-size: 2.5rem;">
+                    Tin tức và sự kiện
+                </div>
+            </div>
+        </div>
+        <div class="row g-4">
+            <!-- Item 1 -->
+            <div class="col-md-4">
+                <a href="#">
+                    <div class="h-100 border-0">
+                        <img src="assets/img/news1.jpg" class="card-img-top rounded-3 mb-2"
+                            alt="Tin tức sự kiện">
+                        <div class="d-flex flex-column">
+                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">SINH VIÊN ICH GIAO LƯU CÙNG BAN GIÁM HIỆU TRƯỜNG ĐẠI HỌC ĐẠI DIỆP – CƠ HỘI VƯƠN XA CHO SINH VIÊN ICH TẠI THỊ TRƯỜNG QUỐC TẾ</h5>
+                            <div class="border-bottom border-1 border-grey mb-2" style="width: 40px;"></div>
+                            <div class="max-lines-3 text-justify">Ngày 06/03/2025, Trường Cao đẳng Quốc tế TP.HCM (ICH) đã
+                                [...]
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Item 2 -->
+            <div class="col-md-4">
+                <a href="#">
+                    <div class="h-100 border-0">
+                        <img src="assets/img/news2.png" class="card-img-top rounded-3 mb-2"
+                            alt="Tin tức sự kiện">
+                        <div class="d-flex flex-column">
+                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">DỰ THẢO ĐƯA TIẾNG NHẬT VÀO
+                                CHƯƠNG TRÌNH PHỔ THÔNG – CƠ HỘI CHO NGÀNH
+                                NGÔN NGỮ NHẬT LÊN NGÔI</h5>
+                            <div class="border-bottom border-1 border-grey mb-2" style="width: 40px;"></div>
+                            <div class="max-lines-3 text-justify">Từ năm 2025, tiếng Nhật có thể được đưa vào [...]
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Item 3 -->
+            <div class="col-md-4">
+                <a href="#">
+                    <div class="h-100 border-0">
+                        <img src="assets/img/news3.jpg" class="card-img-top rounded-3 mb-2"
+                            alt="Tin tức sự kiện">
+                        <div class="d-flex flex-column">
+                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">TRƯỜNG CAO ĐẲNG QUỐC TẾ TP.HCM
+                                TỔ CHỨC KHÁM SỨC KHỎE ĐỊNH KỲ CHO HỌC
+                                SINH, SINH VIÊN</h5>
+                            <div class="border-bottom border-1 border-grey mb-2" style="width: 40px;"></div>
+                            <div class="max-lines-3 text-justify">Ngày 29/04 vừa qua, Trường Cao đẳng Quốc tế TP.HCM [...]
+                            </div>  
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Item 4 -->
+            <div class="col-md-4">
+                <a href="#">
+                    <div class="h-100 border-0">
+                        <img src="assets/img/news4.jpg" class="card-img-top rounded-3 mb-2"
+                            alt="Tin tức sự kiện">
+                        <div class="d-flex flex-column">
+                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">Lễ ký kết phối hợp tuyển sinh và tổ chức lớp học giữa Trường Cao đẳng Quốc tế Tp.HCM và Trường Đại học Công Nghiệp Tp.HCM</h5>
+                            <div class="border-bottom border-1 border-grey mb-2" style="width: 40px;"></div>
+                            <div class="max-lines-3 text-justify">Ngày 24/10/2024 Trường Cao đẳng Quốc tế TP.HCM và trường [...]</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Item 5 -->
+            <div class="col-md-4">
+                <a href="#">
+                    <div class="h-100 border-0">
+                        <img src="assets/img/news5.png" class="card-img-top rounded-3 mb-2"
+                            alt="Tin tức sự kiện">
+                        <div class="d-flex flex-column">
+                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">Đào Tạo Liên Kết Quốc Tế Với
+                                Trường Đại Học Daegu - Hàn Quốc</h5>
+                            <div class="border-bottom border-1 border-grey mb-2" style="width: 40px;"></div>
+                            <div class="max-lines-3 text-justify">Ngày 18/10/2024, Trường Cao Đẳng Quốc Tế TPHCM và trường Đại [...]
+                                </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Item 6 -->
+            <div class="col-md-4">
+                <a href="#">
+                    <div class="h-100 border-0">
+                        <img src="assets/img/news5.png" class="card-img-top rounded-3 mb-2"
+                            alt="Tin tức sự kiện">
+                        <div class="d-flex flex-column">
+                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">Thông Báo Chương Trình Học Bổng
+                                Học Tập Và Thực Hành Tại Đài Loan
+                                Năm 2025</h5>
+                            <div class="border-bottom border-1 border-grey mb-2" style="width: 40px;"></div>
+                            <div class="max-lines-3 text-justify">Căn cứ hợp đồng hợp tác giữa Trường Cao đẳng [...]</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <a href="#" class="btn btn-primary rounded-pill px-4 py-2 mt-3 fw-bold text-white">
+                    Xem thêm
+                    <i class="fa fa-chevron-right ps-2" style="font-size: 0.8rem;"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-6 mb-3">
+        <div class="row">
+            <div class="col-12 mb-5">
+                <div class="fw-bold text-primary border-top border-bottom border-1 border-grey" style="font-size: 2rem; width: fit-content;">
+                    Đăng ký xét tuyển
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Left Column: Thời gian tuyển sinh -->
+            <div class="col-md-6">
+                <a href="#">
+                    <div class="h-100 border-0">
+                        <img src="assets/img/news5.png" class="card-img-top rounded-3 mb-2"
+                            alt="Tin tức sự kiện">
+                        <div class="d-flex flex-column">
+                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">Thông Báo Chương Trình Học Bổng
+                                Học Tập Và Thực Hành Tại Đài Loan
+                                Năm 2025</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Right Column: Phiếu đăng ký -->
+            <div class="col-md-6 border-1 border-primary border-bottom">
+                <div class="p-4 h-100">
+                    <div class="fw-bold text-primary mb-4 text-center" style="font-size: 1.8rem;">
+                        Đăng ký ngay để được tư vấn miễn phí
+                    </div>
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control py-3 fw-bold" placeholder="Họ tên">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control py-3 fw-bold" placeholder="Số điện thoại">
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary fw-bold w-50 py-2 text-white text-uppercase" style="font-size: 1.2rem;">Đăng ký</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+    <!-- Footer component -->
+	<div include-html="shared/footer.html"></div>
+
+    <!-- Bootstrap JS Bundle (includes Popper) -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script src="assets/js/app.js"></script>
+    <script>
+        // Swiper initialization from index.blade.php
+        var swiper = new Swiper(".bannerSwipper", {
+            slidesPerView: "auto",
+            spaceBetween: 10,
+            mousewheel: false,
+            loop: true
+        });
+
+        // Tooltip initialization from header.blade.php
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        tooltipTriggerList.forEach(function(tooltipTriggerEl) {
+            new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+
+        // DOMContentLoaded listener and scroll logic from header.blade.php
+        document.addEventListener('DOMContentLoaded', function() {
+            includeHTML();
+
+            let lastScrollTop = 0;
+            const mainHeader = document.getElementById('mainHeader');
+            const infoHeader = document.getElementById('infoHeader');
+            window.addEventListener('scroll', function() {
+                let st = window.pageYOffset || document.documentElement.scrollTop;
+                if (st > mainHeader.offsetHeight + 20) {
+                    mainHeader.classList.add('show');
+                    mainHeader.classList.add('fixed-header');
+                    mainHeader.classList.add('shadow');
+                } else if (st < 20) {
+                    mainHeader.classList.remove('fixed-header');
+                    mainHeader.classList.remove('show');
+                    mainHeader.classList.remove('shadow');
+                }
+                lastScrollTop = st <= 0 ? 0 : st;
+            }, false);
+
+            // Custom script to close other dropdowns when one is opened in offcanvas
+            const offcanvas = document.getElementById('mobileMenu');
+            if (offcanvas) {
+                offcanvas.addEventListener('show.bs.dropdown', function(event) {
+                    const dropdownToggles = offcanvas.querySelectorAll('.dropdown-toggle[aria-expanded="true"]');
+                    dropdownToggles.forEach(function(toggle) {
+                        if (toggle !== event.target) {
+                            bootstrap.Dropdown.getInstance(toggle).hide();
+                        }
+                    });
+                });
+
+                // Custom script for custom toggle menus in offcanvas
+                const customToggleLinks = offcanvas.querySelectorAll('.custom-toggle-link');
+                customToggleLinks.forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const submenu = this.nextElementSibling;
+
+                        offcanvas.querySelectorAll('.custom-submenu').forEach(otherSubmenu => {
+                            if (otherSubmenu !== submenu && !otherSubmenu.classList.contains('d-none')) {
+                                otherSubmenu.classList.add('d-none');
+                                const otherLink = otherSubmenu.previousElementSibling;
+                                if (otherLink && otherLink.querySelector('.fa-angle-down')) {
+                                    otherLink.querySelector('.fa-angle-down').style.transform = 'rotate(0deg)';
+                                }
+                            }
+                        });
+
+                        submenu.classList.toggle('d-none');
+                        const arrowIcon = this.querySelector('.fa-angle-down');
+                        if (arrowIcon) {
+                            if (!submenu.classList.contains('d-none')) {
+                                arrowIcon.style.transform = 'rotate(180deg)';
+                            } else {
+                                arrowIcon.style.transform = 'rotate(0deg)';
+                            }
+                        }
+                    });
+                });
+            }
+			
+			// Các biến cấu hình
+			const offset = 300;
+			const offset_opacity = 1200;
+			const scroll_top_duration = 700; // Không còn cần nếu dùng scrollTo với behavior: 'smooth'
+
+			// Lấy phần tử nút back-to-top
+			const backToTop = document.getElementById('to-top');
+
+			// Theo dõi sự kiện scroll
+			window.addEventListener('scroll', function () {
+				const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+				if (scrollTop > offset) {
+					backToTop.classList.add('cd-is-visible');
+					if (scrollTop > offset_opacity) {
+						backToTop.classList.add('cd-fade-out');
+					} else {
+						backToTop.classList.remove('cd-fade-out');
+					}
+				} else {
+					backToTop.classList.remove('cd-is-visible', 'cd-fade-out');
+				}
+			});
+
+			// Sự kiện click: cuộn lên đầu
+			backToTop.addEventListener('click', function (event) {
+				event.preventDefault();
+				window.scrollTo({
+					top: 0,
+					behavior: 'smooth'
+				});
+			});
+
+        });
+
+        function includeHTML() {
+            var z, i, elmnt, file;
+            /* Loop through a collection of all HTML elements: */
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                    /* 
+                    CORS policy issue: Using fetch with local files won't work when opening HTML directly
+                    This function now requires a local server like Live Server to work properly
+                    */
+                    fetch(file)
+                        .then(response => {
+                            if (response.ok) {
+                                return response.text();
+                            }
+                            return "Page not found.";
+                        })
+                        .then(data => {
+                            elmnt.innerHTML = data;
+                            /* Remove the attribute, and call this function once more: */
+                            elmnt.removeAttribute("include-html");
+                            includeHTML();
+                        })
+                        .catch(error => {
+                            console.error("Failed to include HTML:", error);
+                            elmnt.innerHTML = "Error loading the page. Please use a local server like Live Server.";
+                            elmnt.removeAttribute("include-html");
+                            includeHTML();
+                        });
+                    /* Exit the function: */
+                    return;
+                }
+            }
+        }
+    </script>
+</body>
 </html>
