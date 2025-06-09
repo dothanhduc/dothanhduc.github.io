@@ -34,7 +34,7 @@
             display: block;
             width: 0;
             height: 3px;
-            background: #000099;
+            background: #bf2642;
             position: absolute;
             left: 0;
             bottom: 0;
@@ -61,7 +61,7 @@
             display: block;
             width: 0;
             height: 3px;
-            background: #000099;
+            background: #bf2642;
             position: absolute;
             left: 0;
             bottom: 0;
@@ -235,34 +235,19 @@
 <body>
 
     <!-- Topbar-->
-    <div class="topbar d-none d-lg-flex" style="background: #f9076b; color:rgb(255, 218, 233); font-size: 16px;">
-        <div class="container d-flex justify-content-between align-items-center">
+    <div class="topbar d-none d-lg-flex" style="background: #f9076b;">
+        <div class="container d-flex justify-content-between align-items-center text-light">
+            <nav class="navbar-topbar">
+                <ul class="navbar-nav flex-row align-items-center" style="gap: 15px;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tra cứu thông tin học viên</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Đăng nhập nội bộ</a>
+                    </li>
+                </ul>
+            </nav>
             <div>
-                <nav class="navbar-topbar">
-                    <ul class="navbar-nav flex-row align-items-center" style="gap: 15px;">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Thông tin</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Thông tin học sinh</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Tra cứu điểm</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Nộp học phí online</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Tuyển dụng</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div>
-                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sing up for Newsletter"
-                    style="cursor: pointer;">
-                    <i class="fa fa-envelope"></i> Newsletter
-                </span>
                 <span class="mx-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Follow us on Facebook"
                     style="cursor: pointer;">
                     <i class="fab fa-facebook-f"></i>
@@ -275,11 +260,6 @@
                     style="cursor: pointer;">
                     <i class="fab fa-twitter"></i>
                 </span>
-                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Send us an email"
-                    style="cursor: pointer;">
-                    <i class="fa fa-envelope"></i>
-                </span>
-
             </div>
         </div>
     </div>
@@ -321,7 +301,10 @@
                         </div>
                         <div class="col-12 col-xl-auto align-self-center">
                             <div class="d-flex justify-content-end flex-shrink-1 min-width-0">
-                                <a href="#" class="btn btn-primary fw-bold rounded-pill px-4 py-2 text-white">Đăng ký
+                                <a href="javascript:void(0)"
+                                    class="btn btn-primary fw-bold rounded-pill px-4 py-2 text-white"
+                                    onclick="scrollToRegisterForm()">Đăng
+                                    ký
                                     online</a>
                             </div>
                         </div>
@@ -581,6 +564,13 @@
                     <a class="nav-link text-muted" href="#">Liên hệ</a>
                 </li>
                 <li class="nav-item fw-bold">
+                    <a class="nav-link text-muted" href="javascript:void(0)" onclick="scrollToRegisterForm()">Đăng ký tư
+                        vấn</a>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a class="nav-link text-muted" href="#">Tra cứu thông tin học viên</a>
+                </li>
+                <li class="nav-item fw-bold">
                     <a class="nav-link text-muted" href="#">Đăng nhập nội bộ</a>
                 </li>
             </ul>
@@ -649,10 +639,11 @@
                                         <div class="banner-note fw-bold text-white" style="font-size: 1.2rem;">
                                             Dạy lái tận tâm - Vững vàng tay lái
                                         </div>
-                                        <button
-                                            class="banner-btn btn mt-4 w-75 fw-bold bg-white text-muted rounded-pill py-2 fs-5">
+                                        <a href="javascript:void(0)"
+                                            class="banner-btn btn mt-4 w-75 fw-bold bg-white text-muted rounded-pill py-2 fs-5"
+                                            onclick="scrollToRegisterForm()">
                                             Đăng ký ngay
-                                        </button>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -1058,7 +1049,7 @@
         </div>
     </div>
 
-    <div class="container mt-6 mb-3">
+    <div id="register-form" class="container mt-6 mb-3">
         <div class="row">
             <div class="col-12 mb-5">
                 <div class="fw-bold text-primary border-top border-bottom border-1 border-grey"
@@ -1312,6 +1303,42 @@
             });
 
         });
+
+        function scrollToRegisterForm() {
+            const scroll_top_duration = 700;
+            const registerForm = document.getElementById('register-form');
+            const mainHeader = document.getElementById('mainHeader');
+            const mobileHeader = document.getElementById('mobileHeader');
+            let headerHeight = 0;
+            if (mobileHeader && window.getComputedStyle(mobileHeader).display !== 'none') {
+                // Đóng offcanvas của mobileHeader nếu đang mở
+                const offcanvasElement = document.querySelector('.offcanvas');
+                if (offcanvasElement) {
+                    const offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvasElement);
+                    if (offcanvasInstance) {
+                        offcanvasInstance.hide();
+                    }
+                }
+                headerHeight = mobileHeader.classList.contains('show') ? mobileHeader.offsetHeight : 2 * mobileHeader.offsetHeight;
+            } else {
+                headerHeight = mainHeader.classList.contains('show') ? mainHeader.offsetHeight : 2 * mainHeader.offsetHeight;
+            }
+
+            // Sử dụng jQuery animate để đảm bảo smooth scroll trên mọi trình duyệt
+            $('html, body').animate({
+                scrollTop: $(registerForm).offset().top - headerHeight - 10
+            }, scroll_top_duration);
+
+            // Fallback cho trình duyệt không hỗ trợ jQuery
+            if (typeof $ === 'undefined') {
+                const offsetPosition = registerForm.getBoundingClientRect().top + window.pageYOffset - headerHeight - 10;
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+            console.log(headerHeight);
+        }
 
         function includeHTML() {
             var z, i, elmnt, file, xhttp;
