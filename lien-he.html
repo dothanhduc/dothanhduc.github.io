@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Trung Tâm Giáo Dục Nghề Nghiệp Thái Sơn" />
+    <meta name="image" content="assets/images/logo_default.png" />
+    <title>Trung Tâm Giáo Dục Nghề Nghiệp Thái Sơn</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous" />
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="/assets/css/custom.css" rel="stylesheet" />
+    <link href="/assets/css/app.css" rel="stylesheet" />
+
+    <style>
+        a {
+            text-decoration: none !important;
+        }
+
+        .navbar-topbar .nav-link {
+            position: relative;
+            transition: color 0.2s;
+        }
+
+        .navbar-topbar .nav-link:hover,
+        .navbar-topbar .nav-link:focus {
+            text-decoration: none;
+        }
+
+        .navbar-topbar .nav-link::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 3px;
+            background: #000099;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            color: #ffffff;
+        }
+
+        .navbar-topbar .nav-link:hover::after,
+        .navbar-topbar .nav-link:focus::after {
+            width: 100%;
+        }
+
+        .navbar-main .nav-link {
+            position: relative;
+            transition: color 0.2s;
+        }
+
+        .navbar-main .nav-link:hover,
+        .navbar-main .nav-link:focus {
+            text-decoration: none;
+        }
+
+        .navbar-main .nav-link::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 3px;
+            background: #000099;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            color: #ffffff;
+        }
+
+        .navbar-main .nav-link:hover::after,
+        .navbar-main .nav-link:focus::after {
+            width: 100%;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0;
+            min-width: 300px;
+            width: 100%;
+            max-width: 350px;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            .dropdown-search:hover .dropdown-menu {
+                display: block;
+                margin-top: 0;
+                right: 0;
+                left: auto;
+            }
+        }
+
+        .fixed-header {
+            position: fixed;
+            top: -100px;
+            left: 0;
+            width: 100%;
+            z-index: 1050;
+            background: #fff;
+            transition: top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .fixed-header.show {
+            top: 0;
+            animation: slideDown 0.8s cubic-bezier(0.8, 0, 0.2, 1);
+        }
+
+        @keyframes slideDown {
+            from {
+                top: -200px;
+            }
+
+            to {
+                top: 0;
+            }
+        }
+
+        .custom-submenu {
+            transition: all 0.3s ease-in-out;
+            overflow: hidden;
+        }
+
+        .custom-submenu.d-none {
+            max-height: 0;
+            opacity: 0;
+        }
+
+        .custom-submenu:not(.d-none) {
+            max-height: 200px;
+            /* Adjust as needed */
+            opacity: 1;
+        }
+
+        .custom-toggle-link .fa-angle-down {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .custom-detail-link .custom-underline {
+            height: 1px;
+            width: 60px;
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.1s;
+        }
+
+        .custom-detail-link:hover,
+        .custom-detail-link:focus {
+            color: #333333;
+        }
+
+        .custom-detail-link:hover .custom-underline,
+        .custom-detail-link:focus .custom-underline {
+            width: 120px;
+            height: 3px;
+            background: #333333;
+        }
+
+        .custom-more-link .custom-underline {
+            height: 1px;
+            width: 40px;
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.1s;
+        }
+
+        .custom-more-link:hover,
+        .custom-more-link:focus {
+            color: #333333;
+        }
+
+        .custom-more-link:hover .custom-underline,
+        .custom-more-link:focus .custom-underline {
+            width: 80px;
+            height: 3px;
+            background: #333333;
+        }
+
+        /* back to top */
+        a#to-top {
+            height: 50px;
+            width: 50px;
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            font-size: 2rem;
+            visibility: hidden;
+            opacity: 0;
+            border-radius: 10px;
+            z-index: 999999;
+            cursor: pointer;
+        }
+
+        a#to-top:hover {
+            background-color: #000099 !important;
+            color: #fff;
+        }
+
+        a#to-top.cd-is-visible,
+        a#to-top.cd-fade-out,
+        .no-touch a#to-top:hover {
+            -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+            -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+            transition: opacity 0.3s 0s, visibility 0s 0s;
+        }
+
+        a#to-top,
+        a.cd-top:visited,
+        a.cd-top:hover {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        a#to-top.cd-is-visible {
+            /* the button becomes visible */
+            visibility: visible;
+            opacity: 1;
+        }
+
+        a#to-top.cd-fade-out {
+            /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Topbar-->
+    <div class="topbar d-none d-lg-flex" style="background: #f9076b; color: rgb(255, 218, 233); font-size: 16px">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <nav class="navbar-topbar">
+                    <ul class="navbar-nav flex-row align-items-center" style="gap: 15px">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Thông tin</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Thông tin học sinh</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Tra cứu điểm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Nộp học phí online</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Tuyển dụng</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sing up for Newsletter"
+                    style="cursor: pointer">
+                    <i class="fa fa-envelope"></i> Newsletter
+                </span>
+                <span class="mx-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Follow us on Facebook"
+                    style="cursor: pointer">
+                    <i class="fab fa-facebook-f"></i>
+                </span>
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Follow us on Instagram"
+                    style="cursor: pointer">
+                    <i class="fab fa-instagram"></i>
+                </span>
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Follow us on Twitter"
+                    style="cursor: pointer">
+                    <i class="fab fa-twitter"></i>
+                </span>
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Send us an email"
+                    style="cursor: pointer">
+                    <i class="fa fa-envelope"></i>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <header class="header d-none d-lg-block" id="mainHeader">
+        <!-- Phần logo, tên trung tâm, hotline, email, nộp hồ sơ -->
+        <div id="infoHeader" style="background-color: transparent">
+            <div class="container py-3 border-bottom border-2 border-light">
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <div class="text-nowrap d-inline-block">
+                            <div class="d-flex align-items-center" style="min-width: 140px">
+                                <img src="assets/img/logo_default.png" style="height: 60px" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="d-flex justify-content-end flex-shrink-1 min-width-0">
+                            <!-- Hotline -->
+                            <div class="d-flex align-items-center gap-3 border-end px-3">
+                                <i class="fa fa-mobile-alt fa-2x text-muted"></i>
+                                <div class="d-flex flex-column">
+                                    <div class="text-uppercase text-muted">HOTLINE</div>
+                                    <div class="fw-bold fs-5">0968130606 - 0968120606</div>
+                                </div>
+                            </div>
+                            <!-- Email -->
+                            <div class="d-flex align-items-center gap-3 border-end px-3">
+                                <i class="fa-regular fa-envelope fa-2x mr-2 text-muted"></i>
+                                <div class="d-flex flex-column">
+                                    <div class="text-uppercase text-muted">EMAIL</div>
+                                    <div class="fw-bold fs-5">daynghethaishonhcm@gmail.com</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col">
+                        <div class="d-flex justify-content-end flex-shrink-1 min-width-0">
+                            <a href="#" class="btn btn-primary fw-bold rounded-pill px-4 py-2 text-white">Nộp hồ sơ
+                                online</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thanh menu chính -->
+        <nav class="navbar-main bg-white justify-content-between navbar-expand-lg shadow-none">
+            <div class="container position-relative">
+                <ul class="navbar-nav flex-row align-items-center w-100 gap-4 py-3">
+                    <li class="nav-item fw-bold fs-5 dropdown">
+                        <a class="nav-link custom-nav-link text-muted" href="#" id="navbarDropdownMenuLink_TrangChu"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Trang chủ
+                            <i class="fa fa-angle-down fs-5"></i>
+                        </a>
+                        <ul class="dropdown-menu p-4" aria-labelledby="navbarDropdownMenuLink_TrangChu">
+                            <li>
+                                <a class="dropdown-item border-bottom fs-5 py-3 text-wrap text-break" href="#">
+                                    Giới thiệu
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item fs-5 py-2 text-wrap text-break" href="#">
+                                    Sự hình thành và phát triển
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item fw-bold fs-5 dropdown">
+                        <a class="nav-link custom-nav-link text-muted" href="#" id="navbarDropdownMenuLink_TSCD"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tuyển sinh Cao đẳng
+                            <i class="fa fa-angle-down fs-5"></i>
+                        </a>
+                        <ul class="dropdown-menu p-4" aria-labelledby="navbarDropdownMenuLink_TSCD">
+                            <li>
+                                <a class="dropdown-item border-bottom fs-5 py-3 text-wrap text-break" href="#">
+                                    Cao đẳng chính quy
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item border-bottom fs-5 py-3 text-wrap text-break" href="#">
+                                    Cao đẳng chất lượng cao
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item fs-5 py-3 text-wrap text-break" href="#">
+                                    Cao đẳng làm việc tại Nhật/Đức
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item fw-bold fs-5">
+                        <a class="nav-link custom-nav-link text-muted" href="#">Tuyển sinh THPT</a>
+                    </li>
+                    <li class="nav-item fw-bold fs-5">
+                        <a class="nav-link custom-nav-link text-muted" href="#">Đăng ký tư vấn</a>
+                    </li>
+                    <li class="nav-item fw-bold fs-5">
+                        <a class="nav-link custom-nav-link text-muted" href="#">Tin tức và sự kiện</a>
+                    </li>
+                    <li class="nav-item fw-bold fs-5">
+                        <a class="nav-link custom-nav-link text-muted" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item fw-bold fs-5">
+                        <a class="nav-link custom-nav-link text-muted" href="#">Liên hệ</a>
+                    </li>
+                    <li class="nav-item fw-bold fs-5 ms-auto dropdown dropdown-search">
+                        <a class="nav-link custom-nav-link text-muted" href="#" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-search fs-5 text-muted"></i>
+                        </a>
+                        <ul class="dropdown-menu p-4 dropdown-menu-end dropdown-menu-lg-start"
+                            aria-labelledby="navbarDropdownMenuLink" style="width: 300px">
+                            <li>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search..."
+                                        aria-label="Search..." aria-describedby="button-addon2" />
+                                    <button class="btn btn-primary" type="button" id="button-addon2">
+                                        <i class="fa fa-search text-white"></i>
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Trigger -->
+    <header class="header d-lg-none" id="mobileHeader">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10 p-1">
+                <div class="d-flex align-items-center" style="min-width: 140px">
+                    <img class="w-100" src="assets/img/logo_default.png" style="height: 60px" />
+                </div>
+            </div>
+            <div class="col-1">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+                    aria-controls="mobileMenu">
+                    <span class="navbar-toggler-icon"></span>
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="mobileMenuLabel"></h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <!-- Search Form -->
+            <div class="input-group flex-nowrap mb-3">
+                <input type="text" class="form-control fw-bold fs-5" placeholder="Search..." aria-label="Search"
+                    aria-describedby="addon-wrapping" />
+                <a href="#" class="input-group-text bg-primary" id="addon-wrapping">
+                    <i class="fa fa-search text-white"></i>
+                </a>
+            </div>
+
+            <!-- Menu Items -->
+            <ul class="navbar-nav flex-column">
+                <li class="nav-item fw-bold fs-5">
+                    <a class="nav-link custom-toggle-link text-muted" href="#" id="navbarDropdownMenuLink_Home">
+                        Trang chủ <i class="fa fa-angle-down fs-5"></i>
+                    </a>
+                    <ul class="custom-submenu list-unstyled d-none ps-3" aria-labelledby="navbarDropdownMenuLink_Home">
+                        <li>
+                            <a class="text-muted py-2 d-block" href="#">Giới thiệu</a>
+                        </li>
+                        <li>
+                            <a class="text-muted py-2 d-block" href="#">Sự hình thành và phát triển</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item fw-bold fs-5">
+                    <a class="nav-link custom-toggle-link text-muted" href="#" id="navbarDropdownMenuLink_TuyenSinh">
+                        Tuyển sinh Cao đẳng <i class="fa fa-angle-down fs-5"></i>
+                    </a>
+                    <ul class="custom-submenu list-unstyled d-none ps-3"
+                        aria-labelledby="navbarDropdownMenuLink_TuyenSinh">
+                        <li>
+                            <a class="text-muted py-2 d-block" href="#">Cao đẳng chính quy</a>
+                        </li>
+                        <li>
+                            <a class="text-muted py-2 d-block" href="#">Cao đẳng chất lượng cao</a>
+                        </li>
+                        <li>
+                            <a class="text-muted py-2 d-block" href="#">Cao đẳng làm việc tại Nhật/Đức</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item fw-bold fs-5">
+                    <a class="nav-link text-muted" href="#">Tuyển sinh THPT</a>
+                </li>
+                <li class="nav-item fw-bold fs-5">
+                    <a class="nav-link text-muted" href="#">Đăng ký tư vấn</a>
+                </li>
+                <li class="nav-item fw-bold fs-5">
+                    <a class="nav-link text-muted" href="#">Tin tức và sự kiện</a>
+                </li>
+                <li class="nav-item fw-bold fs-5">
+                    <a class="nav-link text-muted" href="#">Blog</a>
+                </li>
+                <li class="nav-item fw-bold fs-5">
+                    <a class="nav-link text-muted" href="#">Liên hệ</a>
+                </li>
+                <li class="nav-item fw-bold fs-5">
+                    <a class="nav-link text-muted" href="#">WooCommerce not Found</a>
+                </li>
+                <li class="nav-item fw-bold fs-5">
+                    <a class="nav-link text-muted" href="#"><i class="fa fa-envelope me-2"></i> Newsletter</a>
+                </li>
+            </ul>
+
+            <!-- Social Media and Contact -->
+            <div class="mt-auto pt-4 border-top">
+                <div class="d-flex justify-content-center mb-3 gap-3">
+                    <a href="#" class="text-muted fs-4"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-muted fs-4"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-muted fs-4"><i class="fab fa-twitter"></i></a>
+                    <a href="mailto:daynghethaishonhcm@gmail.com" class="text-muted fs-4"><i
+                            class="fa fa-envelope"></i></a>
+                </div>
+                <div class="text-center text-muted fw-bold">
+                    EMAIL: daynghethaishonhcm@gmail.com
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content from index.blade.php -->
+    <main class="main-content">
+        <div class="text-primary fw-bold text-center pt-3" style="font-size: 2rem">
+            LIÊN HỆ
+        </div>
+        <div class="container">
+            <div class="row my-3 gy-3">
+                <div class="col-md-6" style="min-height: 400px">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7839.84337552069!2d106.616249!3d10.740519!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752dcfbf888cd3%3A0x57473e737c85fa3e!2zVHLGsOG7nW5nIENhbyDEkeG6s25nIFF14buRYyBU4bq_IFRQLkhDTQ!5e0!3m2!1svi!2sus!4v1749322612150!5m2!1svi!2sus"
+                        width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-md-6">
+                    <div class="px-lg-5">
+                        <div class="border rounded mx-lg-5 p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bold">Đăng ký tư vấn</h5>
+                                <p>Xin vui lòng điền đầy đủ thông tin</p>
+                            </div>
+                            <form method="POST" action="{{ route('advise') }}">
+                                <div>
+                                    <input type="text" class="form-control" placeholder="Họ tên" name="name"
+                                        data-validation="required" data-validation-error-msg="Vui lòng nhập Họ tên" />
+                                </div>
+                                <br />
+                                <div>
+                                    <input type="email" class="form-control" name="email" placeholder="Email" />
+                                </div>
+                                <br />
+                                <div>
+                                    <input type="text" class="form-control" name="phone" placeholder="Số điện thoại"
+                                        data-validation="phonevn"
+                                        data-validation-error-msg="Số điện thoại chưa đúng định dạng" />
+                                </div>
+                                <br />
+                                <div>
+                                    <input type="text" class="form-control" name="title" placeholder="Tiêu đề"
+                                        data-validation="required" data-validation-error-msg="Vui lòng nhập Tiêu đề" />
+                                </div>
+                                <br />
+                                <div>
+                                    <textarea type="text" class="form-control input-content" name="content" rows="4"
+                                        placeholder="Nội dung" data-validation="required"
+                                        data-validation-error-msg="Vui lòng nhập Nội dung"></textarea>
+                                </div>
+                                <br />
+
+                                <div class="g-recaptcha" data-sitekey=""></div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary px-5">
+                                        Gửi
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container my-5">
+            <div class="row gy-4">
+                <!-- Trụ sở chính Column -->
+                <div class="col-md-4">
+                    <div class="d-flex align-items-start mb-3">
+                        <i class="fa-solid fa-layer-group fa-2x text-muted me-3"></i>
+                        <div>
+                            <p class="mb-0 text-muted" style="font-size: 1rem">
+                                <b>Trụ sở chính:</b> 460D Kinh Dương Vương, P. An Lạc A, Q.
+                                Bình Tân
+                            </p>
+                        </div>
+                    </div>
+                    <div class="ms-5 text-muted">
+                        <p class="mb-3" style="font-size: 1rem">
+                            <b>Cơ sở 2:</b> 743/34 Hồng Bàng, P.6, Q.6
+                        </p>
+                        <p class="mb-3" style="font-size: 1rem">
+                            <b>Cơ sở 3:</b> 91 Nguyễn Chí Thanh, P.9, Q.5
+                        </p>
+                        <p style="font-size: 1rem">
+                            <b>Điện thoại:</b> 028 54047799 – 0912244100
+                        </p>
+                    </div>
+                </div>
+                <!-- CS Bình Dương Column -->
+                <div class="col-md-4">
+                    <div class="d-flex align-items-start mb-3">
+                        <i class="fa-solid fa-map fa-2x text-muted me-3"></i>
+                        <div>
+                            <h5 class="fw-bold mb-0" style="color: red; font-size: 1rem">
+                                CS Bình Dương
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="ms-5 text-muted">
+                        <p class="mb-3" style="font-size: 1rem">
+                            <b>Văn phòng tuyển sinh:</b> 218 đường Trường Định, K8, Phường
+                            Hiệp Thành, Tp Thủ Dầu Một, Bình Dương
+                        </p>
+                        <p style="font-size: 1rem"><b>Điện thoại:</b> 02742466199</p>
+                    </div>
+                </div>
+                <!-- CS Đà Nẵng Column -->
+                <div class="col-md-4">
+                    <div class="d-flex align-items-start mb-3">
+                        <i class="fa-solid fa-map fa-2x text-muted me-3"></i>
+                        <div>
+                            <h5 class="fw-bold mb-0" style="color: red; font-size: 1rem">
+                                CS Đà Nẵng
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="ms-5 text-muted">
+                        <p class="mb-3" style="font-size: 1rem">
+                            <b>Văn phòng tuyển sinh:</b> 18 Võ Văn Tần – Q. Thanh Khê – TP
+                            Đà Nẵng
+                        </p>
+                        <p class="mb-3" style="font-size: 1rem">
+                            <b>Điện thoại:</b> 02363 699 699 - 090 546 7226
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="pt-5" style="background: #0b0b5a; color: #fff">
+        <div class="container py-5">
+            <div class="row">
+                <!-- Cột 1: Logo + Thông tin liên hệ -->
+                <div class="col-lg-4 col-md-12 mb-4">
+                    <div class="mb-3">
+                        <img src="assets/img/logo-main-menu.png" alt="Logo" class="img-fluid" style="height: 80px" />
+                    </div>
+                    <div class="mt-3 fs-6">
+                        <div class="mb-4">
+                            <b>Trụ sở chính:</b> Số 3 đường 3/2, Phường 10, Quận 10, Tp Hồ
+                            Chí Minh
+                        </div>
+                        <div class="mb-4"><b>Điện thoại:</b> (028) 35888247</div>
+                        <div class="mb-4"><b>Hotline:</b> 0968120606 - 0968130606</div>
+                        <div class="mb-4 mt-4">
+                            <b>Cơ sở đào tạo:</b> 364/1A Phan Văn Trị, Phường 5, Quận Gò Vấp
+                            Tp. Hồ Chí Minh
+                        </div>
+                        <div class="mb-4"><b>Điện thoại:</b> (028) 35888499</div>
+                        <div class="mt-4">
+                            <b>Sân tập lái:</b> Hẻm 687/8 Nguyễn Văn Khạ, ấp Cây Sộp, xã Tân
+                            An Hội, huyện Củ Chi, Tp. Hồ Chí Minh
+                        </div>
+                    </div>
+                    <div class="mt-3 d-flex gap-3">
+                        <a href="#"
+                            class="d-flex align-items-center justify-content-center border border-2 border-white rounded-circle text-white"
+                            style="width: 36px; height: 36px; font-size: 18px">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="d-flex align-items-center justify-content-center border border-2 border-white rounded-circle text-white"
+                            style="width: 36px; height: 36px; font-size: 18px">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                        <a href="#"
+                            class="d-flex align-items-center justify-content-center border border-2 border-white rounded-circle text-white"
+                            style="width: 36px; height: 36px; font-size: 18px">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Cột 2: Về chúng tôi -->
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <div class="fw-bold fs-5">Về chúng tôi</div>
+                    <ul class="list-unstyled mt-3">
+                        <li class="fs-6 py-3 border-bottom border-1 border-light"
+                            style="border-color: #333370 !important">
+                            <i class="fa fa-chevron-right pe-3 fs-6"></i>Giới thiệu
+                        </li>
+                        <li class="fs-6 py-3 border-bottom border-1 border-light"
+                            style="border-color: #333370 !important">
+                            <i class="fa fa-chevron-right pe-3 fs-6"></i> Khoa Kinh tế - Du
+                            lịch
+                        </li>
+                        <li class="fs-6 py-3 border-bottom border-1 border-light"
+                            style="border-color: #333370 !important">
+                            <i class="fa fa-chevron-right pe-3 fs-6"></i> Khoa Ngoại ngữ
+                        </li>
+                        <li class="fs-6 py-3 border-bottom border-1 border-light"
+                            style="border-color: #333370 !important">
+                            <i class="fa fa-chevron-right pe-3 fs-6"></i> Khoa Công nghệ
+                        </li>
+                        <li class="fs-6 py-3 border-bottom border-1 border-light"
+                            style="border-color: #333370 !important">
+                            <i class="fa fa-chevron-right pe-3 fs-6"></i> Khoa Y dược
+                        </li>
+                    </ul>
+                    <hr class="mt-0" style="border-color: #fff2" />
+                </div>
+                <!-- Cột 3: Tuyển sinh -->
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <div class="fw-bold fs-5">Tuyển sinh</div>
+                    <ul class="list-unstyled mt-3">
+                        <li class="fs-6 py-3 border-bottom border-1 border-light"
+                            style="border-color: #333370 !important">
+                            <i class="fa fa-chevron-right pe-3 fs-6"></i> Cao đẳng chính quy
+                        </li>
+                        <li class="fs-6 py-3 border-bottom border-1 border-light"
+                            style="border-color: #333370 !important">
+                            <i class="fa fa-chevron-right pe-3 fs-6"></i> Cao đẳng chất
+                            lượng cao
+                        </li>
+                        <li class="fs-6 py-3 border-bottom border-1 border-light"
+                            style="border-color: #333370 !important">
+                            <i class="fa fa-chevron-right pe-3 fs-6"></i> Hệ THPT + Cao đẳng
+                        </li>
+                        <li class="fs-6 py-3 border-bottom border-1 border-light"
+                            style="border-color: #333370 !important">
+                            <i class="fa fa-chevron-right pe-3 fs-6"></i> Chương trình hợp
+                            tác quốc tế
+                        </li>
+                    </ul>
+                    <hr class="mt-0" style="border-color: #fff2" />
+                </div>
+                <!-- Cột 4: Liên hệ -->
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <div class="fw-bold fs-5">Liên hệ</div>
+                    <ul class="list-unstyled mt-3">
+                        <li class="fs-6 py-3 border-bottom border-1 border-light"
+                            style="border-color: #333370 !important">
+                            <i class="fa fa-chevron-right pe-3 fs-6"></i> Học bổng
+                        </li>
+                        <li class="fs-6 py-3 border-bottom border-1 border-light"
+                            style="border-color: #333370 !important">
+                            <i class="fa fa-chevron-right pe-3 fs-6"></i> Học phí
+                        </li>
+                        <li class="fs-6 py-3 border-bottom border-1 border-light"
+                            style="border-color: #333370 !important">
+                            <i class="fa fa-chevron-right pe-3 fs-6"></i> <b>Blog</b>
+                        </li>
+                        <li class="fs-6 py-3 border-bottom border-1 border-light"
+                            style="border-color: #333370 !important">
+                            <i class="fa fa-chevron-right pe-3 fs-6"></i> <b>Contact</b>
+                        </li>
+                    </ul>
+                    <hr class="mt-0" style="border-color: #fff2" />
+                </div>
+            </div>
+        </div>
+        <!-- Copyright -->
+        <div class="py-3 fs-6" style="background-color: grey; color: lightgray">
+            <div class="container">
+                Copyright 2025 © <b>TRUNG TÂM GDNN THÁI SƠN</b>
+            </div>
+        </div>
+
+        <a id="to-top"
+            class="d-flex justify-content-center align-items-center text-gray border border-gray-500 border-3">
+            <i class="fa fa-chevron-up" style="font-size: 1.5rem"></i>
+        </a>
+
+        <!-- FontAwesome nếu chưa có -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    </footer>
+
+    <!-- Bootstrap JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-3gJwYp4Z8Zo44/2JPjNm2Fz8GIPDDjGz9lEJ9jUOb0I=" crossorigin="anonymous"></script>
+    <script>
+        // Swiper initialization from index.blade.php
+        var swiper = new Swiper(".bannerSwipper", {
+            slidesPerView: "auto",
+            spaceBetween: 10,
+            mousewheel: false,
+            loop: true,
+        });
+
+        // Tooltip initialization from header.blade.php
+        const tooltipTriggerList = document.querySelectorAll(
+            '[data-bs-toggle="tooltip"]'
+        );
+        tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+            new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+
+        // DOMContentLoaded listener and scroll logic from header.blade.php
+        document.addEventListener("DOMContentLoaded", function () {
+            let lastScrollTop = 0;
+            const mainHeader = document.getElementById("mainHeader");
+            const infoHeader = document.getElementById("infoHeader");
+            window.addEventListener(
+                "scroll",
+                function () {
+                    let st = window.pageYOffset || document.documentElement.scrollTop;
+                    if (st > mainHeader.offsetHeight + 20) {
+                        mainHeader.classList.add("show");
+                        mainHeader.classList.add("fixed-header");
+                        mainHeader.classList.add("shadow");
+                    } else if (st < 20) {
+                        mainHeader.classList.remove("fixed-header");
+                        mainHeader.classList.remove("show");
+                        mainHeader.classList.remove("shadow");
+                    }
+                    lastScrollTop = st <= 0 ? 0 : st;
+                },
+                false
+            );
+
+            // Custom script to close other dropdowns when one is opened in offcanvas
+            const offcanvas = document.getElementById("mobileMenu");
+            if (offcanvas) {
+                offcanvas.addEventListener("show.bs.dropdown", function (event) {
+                    const dropdownToggles = offcanvas.querySelectorAll(
+                        '.dropdown-toggle[aria-expanded="true"]'
+                    );
+                    dropdownToggles.forEach(function (toggle) {
+                        if (toggle !== event.target) {
+                            bootstrap.Dropdown.getInstance(toggle).hide();
+                        }
+                    });
+                });
+
+                // Custom script for custom toggle menus in offcanvas
+                const customToggleLinks = offcanvas.querySelectorAll(
+                    ".custom-toggle-link"
+                );
+                customToggleLinks.forEach((link) => {
+                    link.addEventListener("click", function (e) {
+                        e.preventDefault();
+                        const submenu = this.nextElementSibling;
+
+                        offcanvas
+                            .querySelectorAll(".custom-submenu")
+                            .forEach((otherSubmenu) => {
+                                if (
+                                    otherSubmenu !== submenu &&
+                                    !otherSubmenu.classList.contains("d-none")
+                                ) {
+                                    otherSubmenu.classList.add("d-none");
+                                    const otherLink = otherSubmenu.previousElementSibling;
+                                    if (
+                                        otherLink &&
+                                        otherLink.querySelector(".fa-angle-down")
+                                    ) {
+                                        otherLink.querySelector(
+                                            ".fa-angle-down"
+                                        ).style.transform = "rotate(0deg)";
+                                    }
+                                }
+                            });
+
+                        submenu.classList.toggle("d-none");
+                        const arrowIcon = this.querySelector(".fa-angle-down");
+                        if (arrowIcon) {
+                            if (!submenu.classList.contains("d-none")) {
+                                arrowIcon.style.transform = "rotate(180deg)";
+                            } else {
+                                arrowIcon.style.transform = "rotate(0deg)";
+                            }
+                        }
+                    });
+                });
+            }
+
+            // Các biến cấu hình
+            const offset = 300;
+            const offset_opacity = 1200;
+            const scroll_top_duration = 700; // Không còn cần nếu dùng scrollTo với behavior: 'smooth'
+
+            // Lấy phần tử nút back-to-top
+            const backToTop = document.getElementById("to-top");
+
+            // Theo dõi sự kiện scroll
+            window.addEventListener("scroll", function () {
+                const scrollTop =
+                    window.scrollY || document.documentElement.scrollTop;
+
+                if (scrollTop > offset) {
+                    backToTop.classList.add("cd-is-visible");
+                    if (scrollTop > offset_opacity) {
+                        backToTop.classList.add("cd-fade-out");
+                    } else {
+                        backToTop.classList.remove("cd-fade-out");
+                    }
+                } else {
+                    backToTop.classList.remove("cd-is-visible", "cd-fade-out");
+                }
+            });
+
+            // Sự kiện click: cuộn lên đầu
+            backToTop.addEventListener("click", function (event) {
+                event.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

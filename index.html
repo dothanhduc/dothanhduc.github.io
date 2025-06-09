@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,17 +8,17 @@
     <meta name="image" content="assets/images/logo_default.png">
     <title>Trung Tâm Giáo Dục Nghề Nghiệp Thái Sơn</title>
 
-	<link href="assets/css/app.css" rel="stylesheet">
-    <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="assets/css/app.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-	<link href="assets/css/custom.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
 
     <style>
-		a {
-		  text-decoration: none !important;
-		}
+        a {
+            text-decoration: none !important;
+        }
+
         .navbar-topbar .nav-link {
             position: relative;
             transition: color 0.2s;
@@ -55,7 +56,7 @@
             text-decoration: none;
         }
 
-        .navbar-main .nav-link::after {
+        .navbar-main .nav-link::before {
             content: "";
             display: block;
             width: 0;
@@ -67,9 +68,18 @@
             color: #ffffff;
         }
 
-        .navbar-main .nav-link:hover::after,
-        .navbar-main .nav-link:focus::after {
+        .navbar-main .nav-link:hover::before,
+        .navbar-main .nav-link:focus::before {
             width: 100%;
+        }
+
+        .navbar-nav .dropdown-toggle:after {
+            content: "\f107";
+            font-family: Font Awesome\ 5 Pro;
+            font-weight: 300;
+            border: none;
+            vertical-align: inherit;
+            margin-left: 0;
         }
 
         .dropdown:hover .dropdown-menu {
@@ -78,6 +88,15 @@
             min-width: 300px;
             width: 100%;
             max-width: 350px;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            .dropdown-search:hover .dropdown-menu {
+                display: block;
+                margin-top: 0;
+                right: 0;
+                left: auto;
+            }
         }
 
         .fixed-header {
@@ -116,7 +135,8 @@
         }
 
         .custom-submenu:not(.d-none) {
-            max-height: 200px; /* Adjust as needed */
+            max-height: 200px;
+            /* Adjust as needed */
             opacity: 1;
         }
 
@@ -163,46 +183,55 @@
             height: 3px;
             background: #333333;
         }
-		
-		/* back to top */
-		a#to-top {
-			 height: 50px;
-			 width: 50px;
-			 position: fixed;
-			 bottom: 80px;
-			 right: 20px;
-			 font-size: 2rem;
-			 visibility: hidden;
-			 opacity: 0;
-			 border-radius: 10px;
-			 z-index: 999999;
-			 cursor: pointer;
-		}
-		 a#to-top:hover {
-			 background-color: #000099 !important;
-			 color: #fff;
-		}
-		 a#to-top.cd-is-visible, a#to-top.cd-fade-out, .no-touch a#to-top:hover {
-			 -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
-			 -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
-			 transition: opacity 0.3s 0s, visibility 0s 0s;
-		}
-		 a#to-top, a.cd-top:visited, a.cd-top:hover {
-			 color: #ccc;
-			 text-decoration: none;
-		}
-		 a#to-top.cd-is-visible {
-			/* the button becomes visible */
-			 visibility: visible;
-			 opacity: 1;
-		}
-		 a#to-top.cd-fade-out {
-			/* if the user keeps scrolling down, the button is out of focus and becomes less visible */
-			 opacity: 1;
-		}
-		 
+
+        /* back to top */
+        a#to-top {
+            height: 42px;
+            width: 42px;
+            position: fixed;
+            font-size: 1rem;
+            bottom: 80px;
+            right: 20px;
+            visibility: hidden;
+            opacity: 0;
+            color: transparent;
+            border-radius: 10px;
+            z-index: 999999;
+            cursor: pointer;
+        }
+
+        a#to-top:hover {
+            color: #888;
+        }
+
+        a#to-top.cd-is-visible,
+        a#to-top.cd-fade-out,
+        .no-touch a#to-top:hover {
+            -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+            -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+            transition: opacity 0.3s 0s, visibility 0s 0s;
+        }
+
+        a#to-top,
+        a.cd-top:visited,
+        a.cd-top:hover {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        a#to-top.cd-is-visible {
+            /* the button becomes visible */
+            visibility: visible;
+            opacity: 1;
+        }
+
+        a#to-top.cd-fade-out {
+            /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+            opacity: 1;
+        }
     </style>
 </head>
+
 <body>
 
     <!-- Topbar-->
@@ -246,7 +275,8 @@
                     style="cursor: pointer;">
                     <i class="fab fa-twitter"></i>
                 </span>
-                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Send us an email" style="cursor: pointer;">
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Send us an email"
+                    style="cursor: pointer;">
                     <i class="fa fa-envelope"></i>
                 </span>
 
@@ -257,41 +287,43 @@
     <header class="header d-none d-lg-block" id="mainHeader">
         <!-- Phần logo, tên trung tâm, hotline, email, nộp hồ sơ -->
         <div id="infoHeader" style="background-color: transparent;">
-            <div class="container py-3 border-bottom border-2 border-light">
-                <div class="row align-items-center">
-                    <div class="col-auto">
+            <div class="container py-3 border-bottom">
+                <div class="d-flex">
+                    <div class="me-auto">
                         <div class="text-nowrap d-inline-block">
                             <div class="d-flex align-items-center" style="min-width: 140px;">
                                 <img src="assets/img/logo_default.png" style="height: 60px;">
                             </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="d-flex justify-content-end flex-shrink-1 min-width-0">
+                    <div class="row g-2">
+                        <div class="col-12 col-xl-auto d-flex justify-content-end">
                             <!-- Hotline -->
-                            <div class="d-flex align-items-center gap-3 border-end px-3">
-                                <i class="fa fa-mobile-alt fa-2x text-muted"></i>
+                            <div class="d-flex align-items-center gap-2 gap-xl-3 border-end px-3">
+                                <i class="fal fa-2x fa-mobile d-none d-xl-block" style="color: #c8c8c8;"></i>
+                                <i class="fal fa-mobile d-block d-xl-none" style="color: #c8c8c8;"></i>
                                 <div class="d-flex flex-column">
-                                    <div class="text-uppercase text-muted">HOTLINE</div>
-                                    <div class="fw-bold fs-5">0968130606 - 0968120606</div>
+                                    <div class="d-none d-xl-block text-uppercase text-muted" style="font-size: 12px;">
+                                        HOTLINE</div>
+                                    <div class="fw-bold" style="line-height: 1.2;">0968130606</div>
                                 </div>
                             </div>
                             <!-- Email -->
-                            <div class="d-flex align-items-center gap-3 border-end px-3">
-                                <i class="fa-regular fa-envelope fa-2x mr-2 text-muted"></i>
+                            <div class="d-flex align-items-center gap-2 gap-xl-3 px-3">
+                                <i class="fal fa-envelope fa-2x d-none d-xl-block" style="color: #c8c8c8;"></i>
+                                <i class="fal fa-envelope d-block d-xl-none" style="color: #c8c8c8;"></i>
                                 <div class="d-flex flex-column">
-                                    <div class="text-uppercase text-muted">EMAIL</div>
-                                    <div class="fw-bold fs-5">daynghethaishonhcm@gmail.com</div>
+                                    <div class="d-none d-xl-block text-uppercase text-muted" style="font-size: 12px;">
+                                        EMAIL</div>
+                                    <div class="fw-bold" style="line-height: 1.2;">daynghethaishonhcm@gmail.com</div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="row align-items-center">
-                    <div class="col">
-                        <div class="d-flex justify-content-end flex-shrink-1 min-width-0">
-                            <a href="#" class="btn btn-primary fw-bold rounded-pill px-4 py-2 text-white">Nộp hồ sơ
-                                online</a>
+                        <div class="col-12 col-xl-auto align-self-center">
+                            <div class="d-flex justify-content-end flex-shrink-1 min-width-0">
+                                <a href="#" class="btn btn-primary fw-bold rounded-pill px-4 py-2 text-white">Đăng ký
+                                    online</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -299,78 +331,143 @@
         </div>
 
         <!-- Thanh menu chính -->
-        <nav class="navbar-main bg-white justify-content-between navbar-expand-lg shadow-none">
+        <nav class="navbar-main bg-white justify-content-between navbar-expand-lg">
             <div class="container position-relative">
-                <ul class="navbar-nav flex-row align-items-center w-100 gap-4 py-3">
-                    <li class="nav-item fw-bold fs-5 dropdown">
-                        <a class="nav-link custom-nav-link text-muted" href="#" id="navbarDropdownMenuLink_TrangChu"
-                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <ul class="navbar-nav flex-row align-items-center w-100 gap-4 py-2">
+                    <li class="nav-item fw-bold dropdown">
+                        <a class="nav-link text-muted" href="#">
                             Trang chủ
-                            <i class="fa fa-angle-down fs-5"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold dropdown">
+                        <a class="nav-link dropdown-toggle text-muted" href="#" id="navbarDropdownMenuLink_TrangChu"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Giới thiệu
                         </a>
                         <ul class="dropdown-menu p-4" aria-labelledby="navbarDropdownMenuLink_TrangChu">
                             <li>
-                                <a class="dropdown-item border-bottom fs-5 py-3 text-wrap text-break" href="#">
-                                    Giới thiệu
+                                <a class="dropdown-item border-bottom py-3 text-wrap text-break" href="#">
+                                    Giới thiệu trung tâm
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item fs-5 py-2 text-wrap text-break" href="#">
+                                <a class="dropdown-item border-bottom py-3 text-wrap text-break" href="#">
                                     Sự hình thành và phát triển
                                 </a>
                             </li>
+                            <li>
+                                <a class="dropdown-item py-3 text-wrap text-break" href="#">
+                                    Cơ cấu và tổ chức
+                                </a>
+                            </li>
                         </ul>
                     </li>
-                    <li class="nav-item fw-bold fs-5 dropdown">
-                        <a class="nav-link custom-nav-link text-muted" href="#" id="navbarDropdownMenuLink_TSCD"
+                    <li class="nav-item fw-bold dropdown">
+                        <a class="nav-link dropdown-toggle text-muted" href="#" id="navbarDropdownMenuLink_TSCD"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Tuyển sinh Cao đẳng
-                            <i class="fa fa-angle-down fs-5"></i>
+                            Đào tạo
                         </a>
                         <ul class="dropdown-menu p-4" aria-labelledby="navbarDropdownMenuLink_TSCD">
                             <li>
-                                <a class="dropdown-item border-bottom fs-5 py-3 text-wrap text-break" href="#">
-                                    Cao đẳng chính quy
+                                <a class="dropdown-item border-bottom py-3 text-wrap text-break" href="#">
+                                    Đào tạo lái xe hạng A1
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item border-bottom fs-5 py-3 text-wrap text-break" href="#">
-                                    Cao đẳng chất lượng cao
+                                <a class="dropdown-item border-bottom py-3 text-wrap text-break" href="#">
+                                    Đào tạo lái xe ô tô hạng B số sàn, tự động
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item fs-5 py-3 text-wrap text-break" href="#">
-                                    Cao đẳng làm việc tại Nhật/Đức
+                                <a class="dropdown-item py-3 text-wrap text-break" href="#">
+                                    Đào tạo lái xe ô tô hạng C1
                                 </a>
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item fw-bold fs-5">
-                        <a class="nav-link custom-nav-link text-muted" href="#">Tuyển sinh THPT</a>
-                    </li>
-                    <li class="nav-item fw-bold fs-5">
-                        <a class="nav-link custom-nav-link text-muted" href="#">Đăng ký tư vấn</a>
-                    </li>
-                    <li class="nav-item fw-bold fs-5">
-                        <a class="nav-link custom-nav-link text-muted" href="#">Tin tức và sự kiện</a>
-                    </li>
-                    <li class="nav-item fw-bold fs-5">
-                        <a class="nav-link custom-nav-link text-muted" href="#">Blog</a>
-                    </li>
-                    <li class="nav-item fw-bold fs-5">
-                        <a class="nav-link custom-nav-link text-muted" href="#">Liên hệ</a>
-                    </li>
-                    <li class="nav-item fw-bold fs-5 ms-auto dropdown">
-                        <a class="nav-link custom-nav-link text-muted" href="#" id="navbarDropdownMenuLink"
+                    <li class="nav-item fw-bold dropdown">
+                        <a class="nav-link dropdown-toggle text-muted" href="#" id="navbarDropdownMenuLink_TSCD"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fa fa-search fs-5 text-muted"></i>
+                            Thi thử
                         </a>
-                        <ul class="dropdown-menu p-4 dropdown-menu-end dropdown-menu-lg-start"
-                            aria-labelledby="navbarDropdownMenuLink">
+                        <ul class="dropdown-menu p-4" aria-labelledby="navbarDropdownMenuLink_TSCD">
+                            <li>
+                                <a class="dropdown-item border-bottom py-3 text-wrap text-break" href="#">
+                                    Phần mềm mô phỏng 120 câu
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item py-3 text-wrap text-break" href="#">
+                                    Phần mềm thi thử xe hạng B1
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item fw-bold dropdown">
+                        <a class="nav-link dropdown-toggle text-muted" href="#" id="navbarDropdownMenuLink_TSCD"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Khóa học
+                        </a>
+                        <ul class="dropdown-menu p-4" aria-labelledby="navbarDropdownMenuLink_TSCD">
+                            <li>
+                                <a class="dropdown-item border-bottom py-3 text-wrap text-break" href="#">
+                                    Đào tạo lái xe hạng B1
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item border-bottom py-3 text-wrap text-break" href="#">
+                                    Đào tạo lái xe hạng B2
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item border-bottom py-3 text-wrap text-break" href="#">
+                                    Đào tạo lái xe hạng C
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item border-bottom py-3 text-wrap text-break" href="#">
+                                    Đào tạo lái xe hạng D
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item py-3 text-wrap text-break" href="#">
+                                    Đào tạo lái xe hạng A1
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item fw-bold dropdown">
+                        <a class="nav-link dropdown-toggle text-muted" href="#" id="navbarDropdownMenuLink_TSCD"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tin tức và thông báo
+                        </a>
+                        <ul class="dropdown-menu p-4" aria-labelledby="navbarDropdownMenuLink_TSCD">
+                            <li>
+                                <a class="dropdown-item border-bottom py-3 text-wrap text-break" href="#">
+                                    Khai giảng khóa học
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item py-3 text-wrap text-break" href="#">
+                                    Kết quả sát hạch lái xe
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link text-muted" href="#">Liên hệ</a>
+                    </li>
+                    <li class="nav-item fw-bold ms-auto dropdown dropdown-search">
+                        <a class="nav-link text-muted" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-search text-muted"></i>
+                        </a>
+                        <ul class="dropdown-menu p-4 dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink"
+                            style="width: 300px;">
                             <li>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search..."
-                                        aria-label="Search..." aria-describedby="button-addon2">
+                                    <input type="text" class="form-control" placeholder="Tìm kiếm..."
+                                        aria-label="Tìm kiếm..." aria-describedby="button-addon2">
                                     <button class="btn btn-primary" type="button" id="button-addon2">
                                         <i class="fa fa-search text-white"></i>
                                     </button>
@@ -384,21 +481,15 @@
     </header>
 
     <!-- Mobile Menu Trigger -->
-    <header class="header d-lg-none" id="mobileHeader">
-        <div class="row">
-            <div class="col-1"></div>        
-            <div class="col-10 p-1">
-                <div class="d-flex align-items-center" style="min-width: 140px;">
-                    <img class="w-100" src="assets/img/logo_default.png" style="height: 60px;">
-                </div>
+    <header class="header d-lg-none d-flex bg-light" style="min-height: 64px;" id="mobileHeader">
+        <div class="main-nav container d-flex align-items-center justify-content-between">
+            <div class="me-3">
+                <img class="w-100" src="assets/img/logo_default.png">
             </div>
-            <div class="col-1">
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
-                    aria-controls="mobileMenu">
-                    <span class="navbar-toggler-icon"></span>
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </div>
+            <button class="navbar-toggler fs-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+                aria-controls="mobileMenu">
+                <i class="fal fa-bars"></i>
+            </button>
         </div>
     </header>
 
@@ -411,54 +502,86 @@
         <div class="offcanvas-body d-flex flex-column">
             <!-- Search Form -->
             <div class="input-group flex-nowrap mb-3">
-                <input type="text" class="form-control fw-bold fs-5" placeholder="Search..." aria-label="Search"
+                <input type="text" class="form-control" placeholder="Tìm kiếm..." aria-label="Tìm kiếm"
                     aria-describedby="addon-wrapping">
-                <a href="#" class="input-group-text bg-primary" id="addon-wrapping">
+                <a href="#" class="input-group-text bg-primary border-1 border-primary" id="addon-wrapping">
                     <i class="fa fa-search text-white"></i>
                 </a>
             </div>
 
             <!-- Menu Items -->
             <ul class="navbar-nav flex-column">
-                <li class="nav-item fw-bold fs-5">
-					<a class="nav-link custom-toggle-link text-muted" href="#" id="navbarDropdownMenuLink_Home">
-						Trang chủ <i class="fa fa-angle-down fs-5"></i>
-					</a>
-					<ul class="custom-submenu list-unstyled d-none ps-3" aria-labelledby="navbarDropdownMenuLink_Home">
-						<li><a class="text-muted py-2 d-block" href="#">Giới thiệu</a></li>
-						<li><a class="text-muted py-2 d-block" href="#">Sự hình thành và phát triển</a></li>
-					</ul>
-				</li>
-				<li class="nav-item fw-bold fs-5">
-					<a class="nav-link custom-toggle-link text-muted" href="#"  id="navbarDropdownMenuLink_TuyenSinh">
-						Tuyển sinh Cao đẳng <i class="fa fa-angle-down fs-5"></i>
-					</a>
-					<ul class="custom-submenu list-unstyled d-none ps-3"  aria-labelledby="navbarDropdownMenuLink_TuyenSinh">
-						<li><a class="text-muted py-2 d-block" href="#">Cao đẳng chính quy</a></li>
-						<li><a class="text-muted py-2 d-block" href="#">Cao đẳng chất lượng cao</a></li>
-						<li><a class="text-muted py-2 d-block" href="#">Cao đẳng làm việc tại Nhật/Đức</a></li>
-					</ul>
-				</li>
-                <li class="nav-item fw-bold fs-5">
-                    <a class="nav-link text-muted" href="#">Tuyển sinh THPT</a>
+                <li class="nav-item fw-bold">
+                    <a class="nav-link text-muted" href="#">
+                        Trang chủ
+                    </a>
                 </li>
-                <li class="nav-item fw-bold fs-5">
-                    <a class="nav-link text-muted" href="#">Đăng ký tư vấn</a>
+                <li class="nav-item fw-bold">
+                    <a class="nav-link dropdown-toggle custom-toggle-link text-muted" href="#"
+                        id="navbarDropdownMenuLink_GioiThieu">
+                        Giới thiệu
+                    </a>
+                    <ul class="custom-submenu list-unstyled d-none ps-3"
+                        aria-labelledby="navbarDropdownMenuLink_GioiThieu">
+                        <li><a class="text-muted py-2 d-block" href="#">Giới thiệu trung tâm</a></li>
+                        <li><a class="text-muted py-2 d-block" href="#">Sự hình thành và phát triển</a></li>
+                        <li><a class="text-muted py-2 d-block" href="#">Cơ cấu và tổ chức</a></li>
+                    </ul>
                 </li>
-                <li class="nav-item fw-bold fs-5">
-                    <a class="nav-link text-muted" href="#">Tin tức và sự kiện</a>
+                <li class="nav-item fw-bold">
+                    <a class="nav-link dropdown-toggle custom-toggle-link text-muted" href="#"
+                        id="navbarDropdownMenuLink_DaoTao">
+                        Đào tạo
+                    </a>
+                    <ul class="custom-submenu list-unstyled d-none ps-3"
+                        aria-labelledby="navbarDropdownMenuLink_DaoTao">
+                        <li><a class="text-muted py-2 d-block" href="#">Đào tạo lái xe hạng A1</a></li>
+                        <li><a class="text-muted py-2 d-block" href="#">Đào tạo lái xe ô tô hạng B số sàn, tự động</a>
+                        </li>
+                        <li><a class="text-muted py-2 d-block" href="#">Đào tạo lái xe ô tô hạng C1</a></li>
+                    </ul>
                 </li>
-                <li class="nav-item fw-bold fs-5">
-                    <a class="nav-link text-muted" href="#">Blog</a>
+                <li class="nav-item fw-bold">
+                    <a class="nav-link dropdown-toggle custom-toggle-link text-muted" href="#"
+                        id="navbarDropdownMenuLink_ThiThu">
+                        Thi thử
+                    </a>
+                    <ul class="custom-submenu list-unstyled d-none ps-3"
+                        aria-labelledby="navbarDropdownMenuLink_ThiThu">
+                        <li><a class="text-muted py-2 d-block" href="#">Phần mềm mô phỏng 120 câu</a></li>
+                        <li><a class="text-muted py-2 d-block" href="#">Phần mềm thi thử xe hạng B1</a></li>
+                    </ul>
                 </li>
-                <li class="nav-item fw-bold fs-5">
+                <li class="nav-item fw-bold">
+                    <a class="nav-link dropdown-toggle custom-toggle-link text-muted" href="#"
+                        id="navbarDropdownMenuLink_KhoaHoc">
+                        Khóa học
+                    </a>
+                    <ul class="custom-submenu list-unstyled d-none ps-3"
+                        aria-labelledby="navbarDropdownMenuLink_KhoaHoc">
+                        <li><a class="text-muted py-2 d-block" href="#">Đào tạo lái xe hạng B1</a></li>
+                        <li><a class="text-muted py-2 d-block" href="#">Đào tạo lái xe hạng B2</a></li>
+                        <li><a class="text-muted py-2 d-block" href="#">Đào tạo lái xe hạng C</a></li>
+                        <li><a class="text-muted py-2 d-block" href="#">Đào tạo lái xe hạng D</a></li>
+                        <li><a class="text-muted py-2 d-block" href="#">Đào tạo lái xe hạng A1</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a class="nav-link dropdown-toggle custom-toggle-link text-muted" href="#"
+                        id="navbarDropdownMenuLink_TinTuc">
+                        Tin tức và thông báo
+                    </a>
+                    <ul class="custom-submenu list-unstyled d-none ps-3"
+                        aria-labelledby="navbarDropdownMenuLink_TinTuc">
+                        <li><a class="text-muted py-2 d-block" href="#">Khai giảng khóa học</a></li>
+                        <li><a class="text-muted py-2 d-block" href="#">Kết quả sát hạch lái xe</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item fw-bold">
                     <a class="nav-link text-muted" href="#">Liên hệ</a>
                 </li>
-                <li class="nav-item fw-bold fs-5">
-                    <a class="nav-link text-muted" href="#">WooCommerce not Found</a>
-                </li>
-                <li class="nav-item fw-bold fs-5">
-                    <a class="nav-link text-muted" href="#"><i class="fa fa-envelope me-2"></i> Newsletter</a>
+                <li class="nav-item fw-bold">
+                    <a class="nav-link text-muted" href="#">Đăng nhập nội bộ</a>
                 </li>
             </ul>
 
@@ -471,65 +594,97 @@
                     <a href="mailto:daynghethaishonhcm@gmail.com" class="text-muted fs-4"><i
                             class="fa fa-envelope"></i></a>
                 </div>
-                <div class="text-center text-muted fw-bold">
-                    EMAIL: daynghethaishonhcm@gmail.com
+                <div class="text-center text-muted">
+                    daynghethaishonhcm@gmail.com
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Menu bottom mobile -->
+    <div id="menu-bottom-mobile"
+        class="position-fixed bottom-0 start-0 end-0 w-100 d-flex justify-content-around align-items-center p-0 shadow-sm d-lg-none bg-primary"
+        style="z-index: 1050;">
+        <a href="tel:0968130606"
+            class="flex-grow-1 text-white my-1 border-end border-white-25 d-flex align-items-center justify-content-center">
+            <i class="fa fa-phone fa-flip-horizontal"></i>
+            <div class="ms-3">
+                <div class="small">Gọi ngay</div>
+                <div class="small">0968 130 606</div>
+            </div>
+        </a>
+        <a href="https://maps.app.goo.gl/vKva3w4i58XKbEgPA" target="_blank"
+            class="flex-grow-1 text-center text-white my-1 border-end border-white-25 d-flex flex-column align-items-center">
+            <i class="fa fa-map-marker-alt"></i>
+            <span class="small">Chỉ đường</span>
+        </a>
+        <a href="https://zalo.me/0968130606" target="_blank"
+            class="flex-grow-1 text-center text-white my-1 d-flex flex-column align-items-center">
+            <img src="assets/img/zalo-icon.png" alt="Zalo" style="width: 18px; height: 18px;">
+            <span class="small">Zalo Chat</span>
+        </a>
     </div>
 
     <!-- Main Content from index.blade.php -->
     <div class="banner swiper bannerSwipper w-100">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-				<div class="banner-custom slide-content w-100 min-vh-80 position-relative"
-					style="height: 70vh;">
-					<div class="banner-image">
-						<img class="banner-img w-100 h-100" src="assets/img/banner_girl.png" alt="Đào tạo lái xe Thái Sơn">
-					</div>
-					<div class="banner-content container position-absolute top-50 start-50 translate-middle w-100 h-100">
-						<div class="row gx-5 h-100">
-							<div class="col d-flex align-items-center justify-content-center h-100 w-100">
-								<div class="text-center w-100" style="max-width: 600px; margin: 0 auto;">
-									<div class="banner-title fw-bold text-white"
-										style="font-size: 2.5rem; line-height: 1.2; letter-spacing: 1px; text-transform: uppercase;">
-										ĐÀO TẠO LÁI XE MÔ TÔ<br>VÀ Ô TÔ HẠNG B, C1
-									</div>
-									<div class="banner-desc fw-bold mt-3" style="color: #fff; font-size: 1.5rem;">
-										Đào tạo lái xe chuyên nghiệp
-									</div>
-									<div class="banner-note fw-bold mt-2" style="color: #fff; font-size: 1.5rem;">
-										Dạy lái tận tâm – Vững vàng tay lái
-									</div>
-									<button
-										class="banner-btn btn mt-4 w-100 fw-bold bg-white text-muted rounded-pill py-2 fs-3">
-										Đăng ký ngay
-									</button>
-								</div>
-							</div>
-							<div class="col d-flex align-items-center justify-content-center h-100">
-								<img class="banner-img" src="assets/img/girl.png">
-							</div>
-						</div>
-					</div>
-				</div>
+                <div class="banner-custom slide-content w-100 d-flex align-items-center justify-content-center position-relative"
+                    style="height: auto;">
+                    <img src="assets/img/banner_girl.png" alt="Banner"
+                        class="w-100 object-fit-cover position-absolute top-0 start-0" style="height: 100%;"
+                        onload="this.parentElement.style.height = this.height + 'px';">
+                    <div class="container position-relative">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="d-flex align-items-center justify-content-center h-100 w-100">
+                                    <div class="text-center w-100" style="max-width: 600px; margin: 0 auto;">
+                                        <div class="banner-title fw-bold text-white"
+                                            style="font-size: 2rem; line-height: 1.2; letter-spacing: 0.8px; ">
+                                            ĐÀO TẠO LÁI XE MÔ TÔ<br>VÀ Ô TÔ HẠNG B, C1
+                                        </div>
+                                        <div class="banner-desc fw-bold text-white mt-3" style=" font-size: 1.2rem;">
+                                            Đào tạo lái xe chuyên nghiệp
+                                        </div>
+                                        <div class="banner-note fw-bold text-white" style="font-size: 1.2rem;">
+                                            Dạy lái tận tâm - Vững vàng tay lái
+                                        </div>
+                                        <button
+                                            class="banner-btn btn mt-4 w-75 fw-bold bg-white text-muted rounded-pill py-2 fs-5">
+                                            Đăng ký ngay
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 d-flex align-items-end justify-content-center">
+                                <div class="banner-img d-flex align-items-end justify-content-center pb-3"
+                                    style="height: 80%;">
+                                    <img src="assets/img/girl.png" style="height: 100%; max-width: 100%;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-			<div class="swiper-pagination"></div>
+
+            <div class="swiper-pagination"></div>
         </div>
     </div>
-    <div class="container my-5">
-        <div class="row">
-            <div class="col-md-6">
+
+    <div id="about-component" class="container mt-5">
+        <div class="row g-4 g-lg-5">
+            <div class="col-lg-6">
                 <div class="bg-white h-100 d-flex align-items-center">
                     <img src="assets/img/gioi-thieu-thai-son.png" alt="Giới thiệu Thái Sơn"
                         class="img-fluid rounded w-100 h-100 object-fit-cover">
                 </div>
             </div>
-            <div class="col-md-6 ps-5">
-                <h1 class="fw-bold mb-3 text-primary" style="font-size: 2.2rem;">
-                    Trung tâm Giáo dục Nghề nghiệp Thái Sơn
+            <div class="col-lg-6">
+                <h1 class="title fw-bold mb-3 text-primary text-center text-lg-start" style="font-size: 1.8rem;">
+                    Giới thiệu về chúng tôi
                 </h1>
-                <p class="fw-bold text-muted" style="font-size: 1.2rem; line-height: 1.6; text-align: justify;"">
+                <p class="description fw-bold text-muted"
+                    style="font-size: 1.2rem; line-height: 1.6; text-align: justify;"">
                     Trung tâm Dạy nghề Thái Sơn là đơn vị thành viên trực thuộc Tổng công ty Thái Sơn – Bộ Quốc Phòng, được
                     thành lập theo Quyết định số 84/2006/QĐ-BQP ngày 20 tháng 3 năm 2006 của Bộ trưởng Bộ Quốc Phòng. Theo
                     Quyết định số 5068/QĐ-BQP ngày 17 tháng 8 năm 2022, Trung tâm chính thức đổi tên từ Trung tâm nghề Thái
@@ -537,306 +692,357 @@
                     lượng, phục vụ nhu cầu học nghề và nâng cao tay nghề lái xe cho nhân dân trên địa bàn thành phố Hồ Chí
                     Minh và các khu vực lân cận.
                 </p>
-                <a href="#" class="btn btn-primary rounded-pill px-4 py-2 mt-3 fw-bold text-white">
-                    Xem thêm
-                    <i class="fa fa-chevron-right ps-2" style="font-size: 0.8rem;"></i>
-                </a>
+                <div class=" d-flex justify-content-center">
+                    <a href=" #" class="btn btn-primary rounded-pill px-4 py-2 mt-3 fw-bold text-white">
+                        Xem thêm
+                        <i class="fa fa-chevron-right ps-2" style="font-size: 0.8rem;"></i>
+                    </a>
             </div>
         </div>
+    </div>
+    </div>
 
-        <div class="container my-5">
-            <div class="row justify-content-center text-center">
-                <!-- Đào tạo lái xe Mô tô hạng A1 -->
-                <div class="col-md-4 mb-4">
-                    <div class="p-4 h-100 d-flex flex-column align-items-center">
-                        <div class="mb-3 d-flex align-items-center justify-content-center rounded-circle bg-primary"
-                            style="width: 65px; height: 65px;">
-                            <i class="fa fa-motorcycle text-white fs-1"></i>
-                        </div>
-                        <div class="fw-bold mb-3" style="font-size: 1.5rem;">Đào tạo lái xe Mô tô hạng A1
-                        </div>
-                        <div class="fw-600 text-muted" style="font-size: 1.2rem;">
-                            Ngành nghề đa dạng, gắn liền thực tế giúp sinh viên tự tin làm chủ tương lai.
-                        </div>
+    <div id="training-component" class="container my-5">
+        <div class="row justify-content-center text-center mb-4">
+            <div class="col-12 text-center">
+                <div class="fw-bold text-primary" style="font-size: 1.5rem;">
+                    Mang đến cho bạn những trải nghiệm tuyệt vời
+                </div>
+            </div>
+        </div>
+        <div class="row g-2 g-lg-4 justify-content-center text-center">
+            <!-- Đào tạo lái xe Mô tô hạng A1 -->
+            <div class="col-12 col-md-4">
+                <div class="px-0 px-lg-4 d-flex flex-column align-items-center">
+                    <div class="mb-2 d-flex align-items-center justify-content-center rounded-circle bg-primary"
+                        style="width: 65px; height: 65px;">
+                        <i class="fa fa-motorcycle text-white fs-1"></i>
+                    </div>
+                    <div class="title fw-bold mb-2" style="font-size: 1.5rem;">Đào tạo lái xe Mô tô hạng A1
+                    </div>
+                    <div class="description fw-600 text-muted" style="font-size: 1.2rem;">
+                        Ngành nghề đa dạng, gắn liền thực tế giúp sinh viên tự tin làm chủ tương lai.
                     </div>
                 </div>
-                <!-- Đào tạo lái xe ô tô hạng B số sàn, tự động -->
-                <div class="col-md-4 mb-4 border-start border-end border-1 border-gray">
-                    <div class="p-4 h-100 d-flex flex-column align-items-center">
-                        <div class="mb-3 d-flex align-items-center justify-content-center rounded-circle bg-primary"
-                            style="width: 65px; height: 65px;">
-                            <i class="fa fa-car-side text-white fs-1"></i>
-                        </div>
-                        <div class="fw-bold mb-3" style="font-size: 1.5rem;">Đào tạo lái xe ô tô hạng B số sàn,
-                            tự động</div>
-                        <div class="fw-600 text-muted" style="font-size: 1.2rem;">
-                            Trang thiết bị tiên tiến, không gian mở, khơi nguồn sáng tạo và gắn kết.
-                        </div>
+            </div>
+            <!-- Đào tạo lái xe ô tô hạng B số sàn, tự động -->
+            <div class="col-12 col-md-4">
+                <div class="px-0 px-lg-4 d-flex flex-column align-items-center">
+                    <div class="mb-2 d-flex align-items-center justify-content-center rounded-circle bg-primary"
+                        style="width: 65px; height: 65px;">
+                        <i class="fa fa-car-side text-white fs-1"></i>
+                    </div>
+                    <div class="title fw-bold mb-2" style="font-size: 1.5rem;">Đào tạo lái xe ô tô hạng B số
+                        sàn,
+                        tự động</div>
+                    <div class="description fw-600 text-muted" style="font-size: 1.2rem;">
+                        Trang thiết bị tiên tiến, không gian mở, khơi nguồn sáng tạo và gắn kết.
                     </div>
                 </div>
-                <!-- Đào tạo lái xe ô tô hạng C1 -->
-                <div class="col-md-4 mb-4">
-                    <div class="p-4 h-100 d-flex flex-column align-items-center">
-                        <div class="mb-3 d-flex align-items-center justify-content-center rounded-circle bg-primary"
-                            style="width: 65px; height: 65px;">
-                            <i class="fa fa-truck text-white fs-1"></i>
-                        </div>
-                        <div class="fw-bold mb-3" style="font-size: 1.5rem;">Đào tạo lái xe ô tô hạng C1</div>
-                        <div class="fw-600 text-muted" style="font-size: 1.2rem;">
-                            Kết nối doanh nghiệp, mở rộng cơ hội thực tập, việc làm và hội nhập quốc tế.
-                        </div>
+            </div>
+            <!-- Đào tạo lái xe ô tô hạng C1 -->
+            <div class="col-12 col-md-4">
+                <div class="px-0 px-lg-4 d-flex flex-column align-items-center">
+                    <div class="mb-2 d-flex align-items-center justify-content-center rounded-circle bg-primary"
+                        style="width: 65px; height: 65px;">
+                        <i class="fa fa-truck text-white fs-1"></i>
+                    </div>
+                    <div class="title fw-bold mb-2" style="font-size: 1.5rem;">Đào tạo lái xe ô tô hạng C1
+                    </div>
+                    <div class="description fw-600 text-muted" style="font-size: 1.2rem;">
+                        Kết nối doanh nghiệp, mở rộng cơ hội thực tập, việc làm và hội nhập quốc tế.
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="my-5" style="background-color: #f5f5f5;">
-        <div class="container mb-3">
-            <div class="text-primary fw-bold text-center text-uppercase pt-5" style="font-size: 2.5rem;">
-                NGÀNH NGHỀ ĐÀO TẠO
+
+    <div class="container my-5">
+        <div class=" row">
+            <div class="col-12 text-center mb-4">
+                <h1 class="fw-bold text-primary" style="font-size: 1.8rem;">
+                    Các khóa học
+                </h1>
             </div>
-            <div class="row mt-4">
-                <div class="col-4 position-relative" style="height: 300px;">
-                    <div class="position-relative w-100 h-100">
-                        <div class="rounded-3 bg-white z-2 position-absolute left-0 w-100"
-                            style="top: 30px; height: calc(100% - 30px);"></div>
-                        <div class="bg-white z-3 position-absolute top-0 h-100 d-flex flex-column justify-content-start pt-3"
-                            style="left: 30px; width: calc(100% - 60px);">
-                            <h1 class="fw-bold text-center">Dược</h1>
-                            <div class="text-center mt-2 mb-3" style="font-size: 1.2rem; line-height: 1.4;">
-                                Trang bị kiến thức chuyên sâu về thuốc, tư vấn sử dụng an toàn và hiệu quả.
-                                Mở ra cơ hội nghề nghiệp đa dạng trong ngành y tế và công nghiệp dược phẩm.
+        </div>
+        <div class="row g-4 g-md-5">
+            <div class="col-12 col-md-6 col-lg-4">
+                <a href="#">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-12 col-sm-4 col-md-12">
+                            <img src="assets/img/xe-hang-b1.png" class="card-img-top rounded-3 mb-2"
+                                alt="Đào tạo lái xe hạng A">
+                        </div>
+                        <div class="col-12 col-sm-8 col-md-12">
+                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">Đào tạo lái
+                                xe hạng B1
+                            </h5>
+                            <div class="max-lines-3 text-justify">
+                                Bằng lái xe B1 tự động là loại bằng lái xe ô tô dễ học và dễ thi đậu
+                                nhất với tỉ lệ
+                                thi
+                                đậu sát hạch hơn 95%.
                             </div>
-                            <a href="#" class="fw-bold text-center position-relative custom-detail-link text-primary text-decoration-none d-inline-block ">
-                                Xem chi tiết
-                                <span class="custom-underline d-block bg-primary mt-2 mx-auto"></span>
-                            </a>
                         </div>
                     </div>
-                </div>
-                <div class="col-4" style="height: 300px;">
-                    <div class="position-relative w-100 h-100">
-                        <div class="rounded-3 bg-white z-2 position-absolute left-0 w-100"
-                            style="top: 30px; height: calc(100% - 30px);"></div>
-                        <div class="bg-white z-3 position-absolute top-0 h-100 d-flex flex-column justify-content-start pt-3"
-                            style="left: 30px; width: calc(100% - 60px);">
-                            <h1 class="fw-bold text-center">Điều dưỡng</h1>
-                            <div class="text-center mt-2 mb-3"
-                                style="font-size: 1.2rem; line-height: 1.4;">
-                                Đào tạo kỹ năng chăm sóc sức khỏe toàn diện, từ bệnh viện đến cộng đồng.
-                                Trở thành người đồng hành tin cậy, góp phần nâng cao chất lượng cuộc sống.
-                            </div>
-                            <a href="#" class="fw-bold text-center position-relative custom-detail-link text-primary text-decoration-none d-inline-block ">
-                                Xem chi tiết
-                                <span class="custom-underline d-block bg-primary mt-2 mx-auto"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4" style="height: 300px;">
-                    <div class="position-relative w-100 h-100">
-                        <div class="rounded-3 bg-white z-2 position-absolute left-0 w-100"
-                            style="top: 30px; height: calc(100% - 30px);"></div>
-                        <div class="bg-white z-3 position-absolute top-0 h-100 d-flex flex-column justify-content-start pt-3"
-                            style="left: 30px; width: calc(100% - 60px);">
-                            <h1 class="fw-bold text-center">Chăm sóc sắc đẹp</h1>
-                            <div class="text-center mt-2 mb-3"
-                                style="font-size: 1.2rem; line-height: 1.4;">
-                                Khám phá nghệ thuật làm đẹp chuyên nghiệp, từ chăm sóc da, trang điểm đến các kỹ thuật thẩm
-                                mỹ hiện đại. Hiện thực hóa đam mê và kiến tạo vẻ đẹp hoàn mỹ.
-                            </div>
-                            <a href="#" class="fw-bold text-center position-relative custom-detail-link text-primary text-decoration-none d-inline-block ">
-                                Xem chi tiết
-                                <span class="custom-underline d-block bg-primary mt-2 mx-auto"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4" style="height: 300px;">
-                    <div class="position-relative w-100 h-100">
-                        <div class="rounded-3 bg-white z-2 position-absolute left-0 w-100"
-                            style="top: 30px; height: calc(100% - 30px);"></div>
-                        <div class="bg-white z-3 position-absolute top-0 h-100 d-flex flex-column justify-content-start pt-3"
-                            style="left: 30px; width: calc(100% - 60px);">
-                            <h1 class="fw-bold text-center">Công nghệ ô tô</h1>
-                            <div class="text-center mt-2 mb-3"
-                                style="font-size: 1.2rem; line-height: 1.4;">
-                                Làm chủ công nghệ ô tô hiện đại, từ cơ khí, điện tử đến hệ thống thông minh.
-                                Khám phá cơ hội nghề nghiệp hấp dẫn trong ngành công nghiệp ô tô mới.
-                            </div>
-                            <a href="#" class="fw-bold text-center position-relative custom-detail-link text-primary text-decoration-none d-inline-block ">
-                                Xem chi tiết
-                                <span class="custom-underline d-block bg-primary mt-2 mx-auto"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4" style="height: 300px;">
-                    <div class="position-relative w-100 h-100">
-                        <div class="rounded-3 bg-white z-2 position-absolute left-0 w-100"
-                            style="top: 30px; height: calc(100% - 30px);"></div>
-                        <div class="bg-white z-3 position-absolute top-0 h-100 d-flex flex-column justify-content-start pt-3"
-                            style="left: 30px; width: calc(100% - 60px);">
-                            <h1 class="fw-bold text-center">Quản trị nhà hàng khách sạn</h1>
-                            <div class="text-center mt-2 mb-3"
-                                style="font-size: 1.2rem; line-height: 1.4;">
-                                Kiến tạo trải nghiệm dịch vụ đẳng cấp trong ngành nhà hàng – khách sạn.
-                                Phát triển kỹ năng quản lý, điều hành và nắm bắt xu hướng du lịch toàn cầu.
-                            </div>
-                            <a href="#" class="fw-bold text-center position-relative custom-detail-link text-primary text-decoration-none d-inline-block ">
-                                Xem chi tiết
-                                <span class="custom-underline d-block bg-primary mt-2 mx-auto"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4" style="height: 300px;">
-                    <div class="position-relative w-100 h-100">
-                        <div class="rounded-3 bg-white z-2 position-absolute left-0 w-100"
-                            style="top: 30px; height: calc(100% - 30px);"></div>
-                        <div class="bg-white z-3 position-absolute top-0 h-100 d-flex flex-column justify-content-start pt-3"
-                            style="left: 30px; width: calc(100% - 60px);">
-                            <h1 class="fw-bold text-center">Chất bán dẫn</h1>
-                            <div class="text-center mt-2 mb-3"
-                                style="font-size: 1.2rem; line-height: 1.4;">
-                                Trở thành chuyên gia trong lĩnh vực công nghệ cao, nền tảng của mọi thiết bị điện tử.
-                                Đón đầu xu hướng, tham gia thiết kế và sản xuất vi mạch tương lai.
-                            </div>
-                            <a href="#" class="fw-bold text-center position-relative custom-detail-link text-primary text-decoration-none d-inline-block ">
-                                Xem chi tiết
-                                <span class="custom-underline d-block bg-primary mt-2 mx-auto"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                </a>
             </div>
-            <div class="text-center py-3">
+            <div class="col-12 col-md-6 col-lg-4">
+                <a href="#">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-12 col-sm-4 col-md-12">
+                            <img src="assets/img/xe-hang-b2.png" class="card-img-top rounded-3 mb-2"
+                                alt="Đào tạo lái xe hạng B">
+                        </div>
+                        <div class="col-12 col-sm-8 col-md-12">
+                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">Đào tạo lái
+                                xe hạng B2
+                            </h5>
+                            <div class="max-lines-3 text-justify">
+                                Bằng lái xe B2 số sàn cho phép lái cả xe số sàn và tự động, phù hợp với
+                                người muốn
+                                mở
+                                rộng khả năng lái xe và cơ hội việc làm trong lĩnh vực vận tải.
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <a href="#">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-12 col-sm-4 col-md-12">
+                            <img src="assets/img/xe-hang-c.png" class="card-img-top rounded-3 mb-2"
+                                alt="Đào tạo lái xe hạng C">
+                        </div>
+                        <div class="col-12 col-sm-8 col-md-12">
+                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">Đào tạo lái
+                                xe hạng C
+                            </h5>
+                            <div class="max-lines-3 text-justify">
+                                Bằng lái xe C cho phép điều khiển xe tải có tải trọng từ 3.500 kg đến
+                                7.500 kg, mở
+                                ra
+                                nhiều cơ hội nghề nghiệp trong ngành vận tải hàng hóa và logistics với
+                                mức thu nhập
+                                hấp
+                                dẫn.
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <a href="#">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-12 col-sm-4 col-md-12">
+                            <img src="assets/img/xe-hang-d.png" class="card-img-top rounded-3 mb-2"
+                                alt="Đào tạo lái xe hạng D">
+                        </div>
+                        <div class="col-12 col-sm-8 col-md-12">
+                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">Đào tạo lái
+                                xe hạng D
+                            </h5>
+                            <div class="max-lines-3 text-justify">
+                                Bằng lái xe D cho phép điều khiển xe chở từ 10 đến 30 người, là lựa chọn
+                                lý tưởng
+                                cho
+                                người muốn điều khiển xe chở nhiều người.
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <a href="#">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-12 col-sm-4 col-md-12">
+                            <img src="assets/img/xe-hang-a1.png" class="card-img-top rounded-3 mb-2"
+                                alt="Đào tạo lái xe hạng A1">
+                        </div>
+                        <div class="col-12 col-sm-8 col-md-12">
+                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">Đào tạo lái
+                                xe hạng A1
+                            </h5>
+                            <div class="max-lines-3 text-justify">
+                                Bằng lái xe A1 cho phép điều khiển xe mô tô có công suất dưới 175cc.
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
                 <a href="#" class="btn btn-primary rounded-pill px-4 py-2 mt-3 fw-bold text-white">
                     Xem thêm
                     <i class="fa fa-chevron-right ps-2" style="font-size: 0.8rem;"></i>
                 </a>
             </div>
+        </div>
+    </div>
 
-            <div class="container py-3 rounded-4 border border-1 border-white mt-3" style="background-color: #EAEAEA;">
-                <div class="row m-1 bg-primary rounded-3 py-4 align-items-center">
-                    <div class="col-9">
-                        <div class="fw-bold text-white ps-4" style="font-size: 2rem;">
-                            MIỄN, GIẢM HỌC PHÍ CHO BỘ ĐỘI XUẤT NGŨ KHI ĐĂNG KÝ HỌC TẠI TRUNG TÂM
-                        </div>
-                    </div>
-                    <div class="col-3 px-5">
-                        <a href="#" class="btn btn-light px-4 py-3 rounded-3 text-muted fw-bold "
-                            style="font-size: 1.3rem; width: 100%;">
-                            Xem chi tiết
-                        </a>
+    <div style="background-color: #eaeaea;">
+        <div class="container py-5">
+            <div class="row bg-primary rounded-3 p-4 align-items-center">
+                <div class="col-12 col-md-8">
+                    <div class="fw-bold text-white fs-3">
+                        MIỄN, GIẢM HỌC PHÍ CHO BỘ ĐỘI XUẤT NGŨ KHI ĐĂNG KÝ HỌC TẠI TRUNG TÂM
                     </div>
                 </div>
+                <div class="col-12 col-md-4">
+                    <a href="#" class="btn btn-light px-4 py-2 rounded-3 text-muted fw-bold "
+                        style="font-size: 1.3rem; width: 100%;">
+                        Xem chi tiết
+                    </a>
+                </div>
             </div>
-            <div style="height:100px"></div>
         </div>
     </div>
 
     <div class="container my-5">
         <div class="row">
             <div class="col-12 text-center mb-4">
-                <div class="fw-bold text-primary" style="font-size: 2.5rem;">
+                <h1 class="fw-bold text-primary" style="font-size: 1.8rem;">
                     Tin tức và sự kiện
-                </div>
+                </h1>
             </div>
         </div>
         <div class="row g-4">
             <!-- Item 1 -->
-            <div class="col-md-4">
+            <div class="col-12 col-md-6 col-lg-4">
                 <a href="#">
                     <div class="h-100 border-0">
-                        <img src="assets/img/news1.jpg" class="card-img-top rounded-3 mb-2"
-                            alt="Tin tức sự kiện">
+                        <img src="assets/img/news1.jpg" class="card-img-top rounded-3 mb-2" alt="Tin tức sự kiện">
                         <div class="d-flex flex-column">
-                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">SINH VIÊN ICH GIAO LƯU CÙNG BAN GIÁM HIỆU TRƯỜNG ĐẠI HỌC ĐẠI DIỆP – CƠ HỘI VƯƠN XA CHO SINH VIÊN ICH TẠI THỊ TRƯỜNG QUỐC TẾ</h5>
-                            <div class="border-bottom border-1 border-grey mb-2" style="width: 40px;"></div>
-                            <div class="max-lines-3 text-justify">Ngày 06/03/2025, Trường Cao đẳng Quốc tế TP.HCM (ICH) đã
-                                [...]
+                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">SINH VIÊN ICH
+                                GIAO LƯU
+                                CÙNG
+                                BAN GIÁM HIỆU TRƯỜNG ĐẠI HỌC ĐẠI DIỆP – CƠ HỘI VƯƠN XA CHO SINH VIÊN ICH
+                                TẠI THỊ
+                                TRƯỜNG
+                                QUỐC TẾ</h5>
+                            <div class="border-bottom border-1 border-grey mb-2" style="width: 40px;">
+                            </div>
+                            <div class="max-lines-3 text-justify">Ngày 06/03/2025, Trường Cao đẳng Quốc
+                                tế TP.HCM
+                                (ICH)
+                                đã tổ chức buổi giao lưu đặc biệt giữa sinh viên và Ban Giám hiệu Trường Đại học Đại
+                                Diệp, mở ra nhiều cơ hội học tập và việc làm quốc tế cho sinh viên.
                             </div>
                         </div>
                     </div>
                 </a>
             </div>
             <!-- Item 2 -->
-            <div class="col-md-4">
+            <div class="col-12 col-md-6 col-lg-4">
                 <a href="#">
                     <div class="h-100 border-0">
-                        <img src="assets/img/news2.png" class="card-img-top rounded-3 mb-2"
-                            alt="Tin tức sự kiện">
+                        <img src="assets/img/news2.png" class="card-img-top rounded-3 mb-2" alt="Tin tức sự kiện">
                         <div class="d-flex flex-column">
-                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">DỰ THẢO ĐƯA TIẾNG NHẬT VÀO
+                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">DỰ THẢO ĐƯA
+                                TIẾNG NHẬT
+                                VÀO
                                 CHƯƠNG TRÌNH PHỔ THÔNG – CƠ HỘI CHO NGÀNH
                                 NGÔN NGỮ NHẬT LÊN NGÔI</h5>
-                            <div class="border-bottom border-1 border-grey mb-2" style="width: 40px;"></div>
-                            <div class="max-lines-3 text-justify">Từ năm 2025, tiếng Nhật có thể được đưa vào [...]
+                            <div class="border-bottom border-1 border-grey mb-2" style="width: 40px;">
+                            </div>
+                            <div class="max-lines-3 text-justify">Từ năm 2025, tiếng Nhật có thể được
+                                đưa vào
+                                chương trình phổ thông, đáp ứng nhu cầu học tập và phát triển ngoại ngữ của
+                                học sinh.
                             </div>
                         </div>
                     </div>
                 </a>
             </div>
             <!-- Item 3 -->
-            <div class="col-md-4">
+            <div class="col-12 col-md-6 col-lg-4">
                 <a href="#">
                     <div class="h-100 border-0">
-                        <img src="assets/img/news3.jpg" class="card-img-top rounded-3 mb-2"
-                            alt="Tin tức sự kiện">
+                        <img src="assets/img/news3.jpg" class="card-img-top rounded-3 mb-2" alt="Tin tức sự kiện">
                         <div class="d-flex flex-column">
-                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">TRƯỜNG CAO ĐẲNG QUỐC TẾ TP.HCM
+                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">TRƯỜNG CAO
+                                ĐẲNG QUỐC TẾ
+                                TP.HCM
                                 TỔ CHỨC KHÁM SỨC KHỎE ĐỊNH KỲ CHO HỌC
                                 SINH, SINH VIÊN</h5>
-                            <div class="border-bottom border-1 border-grey mb-2" style="width: 40px;"></div>
-                            <div class="max-lines-3 text-justify">Ngày 29/04 vừa qua, Trường Cao đẳng Quốc tế TP.HCM [...]
-                            </div>  
+                            <div class="border-bottom border-1 border-grey mb-2" style="width: 40px;">
+                            </div>
+                            <div class="max-lines-3 text-justify">Ngày 29/04 vừa qua, Trường Cao đẳng
+                                Quốc tế TP.HCM
+                                đã tổ chức khám sức khỏe định kỳ cho học sinh và sinh viên, đảm bảo sức khỏe
+                                tốt nhất cho các em trong suốt quá trình học tập.
+                            </div>
                         </div>
                     </div>
                 </a>
             </div>
             <!-- Item 4 -->
-            <div class="col-md-4">
+            <div class="col-12 col-md-6 col-lg-4">
                 <a href="#">
                     <div class="h-100 border-0">
-                        <img src="assets/img/news4.jpg" class="card-img-top rounded-3 mb-2"
-                            alt="Tin tức sự kiện">
+                        <img src="assets/img/news4.jpg" class="card-img-top rounded-3 mb-2" alt="Tin tức sự kiện">
                         <div class="d-flex flex-column">
-                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">Lễ ký kết phối hợp tuyển sinh và tổ chức lớp học giữa Trường Cao đẳng Quốc tế Tp.HCM và Trường Đại học Công Nghiệp Tp.HCM</h5>
-                            <div class="border-bottom border-1 border-grey mb-2" style="width: 40px;"></div>
-                            <div class="max-lines-3 text-justify">Ngày 24/10/2024 Trường Cao đẳng Quốc tế TP.HCM và trường [...]</div>
+                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">Lễ ký kết
+                                phối hợp tuyển
+                                sinh
+                                và tổ chức lớp học giữa Trường Cao đẳng Quốc tế Tp.HCM và Trường Đại học
+                                Công Nghiệp
+                                Tp.HCM</h5>
+                            <div class="border-bottom border-1 border-grey mb-2" style="width: 40px;">
+                            </div>
+                            <div class="max-lines-3 text-justify">Ngày 24/10/2024 Trường Cao đẳng Quốc
+                                tế TP.HCM và
+                                trường Đại học Công Nghiệp Tp.HCM đã tổ chức lễ ký kết phối hợp tuyển sinh và
+                                tổ chức lớp học giữa hai trường, tạo điều kiện cho sinh viên học tập và phát
+                                triển ngoại ngữ.
+                            </div>
                         </div>
                     </div>
                 </a>
             </div>
             <!-- Item 5 -->
-            <div class="col-md-4">
+            <div class="col-12 col-md-6 col-lg-4">
                 <a href="#">
                     <div class="h-100 border-0">
-                        <img src="assets/img/news5.png" class="card-img-top rounded-3 mb-2"
-                            alt="Tin tức sự kiện">
+                        <img src="assets/img/news5.png" class="card-img-top rounded-3 mb-2" alt="Tin tức sự kiện">
                         <div class="d-flex flex-column">
-                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">Đào Tạo Liên Kết Quốc Tế Với
+                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">Đào Tạo Liên
+                                Kết Quốc Tế
+                                Với
                                 Trường Đại Học Daegu - Hàn Quốc</h5>
-                            <div class="border-bottom border-1 border-grey mb-2" style="width: 40px;"></div>
-                            <div class="max-lines-3 text-justify">Ngày 18/10/2024, Trường Cao Đẳng Quốc Tế TPHCM và trường Đại [...]
-                                </div>
+                            <div class="border-bottom border-1 border-grey mb-2" style="width: 40px;">
+                            </div>
+                            <div class="max-lines-3 text-justify">Ngày 18/10/2024, Trường Cao Đẳng Quốc
+                                Tế TPHCM và
+                                trường Đại
+                                học Daegu - Hàn Quốc đã tổ chức lễ ký kết đào tạo liên kết quốc tế, tạo điều
+                                kiện cho sinh viên học tập và phát triển ngoại ngữ.
+                            </div>
                         </div>
                     </div>
                 </a>
             </div>
             <!-- Item 6 -->
-            <div class="col-md-4">
+            <div class="col-12 col-md-6 col-lg-4">
                 <a href="#">
                     <div class="h-100 border-0">
-                        <img src="assets/img/news5.png" class="card-img-top rounded-3 mb-2"
-                            alt="Tin tức sự kiện">
+                        <img src="assets/img/news5.png" class="card-img-top rounded-3 mb-2" alt="Tin tức sự kiện">
                         <div class="d-flex flex-column">
-                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">Thông Báo Chương Trình Học Bổng
+                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">Thông Báo
+                                Chương Trình
+                                Học
+                                Bổng
                                 Học Tập Và Thực Hành Tại Đài Loan
                                 Năm 2025</h5>
-                            <div class="border-bottom border-1 border-grey mb-2" style="width: 40px;"></div>
-                            <div class="max-lines-3 text-justify">Căn cứ hợp đồng hợp tác giữa Trường Cao đẳng [...]</div>
+                            <div class="border-bottom border-1 border-grey mb-2" style="width: 40px;">
+                            </div>
+                            <div class="max-lines-3 text-justify">Căn cứ hợp đồng hợp tác giữa Trường
+                                Cao đẳng Quốc tế TP.HCM và Trường Đại học Đài Loan, Trường Cao đẳng Quốc tế TP.HCM
+                                đã tổ chức chương trình học tập và thực hành tại Đài Loan năm 2025, tạo điều
+                                kiện cho sinh viên học tập và phát triển ngoại ngữ.
+                            </div>
                         </div>
                     </div>
                 </a>
@@ -855,29 +1061,30 @@
     <div class="container mt-6 mb-3">
         <div class="row">
             <div class="col-12 mb-5">
-                <div class="fw-bold text-primary border-top border-bottom border-1 border-grey" style="font-size: 2rem; width: fit-content;">
+                <div class="fw-bold text-primary border-top border-bottom border-1 border-grey"
+                    style="font-size: 2rem; width: fit-content;">
                     Đăng ký xét tuyển
                 </div>
             </div>
         </div>
         <div class="row">
-            <!-- Left Column: Thời gian tuyển sinh -->
+            <!-- Left Column: Bài viết tuyển sinh -->
             <div class="col-md-6">
                 <a href="#">
                     <div class="h-100 border-0">
-                        <img src="assets/img/news5.png" class="card-img-top rounded-3 mb-2"
+                        <img src="assets/img/uu-dai-hap-dan.jpg" class="card-img-top rounded-3 mb-2"
                             alt="Tin tức sự kiện">
                         <div class="d-flex flex-column">
-                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">Thông Báo Chương Trình Học Bổng
-                                Học Tập Và Thực Hành Tại Đài Loan
-                                Năm 2025</h5>
+                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">Thông Báo
+                                Khóa học lái xe cho người trẻ
+                            </h5>
                         </div>
                     </div>
                 </a>
             </div>
             <!-- Right Column: Phiếu đăng ký -->
-            <div class="col-md-6 border-1 border-primary border-bottom">
-                <div class="p-4 h-100">
+            <div class="col-md-6">
+                <div class="p-lg-4">
                     <div class="fw-bold text-primary mb-4 text-center" style="font-size: 1.8rem;">
                         Đăng ký ngay để được tư vấn miễn phí
                     </div>
@@ -889,24 +1096,98 @@
                             <input type="text" class="form-control py-3 fw-bold" placeholder="Số điện thoại">
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="btn btn-primary fw-bold w-50 py-2 text-white text-uppercase" style="font-size: 1.2rem;">Đăng ký</button>
+                            <button type="submit" class="btn btn-primary fw-bold w-50 py-2 text-white text-uppercase"
+                                style="font-size: 1.2rem;">Đăng ký</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-	
-    <!-- Footer component -->
-	<div include-html="shared/footer.html"></div>
 
+    <!-- Footer component -->
+    <footer class="pt-4 bg-dark text-light">
+        <div class="container">
+            <div class="row gx-4">
+                <div class="col-12 col-lg-7">
+                    <div class="d-flex flex-column flex-md-row">
+                        <div class="me-4 mb-4 mb-md-0 align-self-center">
+                            <img src="assets/img/logo.webp" alt="logo" style="height: 140px; width: auto;">
+                        </div>
+                        <div class="flex-wrap">
+                            <h1 class="text-uppercase mb-3 fw-bold text-primary">Trung tâm Giáo dục nghề nghiệp Thái Sơn
+                            </h1>
+                            <div class="m-2"><i class="fas fa-map-marker-alt me-2"></i><strong>Trụ sở chính:</strong>
+                                Số 3 đường
+                                3/2,
+                                Phường
+                                10, Quận 10, Tp Hồ Chí Minh.</div>
+                            <div class="m-2"><i class="fas fa-phone me-2"></i><strong>Hotline:</strong><span
+                                    class="text-white">0968 130 606</div>
+                            <div class="m-2"><i class="fas fa-envelope me-2"></i><strong>Email:</strong><span
+                                    class="text-white">daynghethaishonhcm@gmail.com</span></div>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4556090695737!2d106.67873767481811!3d10.776374589372402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752fed525051d9%3A0x7252bc536ba9e935!2zVHJ1bmcgdMOibSBnacOhbyBk4bulYyBuZ2jhu4EgbmdoaeG7h3AgVGjDoWkgU8ahbiAtIELhu5kgUXXhu5FjIFBow7JuZw!5e0!3m2!1sen!2sus!4v1732687700447!5m2!1sen!2sus"
+                            width="100%" height="300" style="border:0; border-radius: 8px;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-5 mt-3 mt-lg-5">
+                    <div class="mb-3">
+                        <div class="mb-2">
+                            <span class="fw-bold">Cơ sở đào tạo 1:</span>
+                            <span>Phan Văn Trị</span>
+                        </div>
+                        <div class="mb-2">
+                            <span class="fw-bold">Địa chỉ:</span>
+                            <span>364/1A Phan Văn Trị, Phường 5, Quận
+                                Gò Vấp Tp. Hồ Chí Minh</span>
+                        </div>
+                        <div class="mb-2">
+                            <span class="fw-bold">Hotline:</span>
+                            <span> (028) 35 888 499</span>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="mb-2">
+                            <span class="fw-bold">Sân tập 1:</span>
+                            <span>Nguyễn Văn Khả</span>
+                        </div>
+                        <div class="mb-2">
+                            <span class="fw-bold">Địa chỉ:</span>
+                            <span>Hẻm 687/8 Nguyễn Văn Khạ, ấp Cây Sộp, xã Tân An Hội, huyện Củ Chi, Tp. Hồ Chí
+                                Minh</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- Copyright -->
+        <div class="py-3 bg-black">
+            <div class="container">
+                <span class="small" style="font-size: 0.8em;">Copyright 2025 © <b>Trung tâm Giáo dục nghề nghiệp Thái
+                        Sơn</b></span>
+            </div>
+        </div>
+
+        <a id="to-top" class="d-flex justify-content-center align-items-center text-gray bg-primary">
+            <i class="fal fa-chevron-up"></i>
+        </a>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap JS Bundle (includes Popper) -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-	
-	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-	<script src="assets/js/app.js"></script>
+
     <script>
         // Swiper initialization from index.blade.php
         var swiper = new Swiper(".bannerSwipper", {
@@ -918,27 +1199,32 @@
 
         // Tooltip initialization from header.blade.php
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-        tooltipTriggerList.forEach(function(tooltipTriggerEl) {
+        tooltipTriggerList.forEach(function (tooltipTriggerEl) {
             new bootstrap.Tooltip(tooltipTriggerEl);
         });
 
         // DOMContentLoaded listener and scroll logic from header.blade.php
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             includeHTML();
 
             let lastScrollTop = 0;
             const mainHeader = document.getElementById('mainHeader');
+            const mobileHeader = document.getElementById('mobileHeader');
             const infoHeader = document.getElementById('infoHeader');
-            window.addEventListener('scroll', function() {
+            window.addEventListener('scroll', function () {
                 let st = window.pageYOffset || document.documentElement.scrollTop;
                 if (st > mainHeader.offsetHeight + 20) {
                     mainHeader.classList.add('show');
                     mainHeader.classList.add('fixed-header');
                     mainHeader.classList.add('shadow');
+                    mobileHeader.classList.add('fixed-header');
+                    mobileHeader.classList.add('show');
                 } else if (st < 20) {
                     mainHeader.classList.remove('fixed-header');
                     mainHeader.classList.remove('show');
                     mainHeader.classList.remove('shadow');
+                    mobileHeader.classList.remove('fixed-header');
+                    mobileHeader.classList.remove('show');
                 }
                 lastScrollTop = st <= 0 ? 0 : st;
             }, false);
@@ -946,9 +1232,9 @@
             // Custom script to close other dropdowns when one is opened in offcanvas
             const offcanvas = document.getElementById('mobileMenu');
             if (offcanvas) {
-                offcanvas.addEventListener('show.bs.dropdown', function(event) {
+                offcanvas.addEventListener('show.bs.dropdown', function (event) {
                     const dropdownToggles = offcanvas.querySelectorAll('.dropdown-toggle[aria-expanded="true"]');
-                    dropdownToggles.forEach(function(toggle) {
+                    dropdownToggles.forEach(function (toggle) {
                         if (toggle !== event.target) {
                             bootstrap.Dropdown.getInstance(toggle).hide();
                         }
@@ -958,7 +1244,7 @@
                 // Custom script for custom toggle menus in offcanvas
                 const customToggleLinks = offcanvas.querySelectorAll('.custom-toggle-link');
                 customToggleLinks.forEach(link => {
-                    link.addEventListener('click', function(e) {
+                    link.addEventListener('click', function (e) {
                         e.preventDefault();
                         const submenu = this.nextElementSibling;
 
@@ -984,44 +1270,51 @@
                     });
                 });
             }
-			
-			// Các biến cấu hình
-			const offset = 300;
-			const offset_opacity = 1200;
-			const scroll_top_duration = 700; // Không còn cần nếu dùng scrollTo với behavior: 'smooth'
 
-			// Lấy phần tử nút back-to-top
-			const backToTop = document.getElementById('to-top');
+            // Các biến cấu hình
+            const offset = 300;
+            const offset_opacity = 1200;
+            const scroll_top_duration = 700; // Không còn cần nếu dùng scrollTo với behavior: 'smooth'
 
-			// Theo dõi sự kiện scroll
-			window.addEventListener('scroll', function () {
-				const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            // Lấy phần tử nút back-to-top
+            const backToTop = document.getElementById('to-top');
 
-				if (scrollTop > offset) {
-					backToTop.classList.add('cd-is-visible');
-					if (scrollTop > offset_opacity) {
-						backToTop.classList.add('cd-fade-out');
-					} else {
-						backToTop.classList.remove('cd-fade-out');
-					}
-				} else {
-					backToTop.classList.remove('cd-is-visible', 'cd-fade-out');
-				}
-			});
+            // Theo dõi sự kiện scroll
+            window.addEventListener('scroll', function () {
+                const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-			// Sự kiện click: cuộn lên đầu
-			backToTop.addEventListener('click', function (event) {
-				event.preventDefault();
-				window.scrollTo({
-					top: 0,
-					behavior: 'smooth'
-				});
-			});
+                if (scrollTop > offset) {
+                    backToTop.classList.add('cd-is-visible');
+                    if (scrollTop > offset_opacity) {
+                        backToTop.classList.add('cd-fade-out');
+                    } else {
+                        backToTop.classList.remove('cd-fade-out');
+                    }
+                } else {
+                    backToTop.classList.remove('cd-is-visible', 'cd-fade-out');
+                }
+            });
+
+            // Sự kiện click: cuộn lên đầu
+            backToTop.addEventListener('click', function (event) {
+                event.preventDefault();
+                // Sử dụng jQuery animate để đảm bảo smooth scroll trên mọi trình duyệt
+                $('html, body').animate({
+                    scrollTop: 0
+                }, scroll_top_duration);
+                // Fallback cho trình duyệt không hỗ trợ jQuery
+                if (typeof $ === 'undefined') {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                }
+            });
 
         });
 
         function includeHTML() {
-            var z, i, elmnt, file;
+            var z, i, elmnt, file, xhttp;
             /* Loop through a collection of all HTML elements: */
             z = document.getElementsByTagName("*");
             for (i = 0; i < z.length; i++) {
@@ -1029,29 +1322,19 @@
                 /*search for elements with a certain atrribute:*/
                 file = elmnt.getAttribute("include-html");
                 if (file) {
-                    /* 
-                    CORS policy issue: Using fetch with local files won't work when opening HTML directly
-                    This function now requires a local server like Live Server to work properly
-                    */
-                    fetch(file)
-                        .then(response => {
-                            if (response.ok) {
-                                return response.text();
-                            }
-                            return "Page not found.";
-                        })
-                        .then(data => {
-                            elmnt.innerHTML = data;
+                    /* Make an HTTP request using the attribute value as the file name: */
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
                             /* Remove the attribute, and call this function once more: */
                             elmnt.removeAttribute("include-html");
                             includeHTML();
-                        })
-                        .catch(error => {
-                            console.error("Failed to include HTML:", error);
-                            elmnt.innerHTML = "Error loading the page. Please use a local server like Live Server.";
-                            elmnt.removeAttribute("include-html");
-                            includeHTML();
-                        });
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
                     /* Exit the function: */
                     return;
                 }
@@ -1059,4 +1342,5 @@
         }
     </script>
 </body>
+
 </html>

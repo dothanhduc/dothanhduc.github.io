@@ -2,55 +2,63 @@
   padding: 4px 0;
 }
 
-#dot-plus .plus {
-  position: absolute;
-  top: 20%;
-  left: 0.68%;
+#menu-bottom-mobile .fa-phone {
+  animation: tada 1.2s infinite;
 }
 
-#dot-plus .plus {
-  border: 1px solid #ba84ea;
-  width: 12px;
-  height: 12px;
-  opacity: 1;
-  background-color: rgba(238, 46, 36, .2);
-  border-radius: 100%;
-  -webkit-animation-duration: 1.25s;
-  animation-duration: 1.25s;
-  -webkit-animation-name: sonar;
-  animation-name: sonar;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  display: block;
-}
-
-@-webkit-keyframes sonar {
+@-webkit-keyframes tada {
   0% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1)
+    transform: scaleX(-1);
+  }
+
+  10%,
+  20% {
+    transform: scale3d(-.9, .9, .9) rotate(-3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale3d(-1.3, 1.3, 1.3) rotate(3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    transform: scale3d(-1.3, 1.3, 1.3) rotate(-3deg);
   }
 
   100% {
-    -webkit-transform: scale(3);
-    transform: scale(3);
-    opacity: 0
+    transform: scaleX(-1);
   }
 }
 
-@keyframes sonar {
+@keyframes tada {
   0% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1)
+    transform: scaleX(-1);
+  }
+
+  10%,
+  20% {
+    transform: scale3d(-.9, .9, .9) rotate(-3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale3d(-1.3, 1.3, 1.3) rotate(3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    transform: scale3d(-1.3, 1.3, 1.3) rotate(-3deg);
   }
 
   100% {
-    -webkit-transform: scale(3);
-    transform: scale(3);
-    opacity: 0
+    transform: scaleX(-1);
   }
 }
 
@@ -413,6 +421,38 @@
   justify-content: center !important;
 }
 
+@media only screen and (max-width: 991px) {
+  .banner-title {
+    font-size: 1.6rem !important;
+  }
+
+  .banner-desc {
+    font-size: 1.2rem !important;
+  }
+
+  .banner-note {
+    font-size: 1.2rem !important;
+  }
+
+  #about-component .description {
+    font-size: 1rem !important;
+    font-weight: inherit !important;
+  }
+
+  #training-component .title {
+    font-size: 1rem !important;
+  }
+
+  #training-component .description {
+    font-size: 1rem !important;
+    font-weight: inherit !important;
+  }
+
+  footer {
+    margin-bottom: 50px !important;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .anchor {
     display: block;
@@ -427,321 +467,33 @@
     left: 1rem;
     bottom: 2rem;
   }
-}
 
-/* css (hien)*/
-.navbar-toggler {
-  border: white solid 1px !important;
-}
-/* liên hệ */
-.contact {
-  background-color: white !important;
-  margin-top: 10vh;
-  padding: 1.5rem;
-}
+  .banner-title {
+    font-size: 1.5rem !important;
+    letter-spacing: inherit !important;
+    margin-top: 15% !important;
+  }
 
-.location-list {
-  max-height: 400px;
-  overflow-y: auto;
-  padding-right: 10px;
-}
-.location-item {
-  background: white;
-  padding: 15px;
-  margin-bottom: 10px;
-  border-bottom: 1px solid;
-}
-.location-title {
-  color: #e60026;
-  font-weight: bold;
-}
+  .banner-desc {
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+  }
 
+  .banner-note {
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+  }
 
-/* fontweight */
-.heading1 {
-  font-size: 1.2rem !important;
-  font-weight: bold !important;
-}
-.heading2 {
-  font-size: 1.2rem !important;
-}
-.title {
-  font-size: 1rem !important;
-}
-.subtitle {
-  font-size: 0.8rem !important;
-}
-.text {
-  font-size: 1rem !important;
-}
-/* home */
-.branch-swiper .swiper-pagination-bullet-active {
-  background-color: var(--bs-primary) !important;
-  opacity: 1;
-  width: 14px;
-  height: 14px;
-}
-.room {
-  height: 80vh;
-}
-.room-content {
-  padding: 1.5rem 1.5rem 1.5rem 0rem;
-}
-
-@media (max-width: 768px) {
-  .room {
-    flex-direction: column !important;
+  .banner-img {
     height: 100% !important;
   }
 
-  .room-image {
-    width: 100% !important;
-    aspect-ratio: 1 / 1 !important;
-  }
-
-  .room-content {
-    padding: 0rem 1.5rem 1.5rem 1.5rem !important;
-    text-align: left !important;
-  }
-
-  .btn {
-    margin-top: 20px !important;
+  .banner-img img {
+    height: 85% !important;
   }
 }
 
-.status-color {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-.booked {
-  background-color: grey !important;
-  color: white !important;
-  pointer-events: none;
-  border: grey 1px solid !important;
-}
-
-.available {
-  background-color: white !important;
-  color: var(--bs-primary) !important;
-  border-color: var(--bs-primary);
-  border-style: solid;
-  border-width: 1px;
-}
-
-.booking {
-  background-color: var(--bs-primary) !important;
-  color: white !important;
-}
-
-/* Giới hạn độ rộng của DateSwiper */
-.date-swiper-container {
-  .swiper-slide {
-    width: 5rem;
-    height: 6rem;
-  }
-}
-
-#booking-room-action .btn-time {
-    --bs-btn-padding-x: 0.75rem;
-    --bs-btn-padding-y: 0.375rem;
-    --bs-btn-font-family: ;
-    --bs-btn-font-size: 1rem;
-    --bs-btn-font-weight: 400;
-    --bs-btn-line-height: 1.5;
-    --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-    --bs-btn-disabled-opacity: 0.65;
-    --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
-    display: inline-block;
-    padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
-    font-family: var(--bs-btn-font-family);
-    font-size: var(--bs-btn-font-size);
-    font-weight: var(--bs-btn-font-weight);
-    line-height: var(--bs-btn-line-height);
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
-    cursor: pointer;
-    user-select: none;
-}
-
-.btn-time {
-  width: 8rem;
-  height: 2.5rem;
-  display: flex;
-  position: relative;
-  background-color: white;
-  color: var(--bs-primary);
-  border: 1px solid var(--bs-primary);
-  border-radius: 0.5rem;
-  cursor: pointer;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Icon button*/
-.btn-badge {
-  width: 1.5rem;
-  height: 1.5rem;
-  position: absolute;
-  top: -0.5rem;
-  right: 0.1rem;
-}
-
-@keyframes shake {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(-10deg);
-  }
-  50% {
-    transform: rotate(10deg);
-  }
-  75% {
-    transform: rotate(-10deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.gif-badge {
-  animation: shake 0.5s ease-in-out infinite;
-}
-
-.sale-badge {
-  animation: blink 1s infinite;
-}
-
-@media (max-width: 768px) {
-  .btn {
-    margin: 1rem 0rem 0rem 0rem;
-  }
-}
-
-.booking-btn {
-  width: 10rem;
-  margin-top: 1.5rem;
-  display: flex;
-  justify-content: flex-end;
-
-}
-.booking-btn button {
-  border-radius: 12px;
-}
-
-#booking-room-info .table-container {
-  max-height: 30rem;
-}
-
-thead th,
-tbody td {
-  min-width: 100px;
-  max-width: 150px;
-  height: 1.5rem;
-  text-align: center;
-  border: 1px solid gray !important;
-  vertical-align: middle;
-}
-@media (max-width: 768px) {
-  thead th,
-  tbody td {
-    min-width: 100px;
-    max-width: 100px;
-    height: 1rem;
-  }
-}
-
-.sticky-header th {
-  position: sticky;
-  top: 0;
-  color: white !important;
-  z-index: 1;
-  border: 1px solid gray !important;
-}
-
-.scrolled:not(:last-child) {
-  z-index: 100 !important;
-}
-
-
-.sticky-column-1 {
-  position: sticky;
-  left: 0px;
-  z-index: 3 !important;
-  color: white !important;
-  border: 1px solid gray !important;
-  vertical-align: middle;
-  text-align: center;
-}
-
-.sticky-column-2 {
-  position: sticky;
-  left: 100px;
-  z-index: 2 !important;
-  color: white !important;
-  border: 1px solid gray !important;
-}
-
-.vertical-merge {
-  writing-mode: horizontal-tb;
-}
-
-/* Post css */
-.nav-pills .nav-link {
-  color: #555;
-  border-radius: 0;
-  text-align: left;
-  font-size: 15px;
-}
-
-.nav-pills .nav-link:hover {
-  background-color: #f2f2f2;
-  color: #000;
-}
-
-.nav-pills .nav-link.active {
-  background-color: #fd5f7c;
-  color: white;
-  font-weight: 500;
-}
-
-.highlight-phone {
-  color: #ff4d4d;
-  /* màu đỏ cho số điện thoại */
-  font-weight: 500;
-}
-
-.highlight-email {
-  color: #e63946;
-
-  /* màu đỏ đậm cho email */
-}
-
-/* Tra cứu booking */
-.btn-pink {
-  background-color: #ff5b7f;
-  color: white;
-}
-.btn-pink:hover {
-  background-color: #ff3c69;
-}
-.modal-header .btn-close {
-  margin: -1rem -1rem -1rem auto;
-}
-.text-red {
-  color: red;
-  font-weight: 500;
+.offcanvas.offcanvas-start {
+  width: 80vw;
+  height: calc(100vh - 50px);
 }
