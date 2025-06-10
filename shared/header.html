@@ -1,0 +1,370 @@
+<!-- Topbar-->
+<div class="topbar d-none d-lg-flex" style="background: #f9076b;">
+    <div class="container d-flex justify-content-between align-items-center text-light">
+        <nav class="navbar-topbar">
+            <ul class="navbar-nav flex-row align-items-center" style="gap: 15px;">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tra cứu thông tin học viên</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Đăng nhập nội bộ</a>
+                </li>
+            </ul>
+        </nav>
+        <div>
+            <span class="mx-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Follow us on Facebook"
+                style="cursor: pointer;">
+                <i class="fab fa-facebook-f"></i>
+            </span>
+            <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Follow us on Instagram"
+                style="cursor: pointer;">
+                <i class="fab fa-instagram"></i>
+            </span>
+            <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Follow us on Twitter"
+                style="cursor: pointer;">
+                <i class="fab fa-twitter"></i>
+            </span>
+        </div>
+    </div>
+</div>
+
+<header class="header d-none d-lg-block shadow-sm" id="mainHeader">
+    <!-- Phần logo, tên trung tâm, hotline, email, nộp hồ sơ -->
+    <div id="infoHeader" style="background-color: transparent;">
+        <div class="container py-3 border-bottom">
+            <div class="d-flex">
+                <div class="me-auto">
+                    <div class="text-nowrap d-inline-block">
+                        <div class="d-flex align-items-center" style="min-width: 140px;">
+                            <img src="assets/img/logo_default.png" style="height: 60px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-2">
+                    <div class="col-12 col-xl-auto d-flex justify-content-end">
+                        <!-- Hotline -->
+                        <a href="tel:0968130606" class="d-flex align-items-center gap-2 gap-xl-3 border-end px-3">
+                            <i class="fal fa-2x fa-mobile d-none d-xl-block" style="color: #c8c8c8;"></i>
+                            <i class="fal fa-mobile d-block d-xl-none" style="color: #c8c8c8;"></i>
+                            <div class="d-flex flex-column">
+                                <div class="d-none d-xl-block text-uppercase text-muted" style="font-size: 12px;">
+                                    HOTLINE</div>
+                                <div class="fw-bold" style="line-height: 1.2;">0968130606</div>
+                            </div>
+                        </a>
+                        <!-- Email -->
+                        <a href="mailto:daynghethaishonhcm@gmail.com"
+                            class="d-flex align-items-center gap-2 gap-xl-3 px-3">
+                            <i class="fal fa-envelope fa-2x d-none d-xl-block" style="color: #c8c8c8;"></i>
+                            <i class="fal fa-envelope d-block d-xl-none" style="color: #c8c8c8;"></i>
+                            <div class="d-flex flex-column">
+                                <div class="d-none d-xl-block text-uppercase text-muted" style="font-size: 12px;">
+                                    EMAIL</div>
+                                <div class="fw-bold" style="line-height: 1.2;">daynghethaishonhcm@gmail.com</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-xl-auto align-self-center">
+                        <div class="d-flex justify-content-end flex-shrink-1 min-width-0">
+                            <a href="javascript:void(0)"
+                                class="btn btn-primary fw-bold rounded-pill px-4 py-2 text-white"
+                                onclick="scrollToRegisterForm()">Đăng
+                                ký
+                                online</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thanh menu chính -->
+    <nav class="navbar-main bg-white justify-content-between navbar-expand-lg">
+        <div class="container position-relative">
+            <ul class="navbar-nav flex-row align-items-center w-100 gap-4 py-2">
+                <li class="nav-item fw-bold">
+                    <a class="nav-link text-muted" href="/">
+                        Trang chủ
+                    </a>
+                </li>
+                <li class="nav-item fw-bold dropdown">
+                    <a class="nav-link dropdown-toggle text-muted" href="gioi-thieu.html">
+                        Giới thiệu
+                    </a>
+                    <ul class="dropdown-menu p-4" aria-labelledby="navbarDropdownMenuLink_TrangChu">
+                        <li>
+                            <a class="dropdown-item border-bottom py-3" href="#">
+                                Giới thiệu trung tâm
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item border-bottom py-3" href="#">
+                                Sự hình thành và phát triển
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item py-3" href="#">
+                                Cơ cấu và tổ chức
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item fw-bold dropdown">
+                    <a class="nav-link dropdown-toggle text-muted" href="dao-tao.html">
+                        Đào tạo
+                    </a>
+                    <ul class="dropdown-menu p-4" aria-labelledby="navbarDropdownMenuLink_TSCD">
+                        <li>
+                            <a class="dropdown-item border-bottom py-3" href="#">
+                                Đào tạo lái xe hạng A1
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item border-bottom py-3" href="#">
+                                Đào tạo lái xe ô tô hạng B số sàn, tự động
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item py-3" href="#">
+                                Đào tạo lái xe ô tô hạng C1
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item fw-bold dropdown">
+                    <a class="nav-link dropdown-toggle text-muted" href="thi-thu.html">
+                        Thi thử
+                    </a>
+                    <ul class="dropdown-menu p-4" aria-labelledby="navbarDropdownMenuLink_TSCD">
+                        <li>
+                            <a class="dropdown-item border-bottom py-3" href="#">
+                                Phần mềm mô phỏng 120 câu
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item py-3" href="#">
+                                Phần mềm thi thử xe hạng B1
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item fw-bold dropdown">
+                    <a class="nav-link dropdown-toggle text-muted" href="khoa-hoc.html">
+                        Khóa học
+                    </a>
+                    <ul class="dropdown-menu p-4" aria-labelledby="navbarDropdownMenuLink_TSCD">
+                        <li>
+                            <a class="dropdown-item border-bottom py-3" href="#">
+                                Đào tạo lái xe hạng B1
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item border-bottom py-3" href="#">
+                                Đào tạo lái xe hạng B2
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item border-bottom py-3" href="#">
+                                Đào tạo lái xe hạng C
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item border-bottom py-3" href="#">
+                                Đào tạo lái xe hạng D
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item py-3" href="#">
+                                Đào tạo lái xe hạng A1
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item fw-bold dropdown">
+                    <a class="nav-link dropdown-toggle text-muted" href="tin-tuc.html">
+                        Tin tức và thông báo
+                    </a>
+                    <ul class="dropdown-menu p-4" aria-labelledby="navbarDropdownMenuLink_TSCD">
+                        <li>
+                            <a class="dropdown-item border-bottom py-3" href="#">
+                                Khai giảng khóa học
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item py-3" href="#">
+                                Kết quả sát hạch lái xe
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a class="nav-link text-muted" href="lien-he.html">Liên hệ</a>
+                </li>
+                <li class="nav-item fw-bold ms-auto dropdown dropdown-search">
+                    <a class="nav-link text-muted" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa fa-search text-muted"></i>
+                    </a>
+                    <ul class="dropdown-menu p-4 dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink"
+                        style="width: 300px;">
+                        <li>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Tìm kiếm..."
+                                    aria-label="Tìm kiếm..." aria-describedby="button-addon2">
+                                <button class="btn btn-primary" type="button" id="button-addon2">
+                                    <i class="fa fa-search text-white"></i>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!-- Mobile Menu Trigger -->
+<header class="header d-lg-none d-flex bg-white shadow-sm" style="min-height: 64px;" id="mobileHeader">
+    <div class="main-nav container d-flex align-items-center justify-content-between">
+        <div class="me-3">
+            <img class="w-100" src="assets/img/logo_default.png">
+        </div>
+        <button class="navbar-toggler fs-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+            aria-controls="mobileMenu">
+            <i class="fal fa-bars"></i>
+        </button>
+    </div>
+</header>
+
+<!-- Mobile Offcanvas Menu -->
+<div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="mobileMenuLabel"></h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+        <!-- Search Form -->
+        <div class="input-group flex-nowrap mb-3">
+            <input type="text" class="form-control" placeholder="Tìm kiếm..." aria-label="Tìm kiếm"
+                aria-describedby="addon-wrapping">
+            <a href="#" class="input-group-text bg-primary border-1 border-primary" id="addon-wrapping">
+                <i class="fa fa-search text-white"></i>
+            </a>
+        </div>
+
+        <!-- Menu Items -->
+        <ul class="navbar-nav flex-column">
+            <li class="nav-item fw-bold">
+                <a class="nav-link text-muted" href="#">
+                    Trang chủ
+                </a>
+            </li>
+            <li class="nav-item fw-bold">
+                <a class="nav-link dropdown-toggle custom-toggle-link text-muted" href="#"
+                    id="navbarDropdownMenuLink_GioiThieu">
+                    Giới thiệu
+                </a>
+                <ul class="custom-submenu list-unstyled d-none ps-3" aria-labelledby="navbarDropdownMenuLink_GioiThieu">
+                    <li><a class="text-muted py-2 d-block" href="#">Giới thiệu trung tâm</a></li>
+                    <li><a class="text-muted py-2 d-block" href="#">Sự hình thành và phát triển</a></li>
+                    <li><a class="text-muted py-2 d-block" href="#">Cơ cấu và tổ chức</a></li>
+                </ul>
+            </li>
+            <li class="nav-item fw-bold">
+                <a class="nav-link dropdown-toggle custom-toggle-link text-muted" href="#"
+                    id="navbarDropdownMenuLink_DaoTao">
+                    Đào tạo
+                </a>
+                <ul class="custom-submenu list-unstyled d-none ps-3" aria-labelledby="navbarDropdownMenuLink_DaoTao">
+                    <li><a class="text-muted py-2 d-block" href="#">Đào tạo lái xe hạng A1</a></li>
+                    <li><a class="text-muted py-2 d-block" href="#">Đào tạo lái xe ô tô hạng B số sàn, tự động</a>
+                    </li>
+                    <li><a class="text-muted py-2 d-block" href="#">Đào tạo lái xe ô tô hạng C1</a></li>
+                </ul>
+            </li>
+            <li class="nav-item fw-bold">
+                <a class="nav-link dropdown-toggle custom-toggle-link text-muted" href="#"
+                    id="navbarDropdownMenuLink_ThiThu">
+                    Thi thử
+                </a>
+                <ul class="custom-submenu list-unstyled d-none ps-3" aria-labelledby="navbarDropdownMenuLink_ThiThu">
+                    <li><a class="text-muted py-2 d-block" href="#">Phần mềm mô phỏng 120 câu</a></li>
+                    <li><a class="text-muted py-2 d-block" href="#">Phần mềm thi thử xe hạng B1</a></li>
+                </ul>
+            </li>
+            <li class="nav-item fw-bold">
+                <a class="nav-link dropdown-toggle custom-toggle-link text-muted" href="#"
+                    id="navbarDropdownMenuLink_KhoaHoc">
+                    Khóa học
+                </a>
+                <ul class="custom-submenu list-unstyled d-none ps-3" aria-labelledby="navbarDropdownMenuLink_KhoaHoc">
+                    <li><a class="text-muted py-2 d-block" href="#">Đào tạo lái xe hạng B1</a></li>
+                    <li><a class="text-muted py-2 d-block" href="#">Đào tạo lái xe hạng B2</a></li>
+                    <li><a class="text-muted py-2 d-block" href="#">Đào tạo lái xe hạng C</a></li>
+                    <li><a class="text-muted py-2 d-block" href="#">Đào tạo lái xe hạng D</a></li>
+                    <li><a class="text-muted py-2 d-block" href="#">Đào tạo lái xe hạng A1</a></li>
+                </ul>
+            </li>
+            <li class="nav-item fw-bold">
+                <a class="nav-link dropdown-toggle custom-toggle-link text-muted" href="#"
+                    id="navbarDropdownMenuLink_TinTuc">
+                    Tin tức và thông báo
+                </a>
+                <ul class="custom-submenu list-unstyled d-none ps-3" aria-labelledby="navbarDropdownMenuLink_TinTuc">
+                    <li><a class="text-muted py-2 d-block" href="#">Khai giảng khóa học</a></li>
+                    <li><a class="text-muted py-2 d-block" href="#">Kết quả sát hạch lái xe</a></li>
+                </ul>
+            </li>
+            <li class="nav-item fw-bold">
+                <a class="nav-link text-muted" href="#">Liên hệ</a>
+            </li>
+            <li class="nav-item fw-bold">
+                <a class="nav-link text-muted" href="javascript:void(0)" onclick="scrollToRegisterForm()">Đăng ký tư
+                    vấn</a>
+            </li>
+            <li class="nav-item fw-bold">
+                <a class="nav-link text-muted" href="#">Tra cứu thông tin học viên</a>
+            </li>
+            <li class="nav-item fw-bold">
+                <a class="nav-link text-muted" href="#">Đăng nhập nội bộ</a>
+            </li>
+        </ul>
+
+        <!-- Social Media and Contact -->
+        <div class="mt-auto pt-4 border-top">
+            <div class="d-flex justify-content-center mb-3 gap-3">
+                <a href="#" class="text-muted fs-4"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-muted fs-4"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-muted fs-4"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:daynghethaishonhcm@gmail.com" class="text-muted fs-4"><i class="fa fa-envelope"></i></a>
+            </div>
+            <div class="text-center text-muted">
+                daynghethaishonhcm@gmail.com
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Menu bottom mobile -->
+<div id="menu-bottom-mobile"
+    class="position-fixed bottom-0 start-0 end-0 w-100 d-flex justify-content-around align-items-center p-0 shadow-sm d-lg-none bg-primary"
+    style="z-index: 1200;">
+    <a href="tel:0968130606"
+        class="flex-grow-1 text-white my-1 border-end border-white-25 d-flex align-items-center justify-content-center">
+        <i class="fa fa-phone fa-flip-horizontal"></i>
+        <div class="ms-3">
+            <div class="small">Gọi ngay</div>
+            <div class="small">0968 130 606</div>
+        </div>
+    </a>
+    <a href="https://maps.app.goo.gl/vKva3w4i58XKbEgPA" target="_blank"
+        class="flex-grow-1 text-center text-white my-1 border-end border-white-25 d-flex flex-column align-items-center">
+        <i class="fa fa-map-marker-alt"></i>
+        <span class="small">Chỉ đường</span>
+    </a>
+    <a href="https://zalo.me/0968130606" target="_blank"
+        class="flex-grow-1 text-center text-white my-1 d-flex flex-column align-items-center">
+        <img src="assets/svg/zalo.svg" alt="Zalo" style="width: 18px; height: 18px;">
+        <span class="small">Zalo Chat</span>
+    </a>
+</div>

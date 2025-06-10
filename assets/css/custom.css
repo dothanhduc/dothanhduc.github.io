@@ -493,7 +493,229 @@
   }
 }
 
+.navbar-topbar .nav-link {
+  position: relative;
+  transition: color 0.2s;
+}
+
+.navbar-topbar .nav-link:hover,
+.navbar-topbar .nav-link:focus {
+  text-decoration: none;
+}
+
+.navbar-topbar .nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #bf2642;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: #ffffff;
+}
+
+.navbar-topbar .nav-link:hover::after,
+.navbar-topbar .nav-link:focus::after,
+.navbar-topbar .nav-item.active .nav-link::after {
+  width: 100%;
+}
+
+.navbar-main .nav-link {
+  position: relative;
+  transition: color 0.2s;
+}
+
+.navbar-main .nav-link:hover,
+.navbar-main .nav-link:focus {
+  text-decoration: none;
+}
+
+.navbar-main .nav-link::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #bf2642;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: #ffffff;
+}
+
+.navbar-main .nav-link:hover::before,
+.navbar-main .nav-link:focus::before,
+.navbar-main .nav-item.active .nav-link::before {
+  width: 100%;
+}
+
+.navbar-nav .dropdown-toggle:after {
+  content: "\f107";
+  font-family: Font Awesome\ 5 Pro;
+  font-weight: 300;
+  border: none;
+  vertical-align: inherit;
+  margin-left: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .dropdown-search:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+    right: 0;
+    left: auto;
+  }
+}
+
+.fixed-header {
+  position: fixed;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  z-index: 1050;
+  background: #fff;
+  transition: top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fixed-header.show {
+  top: 0;
+  animation: slideDown 0.8s cubic-bezier(0.8, 0, 0.2, 1);
+}
+
+@keyframes slideDown {
+  from {
+    top: -200px;
+  }
+
+  to {
+    top: 0;
+  }
+}
+
+.custom-submenu {
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.custom-submenu.d-none {
+  max-height: 0;
+  opacity: 0;
+}
+
+.custom-submenu:not(.d-none) {
+  max-height: 200px;
+  /* Adjust as needed */
+  opacity: 1;
+}
+
+.custom-toggle-link .fa-angle-down {
+  transition: transform 0.3s ease-in-out;
+}
+
+.custom-detail-link .custom-underline {
+  height: 1px;
+  width: 60px;
+  transition:
+    width 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.1s;
+}
+
+.custom-detail-link:hover,
+.custom-detail-link:focus {
+  color: #333333;
+}
+
+.custom-detail-link:hover .custom-underline,
+.custom-detail-link:focus .custom-underline {
+  width: 120px;
+  height: 3px;
+  background: #333333;
+}
+
+.custom-more-link .custom-underline {
+  height: 1px;
+  width: 40px;
+  transition:
+    width 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.1s;
+}
+
+.custom-more-link:hover,
+.custom-more-link:focus {
+  color: #333333;
+}
+
+.custom-more-link:hover .custom-underline,
+.custom-more-link:focus .custom-underline {
+  width: 80px;
+  height: 3px;
+  background: #333333;
+}
+
+/* back to top */
+a#to-top {
+  height: 42px;
+  width: 42px;
+  position: fixed;
+  font-size: 1rem;
+  bottom: 80px;
+  right: 20px;
+  visibility: hidden;
+  opacity: 0;
+  color: transparent;
+  border-radius: 10px;
+  z-index: 1050;
+  cursor: pointer;
+}
+
+a#to-top:hover {
+  color: #888;
+}
+
+a#to-top.cd-is-visible,
+a#to-top.cd-fade-out,
+.no-touch a#to-top:hover {
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+  transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+
+a#to-top,
+a.cd-top:visited,
+a.cd-top:hover {
+  color: #ccc;
+  text-decoration: none;
+}
+
+a#to-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+
+a#to-top.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: 1;
+}
+
 .offcanvas.offcanvas-start {
   width: 80vw;
   height: calc(100vh - 50px);
+}
+
+.offcanvas,
+.offcanvas-xxl,
+.offcanvas-xl,
+.offcanvas-lg,
+.offcanvas-md,
+.offcanvas-sm {
+  --bs-offcanvas-zindex: 1100;
+}
+
+.offcanvas-backdrop {
+  z-index: 1060;
 }
