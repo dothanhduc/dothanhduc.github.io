@@ -126,6 +126,31 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   });
+
+  document
+    .getElementById("registrationForm")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const fullName = document.getElementById("fullName").value;
+      const phoneNumber = document.getElementById("phoneNumber").value;
+
+      // Here you would typically send this data to your server
+      // For now, we'll just show an alert
+      alert(
+        "Cảm ơn " +
+          fullName +
+          " đã đăng ký! Chúng tôi sẽ liên hệ với bạn qua số điện thoại " +
+          phoneNumber +
+          " trong thời gian sớm nhất."
+      );
+
+      // Close the modal
+      $("#registrationModal").modal("hide");
+
+      // Reset the form
+      this.reset();
+    });
 });
 
 function scrollToRegisterForm() {
@@ -134,6 +159,12 @@ function scrollToRegisterForm() {
   const mainHeader = document.getElementById("mainHeader");
   const mobileHeader = document.getElementById("mobileHeader");
   let headerHeight = 0;
+
+  if (!registerForm) {
+    $("#registrationModal").modal("show");
+    return;
+  }
+
   if (
     mobileHeader &&
     window.getComputedStyle(mobileHeader).display !== "none"
