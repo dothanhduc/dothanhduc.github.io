@@ -162,6 +162,20 @@ function scrollToRegisterForm() {
 
   if (!registerForm) {
     $("#registrationModal").modal("show");
+    if (
+      mobileHeader &&
+      window.getComputedStyle(mobileHeader).display !== "none"
+    ) {
+      // Đóng offcanvas của mobileHeader nếu đang mở
+      const offcanvasElement = document.querySelector(".offcanvas");
+      if (offcanvasElement) {
+        const offcanvasInstance =
+          bootstrap.Offcanvas.getInstance(offcanvasElement);
+        if (offcanvasInstance) {
+          offcanvasInstance.hide();
+        }
+      }
+    }
     return;
   }
 
