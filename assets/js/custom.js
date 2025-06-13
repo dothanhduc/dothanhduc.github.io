@@ -153,6 +153,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// Handle image error loading by replacing with default image
+document.addEventListener(
+  "error",
+  function (event) {
+    if (event.target.tagName.toLowerCase() === "img") {
+      console.log("Image failed to load:", event.target.src);
+      event.target.src = "assets/img/image_default.png";
+      event.target.onerror = null; // Prevent infinite loop if default image also fails
+    }
+  },
+  true
+); // Use capture phase to catch the error before it bubbles up6
+
 function scrollToRegisterForm() {
   const scroll_top_duration = 700;
   const registerForm = document.getElementById("register-form");

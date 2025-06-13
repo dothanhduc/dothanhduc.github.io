@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#bf2642">
     <meta name="description" content="Trung Tâm Giáo Dục Nghề Nghiệp Thái Sơn">
     <meta name="image" content="assets/img/logo_default.png">
     <meta name="author" content="Trung Tâm Giáo Dục Nghề Nghiệp Thái Sơn">
@@ -26,10 +27,13 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="banner-custom slide-content w-100 d-flex align-items-center justify-content-center position-relative"
-                    style="height: auto;">
-                    <img src="assets/img/banner_girl.png" alt="Banner"
-                        class="w-100 object-fit-cover position-absolute top-0 start-0" style="height: 100%;"
-                        onload="this.parentElement.style.height = this.height + 'px';">
+                    style="height: 500px; overflow: hidden;">
+                    <img src="assets/img/slider-1.jpg" alt="Banner" class="w-100 position-absolute top-0 start-0"
+                        style="height: 100%; object-fit: cover; object-position: right;">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 d-block d-lg-none"></div>
+                    <div class="position-absolute top-0 start-0 w-75 h-100 d-none d-md-block"
+                        style="background: linear-gradient(90deg, #bf2642 40%, rgba(191, 38, 66, 0.8) 70%, rgba(191, 38, 66, 0.01) 100%);">
+                    </div>
                     <div class="container position-relative">
                         <div class="row">
                             <div class="col-12 col-md-6">
@@ -46,60 +50,88 @@
                                             Dạy lái tận tâm - Vững vàng tay lái
                                         </div>
                                         <a href="javascript:void(0)"
-                                            class="banner-btn btn mt-4 w-75 fw-bold bg-white text-muted rounded-pill py-2 fs-5"
+                                            class="banner-btn btn btn-secondary mt-4 w-75 fw-bold rounded-pill py-2 fs-5"
                                             onclick="scrollToRegisterForm()">
                                             Đăng ký ngay
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6 d-flex align-items-end justify-content-center">
-                                <div class="banner-img d-flex align-items-end justify-content-center pb-3"
-                                    style="height: 80%;">
-                                    <img src="assets/img/girl.png" style="height: 100%; max-width: 100%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="banner-custom slide-content w-100 d-flex align-items-center justify-content-center position-relative"
+                    style="height: 500px; overflow: hidden;">
+                    <img src="assets/img/slider-2.jpg" alt="Banner" class="w-100 position-absolute top-0 start-0"
+                        style="height: 100%; object-fit: cover; object-position: right;">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 d-block d-lg-none"></div>
+                    <div class="position-absolute top-0 start-0 w-75 h-100 d-none d-md-block"
+                        style="background: linear-gradient(90deg, #bf2642 40%, rgba(191, 38, 66, 0.8) 70%, rgba(191, 38, 66, 0.01) 100%);">
+                    </div>
+                    <div class="container position-relative">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="d-flex align-items-center justify-content-center h-100 w-100">
+                                    <div class="text-center w-100" style="max-width: 600px; margin: 0 auto;">
+                                        <div class="banner-title fw-bold text-white"
+                                            style="font-size: 2rem; line-height: 1.2; letter-spacing: 0.8px; ">
+                                            ĐÀO TẠO LÁI XE MÔ TÔ<br>VÀ Ô TÔ HẠNG B, C1
+                                        </div>
+                                        <div class="banner-desc fw-bold text-white mt-3" style=" font-size: 1.2rem;">
+                                            Đào tạo lái xe chuyên nghiệp
+                                        </div>
+                                        <div class="banner-note fw-bold text-white" style="font-size: 1.2rem;">
+                                            Dạy lái tận tâm - Vững vàng tay lái
+                                        </div>
+                                        <a href="javascript:void(0)"
+                                            class="banner-btn btn btn-secondary mt-4 w-75 fw-bold rounded-pill py-2 fs-5"
+                                            onclick="scrollToRegisterForm()">
+                                            Đăng ký ngay
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="swiper-pagination"></div>
         </div>
+        <div class="swiper-pagination"></div>
     </div>
 
-    <div id="about-component" class="container mt-5">
+    <div id="about-component" class="container mt-3 mt-md-5">
         <div class="row g-4 g-lg-5">
             <div class="col-lg-6">
                 <div class="bg-white h-100 d-flex align-items-center">
-                    <img src="assets/img/gioi-thieu-thai-son.png" alt="Giới thiệu Thái Sơn"
-                        class="img-fluid rounded w-100 h-100 object-fit-cover">
+                    <img class="object-fit-cover w-100" src="assets/img/Hinh anh TT.jpg" alt="Giới thiệu Thái Sơn"
+                        style="height: 100%;">
                 </div>
             </div>
             <div class="col-lg-6">
                 <h1 class="title fw-bold mb-3 text-primary text-center text-lg-start" style="font-size: 1.8rem;">
                     Giới thiệu về chúng tôi
                 </h1>
-                <p class="description fw-bold text-muted"
-                    style="font-size: 1.2rem; line-height: 1.6; text-align: justify;"">
-                    Trung tâm Dạy nghề Thái Sơn là đơn vị thành viên trực thuộc Tổng công ty Thái Sơn – Bộ Quốc Phòng, được
-                    thành lập theo Quyết định số 84/2006/QĐ-BQP ngày 20 tháng 3 năm 2006 của Bộ trưởng Bộ Quốc Phòng. Theo
-                    Quyết định số 5068/QĐ-BQP ngày 17 tháng 8 năm 2022, Trung tâm chính thức đổi tên từ Trung tâm nghề Thái
-                    Sơn thành Trung tâm Giáo dục Nghề nghiệp Thái Sơn. Tiếp tục phát huy truyền thống dạy nghề uy tín, chất
-                    lượng, phục vụ nhu cầu học nghề và nâng cao tay nghề lái xe cho nhân dân trên địa bàn thành phố Hồ Chí
-                    Minh và các khu vực lân cận.
+                <p class="description text-muted text-justify" style="line-height: 1.5;">
+                    Trung tâm Dạy nghề Thái Sơn là đơn vị thành viên trực thuộc Tổng công ty Thái Sơn – Bộ Quốc Phòng,
+                    được thành lập theo Quyết định số 84/2006/QĐ-BQP ngày 20 tháng 3 năm 2006 của Bộ trưởng Bộ Quốc
+                    Phòng. Theo Quyết định số 5068/QĐ-BQP ngày 17 tháng 8 năm 2022, Trung tâm chính thức đổi tên từ
+                    Trung tâm nghề Thái Sơn thành Trung tâm Giáo dục Nghề nghiệp Thái Sơn. Tiếp tục phát huy truyền
+                    thống dạy nghề uy tín, chất lượng, phục vụ nhu cầu học nghề và nâng cao tay nghề lái xe cho nhân dân
+                    trên địa bàn thành phố Hồ Chí Minh và các khu vực lân cận.
                 </p>
                 <div class=" d-flex justify-content-center">
                     <a href=" #" class="btn btn-primary rounded-pill px-4 py-2 mt-3 fw-bold text-white">
-                        Xem thêm
+                        Xem chi tiết
                         <i class="fa fa-chevron-right ps-2" style="font-size: 0.8rem;"></i>
                     </a>
+                </div>
             </div>
         </div>
     </div>
-    </div>
 
-    <div id="training-component" class="container my-5">
+    <!-- <div id="training-component" class="container my-5">
         <div class="row justify-content-center text-center mb-4">
             <div class="col-12 text-center">
                 <div class="fw-bold text-primary" style="font-size: 1.5rem;">
@@ -108,72 +140,84 @@
             </div>
         </div>
         <div class="row g-2 g-lg-4 justify-content-center text-center">
-            <!-- Đào tạo lái xe Mô tô hạng A1 -->
-            <div class="col-12 col-md-4">
-                <div class="px-0 px-lg-4 d-flex flex-column align-items-center">
-                    <div class="mb-2 d-flex align-items-center justify-content-center rounded-circle bg-primary"
-                        style="width: 65px; height: 65px;">
-                        <i class="fa fa-motorcycle text-white fs-1"></i>
-                    </div>
-                    <div class="title fw-bold mb-2" style="font-size: 1.5rem;">Đào tạo lái xe Mô tô hạng A1
-                    </div>
-                    <div class="description fw-600 text-muted" style="font-size: 1.2rem;">
-                        Ngành nghề đa dạng, gắn liền thực tế giúp sinh viên tự tin làm chủ tương lai.
-                    </div>
-                </div>
+    <div class="col-12 col-md-4">
+        <div class="px-0 px-lg-4 d-flex flex-column align-items-center">
+            <div class="mb-2 d-flex align-items-center justify-content-center rounded-circle bg-primary"
+                style="width: 65px; height: 65px;">
+                <i class="fa fa-motorcycle text-white fs-1"></i>
             </div>
-            <!-- Đào tạo lái xe ô tô hạng B số sàn, tự động -->
-            <div class="col-12 col-md-4">
-                <div class="px-0 px-lg-4 d-flex flex-column align-items-center">
-                    <div class="mb-2 d-flex align-items-center justify-content-center rounded-circle bg-primary"
-                        style="width: 65px; height: 65px;">
-                        <i class="fa fa-car-side text-white fs-1"></i>
-                    </div>
-                    <div class="title fw-bold mb-2" style="font-size: 1.5rem;">Đào tạo lái xe ô tô hạng B số
-                        sàn,
-                        tự động</div>
-                    <div class="description fw-600 text-muted" style="font-size: 1.2rem;">
-                        Trang thiết bị tiên tiến, không gian mở, khơi nguồn sáng tạo và gắn kết.
-                    </div>
-                </div>
+            <div class="title fw-bold mb-2" style="font-size: 1.5rem;">Đào tạo lái xe Mô tô hạng A1
             </div>
-            <!-- Đào tạo lái xe ô tô hạng C1 -->
-            <div class="col-12 col-md-4">
-                <div class="px-0 px-lg-4 d-flex flex-column align-items-center">
-                    <div class="mb-2 d-flex align-items-center justify-content-center rounded-circle bg-primary"
-                        style="width: 65px; height: 65px;">
-                        <i class="fa fa-truck text-white fs-1"></i>
-                    </div>
-                    <div class="title fw-bold mb-2" style="font-size: 1.5rem;">Đào tạo lái xe ô tô hạng C1
-                    </div>
-                    <div class="description fw-600 text-muted" style="font-size: 1.2rem;">
-                        Kết nối doanh nghiệp, mở rộng cơ hội thực tập, việc làm và hội nhập quốc tế.
-                    </div>
-                </div>
+            <div class="description fw-600 text-muted" style="font-size: 1.2rem;">
+                Ngành nghề đa dạng, gắn liền thực tế giúp sinh viên tự tin làm chủ tương lai.
             </div>
         </div>
     </div>
-
-    <div class="container my-5">
-        <div class=" row">
-            <div class="col-12 text-center mb-4">
-                <h1 class="fw-bold text-primary" style="font-size: 1.8rem;">
-                    Các khóa học
-                </h1>
+    <div class="col-12 col-md-4">
+        <div class="px-0 px-lg-4 d-flex flex-column align-items-center">
+            <div class="mb-2 d-flex align-items-center justify-content-center rounded-circle bg-primary"
+                style="width: 65px; height: 65px;">
+                <i class="fa fa-car-side text-white fs-1"></i>
+            </div>
+            <div class="title fw-bold mb-2" style="font-size: 1.5rem;">Đào tạo lái xe ô tô hạng B số
+                sàn,
+                tự động</div>
+            <div class="description fw-600 text-muted" style="font-size: 1.2rem;">
+                Trang thiết bị tiên tiến, không gian mở, khơi nguồn sáng tạo và gắn kết.
             </div>
         </div>
-        <div class="row g-4 g-md-5">
-            <div class="col-12 col-md-6 col-lg-4">
+    </div>
+    <div class="col-12 col-md-4">
+        <div class="px-0 px-lg-4 d-flex flex-column align-items-center">
+            <div class="mb-2 d-flex align-items-center justify-content-center rounded-circle bg-primary"
+                style="width: 65px; height: 65px;">
+                <i class="fa fa-truck text-white fs-1"></i>
+            </div>
+            <div class="title fw-bold mb-2" style="font-size: 1.5rem;">Đào tạo lái xe ô tô hạng C1
+            </div>
+            <div class="description fw-600 text-muted" style="font-size: 1.2rem;">
+                Kết nối doanh nghiệp, mở rộng cơ hội thực tập, việc làm và hội nhập quốc tế.
+            </div>
+        </div>
+    </div>
+    </div>
+    </div> -->
+
+    <div id="course-component" class="container my-5">
+        <div class="mb-4 d-flex justify-content-center">
+            <h1 class="fw-bold text-primary pb-2 border-bottom" style="font-size: 1.8rem; width: fit-content;">
+                Các khóa giải giảng
+            </h1>
+        </div>
+        <div class="row g-4">
+            <div class="col-12 col-sm-6 col-xl-3">
                 <a href="#">
                     <div class="row d-flex align-items-center">
-                        <div class="col-12 col-sm-4 col-md-12">
+                        <div class="col-12">
+                            <img src="assets/img/xe-hang-a1.png" class="card-img-top rounded-3 mb-2"
+                                alt="Đào tạo lái xe hạng A1">
+                        </div>
+                        <div class="col-12">
+                            <h6 class="fw-bold mb-2 text-center max-lines-3" style="line-height: 1.5;">Mô tô hạng A1
+                            </h6>
+                            <div class="text-muted max-lines-3 text-justify">
+                                Bằng lái xe A1 cho phép điều khiển xe mô tô có công suất dưới 175cc.
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-xl-3">
+                <a href="#">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-12">
                             <img src="assets/img/xe-hang-b1.png" class="card-img-top rounded-3 mb-2"
                                 alt="Đào tạo lái xe hạng A">
                         </div>
-                        <div class="col-12 col-sm-8 col-md-12">
-                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">Đào tạo lái
-                                xe hạng B1
-                            </h5>
+                        <div class="col-12">
+                            <h6 class="fw-bold mb-2 text-center max-lines-3" style="line-height: 1.5;">Ô tô hạng B số tự
+                                động
+                            </h6>
                             <div class="text-muted max-lines-3 text-justify">
                                 Bằng lái xe B1 tự động là loại bằng lái xe ô tô dễ học và dễ thi đậu
                                 nhất với tỉ lệ
@@ -184,17 +228,17 @@
                     </div>
                 </a>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-sm-6 col-xl-3">
                 <a href="#">
                     <div class="row d-flex align-items-center">
-                        <div class="col-12 col-sm-4 col-md-12">
+                        <div class="col-12">
                             <img src="assets/img/xe-hang-b2.png" class="card-img-top rounded-3 mb-2"
-                                alt="Đào tạo lái xe hạng B">
+                                alt="Ô tô hạng B số sàn">
                         </div>
-                        <div class="col-12 col-sm-8 col-md-12">
-                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">Đào tạo lái
-                                xe hạng B2
-                            </h5>
+                        <div class="col-12">
+                            <h6 class="fw-bold mb-2 text-center max-lines-3" style="line-height: 1.5;">
+                                Ô tô hạng B số sàn
+                            </h6>
                             <div class="text-muted max-lines-3 text-justify">
                                 Bằng lái xe B2 số sàn cho phép lái cả xe số sàn và tự động, phù hợp với
                                 người muốn
@@ -205,17 +249,16 @@
                     </div>
                 </a>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-sm-6 col-xl-3">
                 <a href="#">
                     <div class="row d-flex align-items-center">
-                        <div class="col-12 col-sm-4 col-md-12">
-                            <img src="assets/img/xe-hang-c.png" class="card-img-top rounded-3 mb-2"
-                                alt="Đào tạo lái xe hạng C">
+                        <div class="col-12">
+                            <img src="assets/img/xe-hang-c.png" class="card-img-top rounded-3 mb-2" alt="Ô tô hạng C1">
                         </div>
-                        <div class="col-12 col-sm-8 col-md-12">
-                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">Đào tạo lái
-                                xe hạng C
-                            </h5>
+                        <div class="col-12">
+                            <h6 class="fw-bold mb-2 text-center max-lines-3" style="line-height: 1.5;">
+                                Ô tô hạng C1
+                            </h6>
                             <div class="text-muted max-lines-3 text-justify">
                                 Bằng lái xe C cho phép điều khiển xe tải có tải trọng từ 3.500 kg đến
                                 7.500 kg, mở
@@ -229,57 +272,162 @@
                     </div>
                 </a>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                <a href="#">
-                    <div class="row d-flex align-items-center">
-                        <div class="col-12 col-sm-4 col-md-12">
-                            <img src="assets/img/xe-hang-d.png" class="card-img-top rounded-3 mb-2"
-                                alt="Đào tạo lái xe hạng D">
-                        </div>
-                        <div class="col-12 col-sm-8 col-md-12">
-                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">Đào tạo lái
-                                xe hạng D
-                            </h5>
-                            <div class="text-muted max-lines-3 text-justify">
-                                Bằng lái xe D cho phép điều khiển xe chở từ 10 đến 30 người, là lựa chọn
-                                lý tưởng
-                                cho
-                                người muốn điều khiển xe chở nhiều người.
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                <a href="#">
-                    <div class="row d-flex align-items-center">
-                        <div class="col-12 col-sm-4 col-md-12">
-                            <img src="assets/img/xe-hang-a1.png" class="card-img-top rounded-3 mb-2"
-                                alt="Đào tạo lái xe hạng A1">
-                        </div>
-                        <div class="col-12 col-sm-8 col-md-12">
-                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">Đào tạo lái
-                                xe hạng A1
-                            </h5>
-                            <div class="text-muted max-lines-3 text-justify">
-                                Bằng lái xe A1 cho phép điều khiển xe mô tô có công suất dưới 175cc.
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
         </div>
-        <div class="row">
-            <div class="col-12 text-center">
-                <a href="#" class="btn btn-primary rounded-pill px-4 py-2 mt-3 fw-bold text-white">
-                    Xem thêm
-                    <i class="fa fa-chevron-right ps-2" style="font-size: 0.8rem;"></i>
-                </a>
+    </div>
+    <div id="training-component" class="py-5" style="background-color: #f4f4f4;">
+        <div class="container">
+            <div class="mb-4 d-flex justify-content-center">
+                <h1 class="fw-bold text-primary pb-2 border-bottom" style="font-size: 1.8rem; width: fit-content;">
+                    Các ngành nghề đào tạo
+                </h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <a href="#">
+                        <div class="bg-white rounded-4">
+                            <div class="bg-white rounded-4 p-0">
+                                <img src="assets/img/dao-tao-lai-xe.jpg" class="card-img-top rounded-3 mb-2"
+                                    alt="Đào tạo lái xe ô tô">
+                            </div>
+                            <div class="px-4">
+                                <div class="pb-3 position-relative" style="margin-top: -2.5rem;">
+                                    <h6 class="bg-primary rounded-4 rounded-bottom-0 text-white fw-bold mb-1 py-2 text-center max-lines-3"
+                                        style="line-height: 1.5;">
+                                        Đào tạo lái xe ô tô
+                                    </h6>
+                                    <div class="text-muted max-lines-4 text-justify">
+                                        Trung tâm cung cấp chương trình đào tạo lái xe ô tô chuyên nghiệp, bài bản với
+                                        đội ngũ giảng viên giàu kinh nghiệm, xe tập lái đời mới và lộ trình học linh
+                                        hoạt. Học viên được hướng dẫn thực hành thực tế, đảm bảo vững tay lái và tự tin
+                                        thi sát hạch lấy bằng lái ô tô các hạng.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <a href="#">
+                        <div class="bg-white rounded-4">
+                            <div class="bg-white rounded-4 p-0">
+                                <img src="assets/img/cong-nghe-thong-tin.jpg" class="card-img-top rounded-3 mb-2"
+                                    alt="Công nghệ thông tin">
+                            </div>
+                            <div class="px-4">
+                                <div class="pb-3 position-relative" style="margin-top: -2.5rem;">
+                                    <h6 class="bg-primary rounded-4 rounded-bottom-0 text-white fw-bold mb-1 py-2 text-center max-lines-3"
+                                        style="line-height: 1.5;">
+                                        Công nghệ thông tin
+                                    </h6>
+                                    <div class="text-muted max-lines-4 text-justify">
+                                        Trung tâm cung cấp chương trình đào tạo công nghệ thông tin chuyên nghiệp, bài
+                                        bản với đội ngũ giảng viên giàu kinh nghiệm, xe tập lái đời mới và lộ trình học
+                                        linh hoạt. Học viên được hướng dẫn thực hành thực tế, đảm bảo vững tay lái và tự
+                                        tin thi sát hạch lấy bằng lái ô tô các hạng.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <a href="#">
+                        <div class="bg-white rounded-4">
+                            <div class="bg-white rounded-4 p-0">
+                                <img src="assets/img/cong-nghe-o-to.jpg" class="card-img-top rounded-4 mb-2"
+                                    alt="Công nghệ ô tô">
+                            </div>
+                            <div class="px-4">
+                                <div class="pb-3 position-relative" style="margin-top: -2.5rem;">
+                                    <h6 class="bg-primary rounded-4 rounded-bottom-0 text-white fw-bold mb-1 py-2 text-center max-lines-3"
+                                        style="line-height: 1.5;">
+                                        Công nghệ ô tô
+                                    </h6>
+                                    <div class="text-muted max-lines-4 text-justify">
+                                        Đào tạo kỹ năng sửa chữa, bảo dưỡng và vận hành các loại ô tô hiện đại,
+                                        đáp
+                                        ứng
+                                        nhu
+                                        cầu
+                                        nhân lực chất lượng cao trong ngành công nghiệp ô tô.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <a href="#">
+                        <div class="bg-white rounded-4">
+                            <div class="bg-white rounded-4 p-0">
+                                <img src="assets/img/ky-thuat-ket-cuom.jpg" class="card-img-top rounded-4 mb-2"
+                                    alt="Kỹ thuật kết cườm">
+                            </div>
+                            <div class="px-4">
+                                <div class="pb-3 position-relative" style="margin-top: -2.5rem;">
+                                    <h6 class="bg-primary rounded-4 rounded-bottom-0 text-white fw-bold mb-1 py-2 text-center max-lines-3"
+                                        style="line-height: 1.5;">
+                                        Kỹ thuật kết cườm
+                                    </h6>
+                                    <div class="text-muted max-lines-4 text-justify">
+                                        Chương trình đào tạo kỹ thuật kết cườm chuyên nghiệp, giúp học viên nắm vững các
+                                        kỹ
+                                        năng
+                                        thủ công tinh xảo và phát triển khả năng sáng tạo trong thiết kế trang sức.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <a href="#">
+                        <div class="bg-white rounded-4">
+                            <div class="bg-white rounded-4 p-0">
+                                <img src="assets/img/dao-tao-dien.jpg" class="card-img-top rounded-3 mb-2" alt="Điện">
+                            </div>
+                            <div class="px-4">
+                                <div class="pb-3 position-relative" style="margin-top: -2.5rem;">
+                                    <h6 class="bg-primary rounded-4 rounded-bottom-0 text-white fw-bold mb-1 py-2 text-center max-lines-3"
+                                        style="line-height: 1.5;">
+                                        Điện
+                                    </h6>
+                                    <div class="text-muted max-lines-4 text-justify">
+                                        Đào tạo ngành điện cung cấp kiến thức và kỹ năng về lắp đặt, vận hành, bảo trì
+                                        hệ thống điện dân dụng và công nghiệp, đáp ứng nhu cầu nhân lực chất lượng cao
+                                        cho các lĩnh vực sản xuất, xây dựng và dịch vụ kỹ thuật điện.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <a href="#">
+                        <div class="bg-white rounded-4">
+                            <div class="bg-white rounded-4 p-0">
+                                <img src="assets/img/dao-tao-han.jpg" class="card-img-top rounded-4 mb-2" alt="Hàn">
+                            </div>
+                            <div class="px-4">
+                                <div class="pb-3 position-relative" style="margin-top: -2.5rem;">
+                                    <h6 class="bg-primary rounded-4 rounded-bottom-0 text-white fw-bold mb-1 py-2 text-center max-lines-3"
+                                        style="line-height: 1.5;">
+                                        Hàn
+                                    </h6>
+                                    <div class="text-muted max-lines-4 text-justify">
+                                        Đào tạo ngành hàn cung cấp kiến thức và kỹ năng về hàn, đáp ứng nhu cầu nhân lực
+                                        chất lượng cao cho các lĩnh vực sản xuất, xây dựng và dịch vụ kỹ thuật hàn.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="py-5" style="background-color: #eaeaea;">
+    <!-- <div class="py-5" style="background-color: #eaeaea;">
         <div class="container">
             <div class="row bg-primary rounded-3 p-4 align-items-center">
                 <div class="col-12 col-md-8">
@@ -295,15 +443,13 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="container my-5">
-        <div class="row">
-            <div class="col-12 text-center mb-4">
-                <h1 class="fw-bold text-primary" style="font-size: 1.8rem;">
-                    Tin tức và sự kiện
-                </h1>
-            </div>
+        <div class="mb-4 d-flex justify-content-center">
+            <h1 class="fw-bold text-primary pb-2 border-bottom" style="font-size: 1.8rem; width: fit-content;">
+                Tin tức
+            </h1>
         </div>
         <div class="row g-4">
             <!-- Item 1 -->
@@ -312,13 +458,13 @@
                     <div class="h-100 border-0">
                         <img src="assets/img/news1.jpg" class="card-img-top rounded-3 mb-2" alt="Tin tức sự kiện">
                         <div class="d-flex flex-column">
-                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">SINH VIÊN ICH
+                            <h6 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">SINH VIÊN ICH
                                 GIAO LƯU
                                 CÙNG
                                 BAN GIÁM HIỆU TRƯỜNG ĐẠI HỌC ĐẠI DIỆP – CƠ HỘI VƯƠN XA CHO SINH VIÊN ICH
                                 TẠI THỊ
                                 TRƯỜNG
-                                QUỐC TẾ</h5>
+                                QUỐC TẾ</h6>
                             <div class="border-bottom border-1 border-grey mb-2" style="width: 40px;">
                             </div>
                             <div class="text-muted max-lines-3 text-justify">Ngày 06/03/2025, Trường Cao đẳng Quốc
@@ -337,11 +483,11 @@
                     <div class="h-100 border-0">
                         <img src="assets/img/news2.png" class="card-img-top rounded-3 mb-2" alt="Tin tức sự kiện">
                         <div class="d-flex flex-column">
-                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">DỰ THẢO ĐƯA
+                            <h6 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">DỰ THẢO ĐƯA
                                 TIẾNG NHẬT
                                 VÀO
                                 CHƯƠNG TRÌNH PHỔ THÔNG – CƠ HỘI CHO NGÀNH
-                                NGÔN NGỮ NHẬT LÊN NGÔI</h5>
+                                NGÔN NGỮ NHẬT LÊN NGÔI</h6>
                             <div class="border-bottom border-1 border-grey mb-2" style="width: 40px;">
                             </div>
                             <div class="text-muted max-lines-3 text-justify">Từ năm 2025, tiếng Nhật có thể được
@@ -359,11 +505,11 @@
                     <div class="h-100 border-0">
                         <img src="assets/img/news3.jpg" class="card-img-top rounded-3 mb-2" alt="Tin tức sự kiện">
                         <div class="d-flex flex-column">
-                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">TRƯỜNG CAO
+                            <h6 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">TRƯỜNG CAO
                                 ĐẲNG QUỐC TẾ
                                 TP.HCM
                                 TỔ CHỨC KHÁM SỨC KHỎE ĐỊNH KỲ CHO HỌC
-                                SINH, SINH VIÊN</h5>
+                                SINH, SINH VIÊN</h6>
                             <div class="border-bottom border-1 border-grey mb-2" style="width: 40px;">
                             </div>
                             <div class="text-muted max-lines-3 text-justify">Ngày 29/04 vừa qua, Trường Cao đẳng
@@ -381,12 +527,12 @@
                     <div class="h-100 border-0">
                         <img src="assets/img/news4.jpg" class="card-img-top rounded-3 mb-2" alt="Tin tức sự kiện">
                         <div class="d-flex flex-column">
-                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">Lễ ký kết
+                            <h6 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">Lễ ký kết
                                 phối hợp tuyển
                                 sinh
                                 và tổ chức lớp học giữa Trường Cao đẳng Quốc tế Tp.HCM và Trường Đại học
                                 Công Nghiệp
-                                Tp.HCM</h5>
+                                Tp.HCM</h6>
                             <div class="border-bottom border-1 border-grey mb-2" style="width: 40px;">
                             </div>
                             <div class="text-muted max-lines-3 text-justify">Ngày 24/10/2024 Trường Cao đẳng Quốc
@@ -405,10 +551,10 @@
                     <div class="h-100 border-0">
                         <img src="assets/img/news5.png" class="card-img-top rounded-3 mb-2" alt="Tin tức sự kiện">
                         <div class="d-flex flex-column">
-                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">Đào Tạo Liên
+                            <h6 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">Đào Tạo Liên
                                 Kết Quốc Tế
                                 Với
-                                Trường Đại Học Daegu - Hàn Quốc</h5>
+                                Trường Đại Học Daegu - Hàn Quốc</h6>
                             <div class="border-bottom border-1 border-grey mb-2" style="width: 40px;">
                             </div>
                             <div class="text-muted max-lines-3 text-justify">Ngày 18/10/2024, Trường Cao Đẳng Quốc
@@ -427,12 +573,12 @@
                     <div class="h-100 border-0">
                         <img src="assets/img/news5.png" class="card-img-top rounded-3 mb-2" alt="Tin tức sự kiện">
                         <div class="d-flex flex-column">
-                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">Thông Báo
+                            <h6 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">Thông Báo
                                 Chương Trình
                                 Học
                                 Bổng
                                 Học Tập Và Thực Hành Tại Đài Loan
-                                Năm 2025</h5>
+                                Năm 2025</h6>
                             <div class="border-bottom border-1 border-grey mb-2" style="width: 40px;">
                             </div>
                             <div class="text-muted max-lines-3 text-justify">Căn cứ hợp đồng hợp tác giữa Trường
@@ -456,49 +602,53 @@
     </div>
 
     <div id="register-form" class="container mt-6 mb-3">
-        <div class="row">
-            <div class="col-12 mb-5">
-                <div class="fw-bold text-primary border-top border-bottom border-1 border-grey"
-                    style="font-size: 2rem; width: fit-content;">
-                    Đăng ký xét tuyển
-                </div>
-            </div>
+        <div class="mb-4 d-flex justify-content-center">
+            <h1 class="fw-bold text-primary pb-2 border-bottom" style="font-size: 1.8rem; width: fit-content;">
+                Đăng ký trực tuyến
+            </h1>
         </div>
         <div class="row">
             <!-- Left Column: Bài viết tuyển sinh -->
             <div class="col-md-6">
                 <a href="#">
-                    <div class="h-100 border-0">
+                    <div class="border-0">
                         <img src="assets/img/uu-dai-hap-dan.jpg" class="card-img-top rounded-3 mb-2"
-                            alt="Tin tức sự kiện">
-                        <div class="d-flex flex-column">
-                            <h5 class="fw-bold mb-2 max-lines-3" style="line-height: 1.5;">Thông Báo
-                                Khóa học lái xe cho người trẻ
-                            </h5>
-                        </div>
+                            alt="Đăng ký trực tuyến">
                     </div>
                 </a>
             </div>
             <!-- Right Column: Phiếu đăng ký -->
-            <div class="col-md-6">
-                <div class="p-lg-4">
-                    <div class="fw-bold text-primary mb-4 text-center" style="font-size: 1.8rem;">
-                        Đăng ký ngay để được tư vấn miễn phí
+            <div class="col-md-6 px-lg-4">
+                <form>
+                    <div class="mb-3">
+                        <input type="text" class="form-control py-2 fw-bold" placeholder="Họ tên">
                     </div>
-                    <form>
-                        <div class="mb-3">
-                            <input type="text" class="form-control py-3 fw-bold" placeholder="Họ tên">
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control py-3 fw-bold" placeholder="Số điện thoại">
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-primary fw-bold w-50 py-2 text-white text-uppercase"
-                                style="font-size: 1.2rem;">Đăng ký</button>
-                        </div>
-                    </form>
-                </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control py-2 fw-bold" placeholder="Số điện thoại">
+                    </div>
+                    <div class="mb-3">
+                        <textarea type="text" class="form-control py-2 fw-bold" name="content" rows="4"
+                            placeholder="Nội dung" data-validation="required"
+                            data-validation-error-msg="Vui lòng nhập Nội dung"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary fw-bold w-50 rounded-pill py-2 text-white">Đăng
+                            ký</button>
+                    </div>
+                </form>
             </div>
+        </div>
+    </div>
+
+    <div id="news-from-hcmedu" class="container my-5">
+        <div class="mb-4 d-flex justify-content-center">
+            <h1 class="fw-bold text-primary pb-2 border-bottom" style="font-size: 1.8rem; width: fit-content;">
+                Tin từ Sở GD & ĐT TP. Hồ Chí Minh
+            </h1>
+        </div>
+        <div class="content row gx-4 gy-0">
+            <div class=" col-12 col-md-6" id="rss-col-1"></div>
+            <div class="col-12 col-md-6" id="rss-col-2"></div>
         </div>
     </div>
 
@@ -524,8 +674,45 @@
             slidesPerView: "auto",
             spaceBetween: 10,
             mousewheel: false,
-            loop: true
-        });        
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+        });
+
+        $(document).ready(function () {
+            const rssUrl = encodeURIComponent('https://rss.hcm.edu.vn/rssgdtx.aspx?kt=tt');
+            fetch(`https://rss.hcm.edu.vn/rssgdtx.aspx?kt=tt`)
+                .then(response => response.text())
+                .then(str => {
+                    const parser = new DOMParser();
+                    const xml = parser.parseFromString(str, "application/xml");
+                    const items = Array.from(xml.querySelectorAll('item')).slice(0, 10);
+
+                    const group1 = items.slice(0, 5);
+                    const group2 = items.slice(5, 10);
+
+                    function renderNews(item) {
+                        const title = item.querySelector('title')?.textContent || '';
+                        const link = item.querySelector('link')?.textContent || '#';
+                        const desc = item.querySelector('description')?.textContent || '';
+                        return `
+                                <div class="mb-3 d-flex align-items-start justify-content-start gap-2">
+                                <i class="fa fa-rss rounded-1 text-white" style="background-color: #f7941e; padding: 3px;"></i>
+                                <div class="mb-1"><a href="${link}" target="_blank" class="text-decoration-none">${title}</a></div>
+                                </div>
+                            `;
+                    }
+
+                    document.getElementById('rss-col-1').innerHTML = group1.map(renderNews).join('');
+                    document.getElementById('rss-col-2').innerHTML = group2.map(renderNews).join('');
+                })
+                .catch(err => {
+                    document.getElementById('news-from-hcmedu').hide();
+                    console.error('Error fetching RSS:', err);
+                });
+        });
     </script>
 </body>
 

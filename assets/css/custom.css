@@ -468,6 +468,24 @@
     bottom: 2rem;
   }
 
+  #mainHeader .company-name,
+  footer .company-name {
+    font-size: clamp(0.1rem, 3.65vw, 1.25rem) !important;
+  }
+
+  #mobileHeader .company-name {
+    font-size: clamp(0.1rem, 2.75vw, 0.9rem) !important;
+  }
+
+  #mobileHeader .logo {
+    height: clamp(1px, 12vw, 60px) !important;
+  }
+
+  footer .copyright {
+    text-align: center;
+    font-size: clamp(0.2em, 3vw, 0.875em) !important;
+  }
+
   .banner-title {
     font-size: 1.5rem !important;
     letter-spacing: inherit !important;
