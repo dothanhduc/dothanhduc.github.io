@@ -1,30 +1,27 @@
 <!-- Topbar-->
-<div class="topbar d-none d-lg-flex" style="background: #f9076b; font-size: 0.95em;">
+<div class="topbar d-none d-lg-flex bg-primary" font-size: 0.95em;">
     <div class="container d-flex justify-content-between align-items-center text-light">
         <nav class="navbar-topbar">
             <ul class="navbar-nav flex-row align-items-center" style="gap: 15px;">
                 <li class="nav-item">
-                    <a class="nav-link small" href="#">Tra cứu thông tin học viên</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Đăng nhập nội bộ</a>
+                    <a class="nav-link small" href="#">Đăng nhập</a>
                 </li>
             </ul>
         </nav>
-        <div>
-            <span class="mx-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Follow us on Facebook"
+        <!-- <div class="d-flex gap-2">
+            <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Theo dõi chúng tôi trên Facebook"
                 style="cursor: pointer;">
                 <i class="fab fa-facebook-f"></i>
             </span>
-            <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Follow us on Instagram"
+            <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Theo dõi chúng tôi trên Instagram"
                 style="cursor: pointer;">
                 <i class="fab fa-instagram"></i>
             </span>
-            <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Follow us on Twitter"
+            <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Theo dõi chúng tôi trên Twitter"
                 style="cursor: pointer;">
                 <i class="fab fa-twitter"></i>
             </span>
-        </div>
+        </div> -->
     </div>
 </div>
 
@@ -89,7 +86,7 @@
                         </li>
                         <li>
                             <a class="dropdown-item py-3" href="co-cau-va-to-chuc.html">
-                                Cơ cấu và tổ chức
+                                Cơ cấu tổ chức
                             </a>
                         </li>
                     </ul>
@@ -182,7 +179,7 @@
                 </li>
                 <li class="nav-item fw-bold dropdown">
                     <a class="nav-link dropdown-toggle text-muted" href="thong-tin.html">
-                        Thông tin
+                        Danh sách
                     </a>
                     <ul class="dropdown-menu p-4" aria-labelledby="navbarDropdownMenuLink_TSCD">
                         <li>
@@ -191,7 +188,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item py-3" href="ket-qua-sat-hach.html">
+                            <a class="dropdown-item border-bottom py-3" href="ket-qua-sat-hach.html">
                                 Kiểm tra kết thúc khóa học
                             </a>
                         </li>
@@ -268,16 +265,21 @@
         </div>
 
         <!-- Menu Items -->
-        <ul class="navbar-nav flex-column">
-            <li class="nav-item fw-bold">
-                <a class="nav-link dropdown-toggle custom-toggle-link text-muted" href="/">
-                    Trang chủ
-                </a>
-                <ul class="custom-submenu list-unstyled d-none ps-3" aria-labelledby="navbarDropdownMenuLink_GioiThieu">
-                    <li><a class="text-muted py-2 d-block" href="gioi-thieu-trung-tam.html">Giới thiệu</a></li>
-                    <li><a class="text-muted py-2 d-block" href="su-hinh-thanh-va-phat-trien.html">Sự hình thành và phát
+        <ul class="navbar-nav navbar-nav-mobile flex-column position-relative">
+            <li class="nav-item dropdown fw-bold">
+                <div class="nav-link" title="Trang chủ">
+                    <a class="text-muted" href="/">
+                        Trang chủ
+                    </a>
+                </div>
+                <ul class="dropdown-menu list-unstyled ps-3" aria-labelledby="navbarDropdownMenuLink_GioiThieu">
+                    <li class="dropdown-item"><a class="text-muted py-2" href="gioi-thieu-trung-tam.html">Giới thiệu</a>
+                    </li>
+                    <li class="dropdown-item"><a class="text-muted py-2" href="su-hinh-thanh-va-phat-trien.html">Sự hình
+                            thành và phát
                             triển</a></li>
-                    <li><a class="text-muted py-2 d-block" href="co-cau-va-to-chuc.html">Cơ cấu và tổ chức</a></li>
+                    <li class="dropdown-item"><a class="text-muted py-2" href="co-cau-va-to-chuc.html">Cơ cấu và tổ
+                            chức</a></li>
                 </ul>
             </li>
             <li class="nav-item fw-bold">
@@ -285,49 +287,69 @@
                     Tin tức
                 </a>
             </li>
-            <li class="nav-item fw-bold">
-                <a class="nav-link dropdown-toggle custom-toggle-link text-muted" href="dao-tao.html">
-                    Ngành nghề đào tạo
-                </a>
-                <ul class="custom-submenu list-unstyled d-none ps-3" aria-labelledby="navbarDropdownMenuLink_DaoTao">
-                    <li><a class="text-muted py-2 d-block" href="chi-tiet-dao-tao.html">Đào tạo lái xe ô tô</a></li>
-                    <li><a class="text-muted py-2 d-block" href="chi-tiet-dao-tao.html">Công nghệ thông tin</a></li>
-                    <li><a class="text-muted py-2 d-block" href="chi-tiet-dao-tao.html">Kỹ thuật kết cườm</a></li>
-                    <li><a class="text-muted py-2 d-block" href="chi-tiet-dao-tao.html">Công nghệ ô tô</a></li>
-                    <li><a class="text-muted py-2 d-block" href="chi-tiet-dao-tao.html">Điện</a></li>
-                    <li><a class="text-muted py-2 d-block" href="chi-tiet-dao-tao.html">Hàn</a></li>
+            <li class="nav-item dropdown fw-bold">
+                <div class="nav-link" title="Ngành nghề đào tạo">
+                    <a class="text-muted" href="dao-tao.html">
+                        Ngành nghề đào tạo
+                    </a>
+                </div>
+                <ul class="dropdown-menu list-unstyled ps-3" aria-labelledby="navbarDropdownMenuLink_DaoTao">
+                    <li class="dropdown-item"><a class="text-muted py-2" href="chi-tiet-dao-tao.html">Đào tạo lái xe ô
+                            tô</a></li>
+                    <li class="dropdown-item"><a class="text-muted py-2" href="chi-tiet-dao-tao.html">Công nghệ thông
+                            tin</a></li>
+                    <li class="dropdown-item"><a class="text-muted py-2" href="chi-tiet-dao-tao.html">Kỹ thuật kết
+                            cườm</a></li>
+                    <li class="dropdown-item"><a class="text-muted py-2" href="chi-tiet-dao-tao.html">Công nghệ ô tô</a>
+                    </li>
+                    <li class="dropdown-item"><a class="text-muted py-2" href="chi-tiet-dao-tao.html">Điện</a></li>
+                    <li class="dropdown-item"><a class="text-muted py-2" href="chi-tiet-dao-tao.html">Hàn</a></li>
                 </ul>
             </li>
-            <li class="nav-item fw-bold">
-                <a class="nav-link dropdown-toggle custom-toggle-link text-muted" href="thi-thu.html">
-                    Thi thử
-                </a>
-                <ul class="custom-submenu list-unstyled d-none ps-3" aria-labelledby="navbarDropdownMenuLink_ThiThu">
-                    <li><a class="text-muted py-2 d-block" href="chi-tiet-thi-thu.html">Lý thuyết</a></li>
-                    <li><a class="text-muted py-2 d-block" href="chi-tiet-thi-thu.html">Thi thử 120 tình huống mô
+            <li class="nav-item dropdown fw-bold">
+                <div class="nav-link" title="Thi thử">
+                    <a class="text-muted" href="thi-thu.html">
+                        Thi thử
+                    </a>
+                </div>
+                <ul class="dropdown-menu list-unstyled ps-3" aria-labelledby="navbarDropdownMenuLink_ThiThu">
+                    <li class="dropdown-item"><a class="text-muted py-2" href="chi-tiet-thi-thu.html">Lý thuyết</a></li>
+                    <li class="dropdown-item"><a class="text-muted py-2" href="chi-tiet-thi-thu.html">Thi thử 120 tình
+                            huống mô
                             phỏng</a></li>
                 </ul>
             </li>
-            <li class="nav-item fw-bold">
-                <a class="nav-link dropdown-toggle custom-toggle-link text-muted" href="khoa-hoc.html">
-                    Khóa học
-                </a>
-                <ul class="custom-submenu list-unstyled d-none ps-3" aria-labelledby="navbarDropdownMenuLink_KhoaHoc">
-                    <li><a class="text-muted py-2 d-block" href="chi-tiet-khoa-hoc.html">Mô tô hạng A1</a></li>
-                    <li><a class="text-muted py-2 d-block" href="chi-tiet-khoa-hoc.html">Ô tô hạng B số sàn</a></li>
-                    <li><a class="text-muted py-2 d-block" href="chi-tiet-khoa-hoc.html">Ô tô hạng B số tự động</a></li>
-                    <li><a class="text-muted py-2 d-block" href="chi-tiet-khoa-hoc.html">Ô tô hạng C1</a></li>
+            <li class="nav-item dropdown fw-bold">
+                <div class="nav-link" title="Khóa học">
+                    <a class="text-muted" href="khoa-hoc.html">
+                        Khóa học
+                    </a>
+                </div>
+                <ul class="dropdown-menu list-unstyled ps-3" aria-labelledby="navbarDropdownMenuLink_KhoaHoc">
+                    <li class="dropdown-item"><a class="text-muted py-2" href="chi-tiet-khoa-hoc.html">Mô tô hạng A1</a>
+                    </li>
+                    <li class="dropdown-item"><a class="text-muted py-2" href="chi-tiet-khoa-hoc.html">Ô tô hạng B số
+                            sàn</a></li>
+                    <li class="dropdown-item"><a class="text-muted py-2" href="chi-tiet-khoa-hoc.html">Ô tô hạng B số tự
+                            động</a></li>
+                    <li class="dropdown-item"><a class="text-muted py-2" href="chi-tiet-khoa-hoc.html">Ô tô hạng C1</a>
+                    </li>
                 </ul>
             </li>
-            <li class="nav-item fw-bold">
-                <a class="nav-link dropdown-toggle custom-toggle-link text-muted" href="thong-tin.html">
-                    Thông tin
-                </a>
-                <ul class="custom-submenu list-unstyled d-none ps-3" aria-labelledby="navbarDropdownMenuLink_ThongTin">
-                    <li><a class="text-muted py-2 d-block" href="khai-giang-khoa-hoc.html">Các khóa khai giảng</a></li>
-                    <li><a class="text-muted py-2 d-block" href="ket-qua-sat-hach.html">Kiểm tra kết thúc khóa học</a>
+            <li class="nav-item dropdown fw-bold">
+                <div class="nav-link" title="Danh sách">
+                    <a class="text-muted" href="thong-tin.html">
+                        Danh sách
+                    </a>
+                </div>
+                <ul class="dropdown-menu list-unstyled ps-3" aria-labelledby="navbarDropdownMenuLink_ThongTin">
+                    <li class="dropdown-item"><a class="text-muted py-2" href="khai-giang-khoa-hoc.html">Các khóa khai
+                            giảng</a></li>
+                    <li class="dropdown-item"><a class="text-muted py-2" href="ket-qua-sat-hach.html">Kiểm tra kết thúc
+                            khóa học</a>
                     </li>
-                    <li><a class="text-muted py-2 d-block" href="ket-qua-sat-hach.html">Thi sát hạch</a></li>
+                    <li class="dropdown-item"><a class="text-muted py-2" href="ket-qua-sat-hach.html">Thi sát hạch</a>
+                    </li>
                 </ul>
             </li>
             <li class="nav-item fw-bold">
