@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bệnh viện mắt VISI Sóc Trăng">
+    <meta name="image" content="assets/img/logo.png">
+    <meta name="author" content="Bệnh viện mắt VISI Sóc Trăng">
+    <meta name="favicon" content="assets/img/favicon.ico">
+    <title>Giới thiệu - Trung Tâm Giáo Dục Nghề Nghiệp Thái
+        Sơn</title>
+
+    <link href="assets/css/app.css?v=194313062025" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link href="assets/css/custom.css?v=194313062025" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="header d-none d-lg-block bg-white shadow-sm sticky-top" id="mainHeader">
+        <!-- Topbar-->
+        <div id="topbar" class="topbar d-none d-lg-flex bg-primary small" style="height: 40px;">
+            <div class="container d-flex justify-content-between align-items-center text-light">
+                <div class="d-flex justify-content-start">
+                    <a href="tel:0912345678" class="nav-link d-flex align-items-center gap-2 border-end pe-3 me-3">
+                        <i class="fal fa-mobile"></i>
+                        <span class="d-none d-xl-block">Hotline:</span>
+                        <span>0912345678</span>
+                    </a>
+                    <a href="https://maps.app.goo.gl/bhtNQEg5MmQvjAo7A" target="_blank"
+                        class="nav-link d-flex align-items-center gap-2">
+                        <i class="fal fa-map-marker-alt"></i>
+                        <span class="d-none d-xl-block">Địa chỉ:</span>
+                        <span>Số 335 đường Phú Lợi, Khóm 3, Phường Phú Lợi, Thành phố Cần Thơ</span>
+                    </a>
+                </div>
+                <nav class="navbar-topbar">
+                    <ul class="navbar-nav flex-row align-items-center" style="gap: 15px;">
+                        <li class="nav-item">
+                            <span>Giờ hoạt động: 7h30 - 16h30 (thứ 2 - thứ 7)</span>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-globe"></i>
+                                <span>ភាសាខ្មែរ</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="infoHeader" style="background-color: transparent;">
+            <div class="container-fluid-lg container-xl py-1">
+                <div class="d-flex align-items-center">
+                    <div class="me-auto">
+                        <a href="/">
+                            <div class="d-flex flex-row align-items-center gap-2">
+                                <img src="assets/img/logo.png" style="height: 60px;" alt="Logo">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="d-flex flex-column flex-xl-row gap-2">
+                        <ul class="navbar-nav flex-row align-items-center w-100 gap-2">
+                            <li class="nav-item fw-bold">
+                                <a class="nav-link text-muted px-2" href="/">
+                                    <span class="py-4">Trang chủ</span>
+                                </a>
+                            </li>
+                            <li class="nav-item fw-bold">
+                                <a class="nav-link text-muted px-2" href="gioi-thieu.html">
+                                    <span class="py-4">Giới thiệu</span>
+                                </a>
+                            </li>
+                            <li class="nav-item fw-bold">
+                                <a class="nav-link text-muted px-2" href="doi-ngu-bac-si.html">
+                                    <span class="py-4">Đội ngũ bác sĩ</span>
+                                </a>
+                            </li>
+                            <li class="nav-item fw-bold dropdown">
+                                <a class="nav-link active dropdown-toggle text-muted px-2" href="dich-vu.html">
+                                    <span class="py-4">Dịch vụ</span>
+                                </a>
+                                <ul class="dropdown-menu p-1" aria-labelledby="navbarDropdownMenuLink_DichVu">
+                                    <li>
+                                        <a class="dropdown-item border-bottom py-3" href="dich-vu-kham-mat.html">
+                                            Khám mắt tổng quát
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item border-bottom py-3" href="dich-vu-phau-thuat.html">
+                                            Phẫu thuật mắt
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item py-3" href="dich-vu-tu-van.html">
+                                            Tư vấn & chăm sóc mắt
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item fw-bold">
+                                <a class="nav-link text-muted px-2" href="tin-tuc.html">
+                                    <span class="py-4">Tin tức</span>
+                                </a>
+                            </li>
+                            <li class="nav-item fw-bold">
+                                <a class="nav-link text-muted px-2" href="lien-he.html">
+                                    <span class="py-4">Liên hệ</span>
+                                </a>
+                            </li>
+                            <li class="nav-item fw-bold ms-auto dropdown dropdown-search">
+                                <a class="nav-link text-muted" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="py-4 px-2">
+                                        <i class="fa fa-search text-muted"></i>
+                                    </span>
+                                </a>
+                                <div class="dropdown-menu p-4" aria-labelledby="navbarDropdownMenuLink"
+                                    style="width: 300px;">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Tìm kiếm..."
+                                            aria-label="Tìm kiếm..." aria-describedby="button-addon2">
+                                        <button class="btn btn-primary" type="button" id="button-addon2">
+                                            <i class="fa fa-search text-white"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="d-flex justify-content-end flex-shrink-1 min-width-0">
+                                    <a href="#registrationModal" class="btn btn-primary fw-bold rounded-pill px-4 py-2"
+                                        data-bs-toggle="modal" data-bs-target="#registrationModal">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="fas fa-stethoscope"></i>
+                                            <span>Đặt lịch khám</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Trigger -->
+    <header class="header d-lg-none d-flex bg-white shadow-sm" style="min-height: 64px;" id="mobileHeader">
+        <div class="main-nav container d-flex align-items-center justify-content-between position-relative">
+            <div class="uptime text-center text-primary" style="font-size: 0.78rem;">
+                <div class="text-secondary" style="margin-bottom: -3.5px;">
+                    <i class="fas fa-stethoscope"></i>
+                    <span>Giờ hoạt động</span>
+                </div>
+                <div class="fw-bold" style="margin-bottom: -3.5px;">7h30 - 16h30</div>
+                <div style="margin-bottom: -3.5px;">(thứ 2 - thứ 7)</div>
+            </div>
+            <div class="position-absolute start-50 translate-middle-x"
+                style="left: 50%; transform: translate(-50%, -50%);">
+                <a href="/" class="d-flex flex-row align-items-center gap-1">
+                    <img class="logo" src="assets/img/logo.png" style="height: 60px;">
+                </a>
+            </div>
+            <div>
+                <button class="navbar-toggler fs-1" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+                    <i class="fal fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header d-flex justify-content-between align-items-center">
+            <div></div>
+            <div id="mobileMenuLabel">
+                <img src="assets/img/logo.png" style="height: 60px;" alt="Logo">
+            </div>
+            <button type="button" class="btn-close text-reset ms-0" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <!-- Search Form -->
+            <div class="input-group flex-nowrap mb-3">
+                <input type="text" class="form-control" placeholder="Tìm kiếm..." aria-label="Tìm kiếm"
+                    aria-describedby="addon-wrapping">
+                <a href="#" class="input-group-text bg-primary border-1 border-primary" id="addon-wrapping">
+                    <i class="fa fa-search text-white"></i>
+                </a>
+            </div>
+
+            <!-- Menu Items -->
+            <ul class="navbar-nav navbar-nav-mobile flex-column position-relative">
+                <li class="nav-item fw-bold">
+                    <a class="nav-link text-muted" href="/">Trang chủ</a>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a class="nav-link text-muted" href="gioi-thieu.html">Giới thiệu</a>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a class="nav-link text-muted" href="doi-ngu-bac-si.html">Đội ngũ bác sĩ</a>
+                </li>
+                <li class="nav-item dropdown fw-bold">
+                    <a class="nav-link text-muted dropdown-toggle" href="#" id="dichVuDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Dịch vụ
+                    </a>
+                    <ul class="dropdown-menu list-unstyled ps-3" aria-labelledby="dichVuDropdown">
+                        <li class="dropdown-item"><a class="text-muted py-2" href="dich-vu-noi-bat.html">Dịch vụ nổi
+                                bật</a></li>
+                        <li class="dropdown-item"><a class="text-muted py-2" href="dich-vu-chuyen-sau.html">Dịch vụ
+                                chuyên sâu</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a class="nav-link text-muted" href="tin-tuc.html">Tin tức</a>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a class="nav-link text-muted" href="lien-he.html">Liên hệ</a>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a class="nav-link text-muted" href="#" data-bs-toggle="modal" data-bs-target="#registrationModal"
+                        onclick="var offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('mobileMenu')); if(offcanvas){offcanvas.hide();}">
+                        Đặt lịch khám
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Social Media and Contact -->
+            <div class="mt-auto pt-4 border-top">
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="#" title="Theo dõi chúng tôi trên Facebook" style="color: #0862f7;"><i
+                            class="fab fa-facebook-square" style="font-size: 32px;"></i></a>
+
+                    <a href="https://zalo.me/0912345678" target="_blank" title="Theo dõi chúng tôi trên Zalo">
+                        <img src="assets/svg/zalo-color.svg" alt="Zalo" style="width: 30px; height: 30px;">
+                    </a>
+                    <a href="#" title="Theo dõi chúng tôi trên TikTok">
+                        <img src="assets/svg/tiktok.svg" alt="TikTok" style="width: 34px; height: 34px;">
+                    </a>
+                    <a href="https://www.youtube.com/@visisoctrang" target="_blank"
+                        title="Theo dõi chúng tôi trên YouTube" style="color: #ff0000;">
+                        <i class="fab fa-youtube-square" style="font-size: 32px;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu bottom mobile -->
+    <div id="menu-bottom-mobile"
+        class="position-fixed bottom-0 start-0 end-0 w-100 d-flex justify-content-around align-items-center p-0 shadow-sm d-lg-none bg-primary"
+        style="z-index: 1200;">
+        <a href="tel:0912345678"
+            class="flex-grow-1 text-white my-1 border-end border-white-25 d-flex align-items-center justify-content-center">
+            <i class="fa fa-phone fa-phone-tada fa-flip-horizontal"></i>
+            <div class="ms-3">
+                <div class="small">Gọi ngay</div>
+                <div class="small">0912345678</div>
+            </div>
+        </a>
+        <a href="https://maps.app.goo.gl/bhtNQEg5MmQvjAo7A" target="_blank"
+            class="flex-grow-1 text-center text-white my-1 border-end border-white-25 d-flex flex-column align-items-center">
+            <i class="fa fa-map-marker-alt"></i>
+            <span class="small">Chỉ đường</span>
+        </a>
+        <a href="https://zalo.me/0912345678" target="_blank"
+            class="flex-grow-1 text-center text-white my-1 d-flex flex-column align-items-center">
+            <img src="assets/svg/zalo.svg" alt="Zalo" style="width: 18px; height: 18px;">
+            <span class="small">Zalo Chat</span>
+        </a>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-transparent py-3">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="/" class="text-decoration-none">
+                            <i class="fal fa-home"></i>
+                            <span>Trang chủ</span>
+                        </a></li>
+                    <li class="breadcrumb-item">
+                        <a href="dich-vu.html" class="text-decoration-none">
+                            <span>Dịch vụ</span>
+                        </a>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content from index.blade.php -->
+    <main class="main-content mb-5">
+        <div class="container">
+            <div class="row g-4 gx-lg-5">
+                <!-- Main content area -->
+                <div class="col-lg-8 col-md-12">
+                    <div class="row gy-4 post-content">
+                        <div class="col-12">
+                            <div class="position-relative">
+                                <h3 class="fw-bold mb-0">
+                                    Phaco không đau
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="content col-12">
+                            <p>
+                                Phẫu thuật Phaco không đau là kỹ thuật điều trị đục thủy tinh thể tiên tiến, sử dụng
+                                năng lượng sóng siêu âm để tán nhuyễn và hút thủy tinh thể đục ra ngoài qua vết mổ siêu
+                                nhỏ (1,8 – 2,2 mm). Thủy tinh thể nhân tạo được đặt thay thế ngay sau đó, giúp phục hồi
+                                thị lực tối ưu, giảm thiểu biến chứng và rút ngắn thời gian hồi phục.
+                            </p>
+                            <p>
+                                Tại VISI, Phaco không đau được triển khai theo quy trình nghiêm ngặt, chặt chẽ từ khâu
+                                khám, phẫu thuật đến chăm sóc sau mổ, với đội ngũ bác sĩ giàu kinh nghiệm cùng hệ thống
+                                thiết bị hiện đại, đảm bảo an toàn và hiệu quả cao cho người bệnh.
+                            </p>
+
+                            <h5 class="fw-bold">Phaco không đau được chỉ định cho</h5>
+                            <img class="mb-3" src="assets/img/khongchidinh.jpg">
+                            <ul>
+                                <li>Người mắc đục thủy tinh thể với các triệu chứng: nhìn mờ, lóa sáng, giảm khả năng
+                                    phân biệt màu sắc, khó khăn khi đọc sách hoặc lái xe.</li>
+                                <li>Người cao tuổi có đục thủy tinh thể ảnh hưởng đến sinh hoạt hàng ngày.</li>
+                                <li>Trường hợp đục thủy tinh thể đi kèm bệnh lý khác cần can thiệp sớm để phòng ngừa
+                                    biến chứng nguy hiểm (tăng nhãn áp, viêm màng bồ đào, trật thủy tinh thể...).</li>
+                            </ul>
+                            <ul>
+                                <li>Người mắc đục thủy tinh thể với các triệu chứng: nhìn mờ, lóa sáng, giảm khả năng
+                                    phân biệt màu sắc, khó khăn khi đọc sách hoặc lái xe.</li>
+                                <li>Người cao tuổi có đục thủy tinh thể ảnh hưởng đến sinh hoạt hàng ngày.</li>
+                                <li>Trường hợp đục thủy tinh thể đi kèm bệnh lý khác cần can thiệp sớm để phòng ngừa
+                                    biến chứng nguy hiểm (tăng nhãn áp, viêm màng bồ đào, trật thủy tinh thể...).</li>
+                            </ul>
+                            <h5 class="fw-bold">Ưu điểm của phương pháp PHACO KHÔNG ĐAU</h5>
+                            <img class="mb-3" src="assets/img/uudiem.jpg">
+                            <ul>
+                                <li>
+                                    <strong>Không còn nỗi sợ ĐAU:</strong> Khác với lo ngại về “mổ mắt” trong suy nghĩ
+                                    của nhiều người, phẫu thuật Phaco tại VISI được thực hiện bằng dao vi phẫu chuyên
+                                    dụng với đường rạch rất nhỏ (1,8 - 2,2mm), kết hợp gây tê tại chỗ hiệu quả. Nhờ tay
+                                    nghề vững vàng của đội ngũ bác sĩ cùng hệ thống máy phẫu thuật hiện đại, người bệnh
+                                    gần như không cảm thấy đau trong suốt quá trình thực hiện, thời gian hồi phục nhanh,
+                                    hạn chế tối đa tổn thương mô xung quanh.
+                                </li>
+                                <li>
+                                    <strong>Độ chính xác vượt trội:</strong> PHACO KHÔNG ĐAU tại VISI mang lại độ chính
+                                    xác gần như tuyệt đối trong quá trình phẫu thuật. Từng thao tác phẫu thuật đều được
+                                    thực hiện bởi đội ngũ bác sĩ chuyên khoa sâu, có nhiều năm kinh nghiệm, đã thực hiện
+                                    thành công hàng chục nghìn ca mổ đục thủy tinh thể.
+                                </li>
+                                <li>
+                                    <strong>Quy trình nhanh chóng và an toàn:</strong> Quy trình phẫu thuật điều trị đục
+                                    thủy tinh thể bằng phương pháp PHACO KHÔNG ĐAU diễn ra nhanh chóng, nhẹ nhàng và ít
+                                    xâm lấn. Bệnh nhân sẽ không cảm thấy đau đớn, thời gian hồi phục nhanh chóng, và có
+                                    thể trở lại với cuộc sống thường nhật chỉ sau vài ngày.
+                                </li>
+                            </ul>
+
+
+                            <h5 class="fw-bold">Lý do nên lựa chọn VISI</h5>
+                            <img class="mb-3" src="assets/img/lydo.jpg">
+
+                            <ul>
+                                <li>
+                                    <strong>Đội ngũ bác sĩ chuyên nghiệp:</strong> Tại bệnh viện VISI, chúng tôi hiểu
+                                    rằng mỗi ca phẫu thuật đều quan trọng. Đội ngũ bác sĩ của chúng tôi với nhiều năm
+                                    kinh nghiệm trong lĩnh vực phẫu thuật đục thủy tinh thể, luôn sẵn sàng hỗ trợ bạn và
+                                    người thân của bạn. Hơn 30.000 ca phẫu thuật thành công là minh chứng cho sự tận tâm
+                                    và chuyên môn của chúng tôi.
+                                </li>
+                                <li>
+                                    <strong>Hỗ trợ bảo hiểm y tế:</strong> Các Bệnh viện thuộc hệ thống VISI cho phép
+                                    bệnh nhân từ mọi tỉnh thành trên cả nước đến khám và điều trị bằng thẻ Bảo hiểm Y
+                                    tế. Đội ngũ Chăm sóc khách hàng của chúng tôi luôn sẵn sàng tư vấn và hỗ trợ bệnh
+                                    nhân thực hiện các thủ tục nhanh chóng, tiện lợi.
+                                </li>
+                                <li>
+                                    <strong>Chăm sóc tận tình:</strong> Chúng tôi hiểu rằng việc điều trị có thể gây lo
+                                    lắng, đặc biệt đối với người cao tuổi. Đội ngũ nhân viên sẽ luôn bên cạnh, hướng dẫn
+                                    và hỗ trợ bạn và người thân trước và sau phẫu thuật.
+                                </li>
+                                <li>
+                                    <strong>Theo dõi sau phẫu thuật:</strong> Sau khi phẫu thuật, chúng tôi sẽ tiếp tục
+                                    theo dõi sức khỏe cho bệnh nhân và nhắc nhở lịch tái khám. Nếu bạn có bất kỳ câu hỏi
+                                    nào, đừng ngần ngại liên hệ với chúng tôi. Chúng tôi luôn sẵn sàng lắng nghe và hỗ
+                                    trợ.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="py-4">
+                            <h4 class="fw-bold text-center mb-4">Lợi ích của dịch vụ</h4>
+                            <div class="row justify-content-center g-4">
+                                <div class="col-12 col-md-4">
+                                    <div class="h-100 p-3 py-5 rounded-4 shadow-sm text-center bg-light">
+                                        <div class="d-flex flex-column gap-3">
+                                            <i class="far fa-3x fa-check-circle text-primary"></i>
+                                            <h4 class="text-primary fw-bold mb-0">Thị lực rõ nét</h4>
+                                            <div class="text-muted">
+                                                Loại bỏ sự phụ thuộc vào kính gọng hoặc kính áp tròng.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="h-100 p-3 py-5 rounded-4 shadow-sm text-center bg-light">
+                                        <div class="d-flex flex-column gap-3">
+                                            <i class="far fa-3x fa-check-circle text-primary"></i>
+                                            <h4 class="text-primary fw-bold mb-0">An toàn và chính xác</h4>
+                                            <div class="text-muted">
+                                                Công nghệ phẫu thuật hiện đại, đảm bảo an toàn và độ chính xác tối ưu.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="h-100 p-3 py-5 rounded-4 shadow-sm text-center bg-light">
+                                        <div class="d-flex flex-column gap-3">
+                                            <i class="far fa-3x fa-check-circle text-primary"></i>
+                                            <h4 class="text-primary fw-bold mb-0">Yên tâm điều trị</h4>
+                                            <div class="text-muted">
+                                                Đội ngũ chuyên gia giàu kinh nghiệm, phẫu thuật nhẹ nhàng, hồi phục
+                                                nhanh.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-center">
+                            <a href="#registrationModal" class="btn btn-primary fw-bold rounded-pill px-4 py-2"
+                                data-bs-toggle="modal" data-bs-target="#registrationModal">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="fas fa-stethoscope"></i>
+                                    <span>Đặt lịch khám</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sidebar - moves to bottom on mobile -->
+                <div class="col-lg-4 col-md-12 mt-4 mt-lg-0">
+
+                    <!-- Dịch vụ section -->
+                    <div class="mt-4 mt-md-3 mb-3 text-center text-md-start">
+                        <h5 class="text-primary fw-bold pb-2 d-inline-block border-bottom">Dịch vụ</h5>
+                    </div>
+                    <div class="row g-3 g-md-4 g-lg-3 g-xl-4">
+                        <div class="col-6">
+                            <img class="w-100 rounded-4" src="assets/img/phaco_khongdau.jpg" alt="PHACO không đau">
+                        </div>
+                        <div class="col-6">
+                            <img class="w-100 rounded-4" src="assets/img/tat_khuc_xa.jpg" alt="Điều trị tật khúc xạ">
+                        </div>
+                        <div class="col-6">
+                            <img class="w-100 rounded-4" src="assets/img/glo_com.jpg" alt="Điều trị Glô-côm">
+                        </div>
+                        <div class="col-6">
+                            <img class="w-100 rounded-4" src="assets/img/nhan_nhi.jpg" alt="Phẫu thuật nhãn nhi">
+                        </div>
+                        <div class="col-6">
+                            <img class="w-100 rounded-4" src="assets/img/day_mat.jpg" alt="Phẫu thuật đáy mắt">
+                        </div>
+                        <div class="col-6">
+                            <img class="w-100 rounded-4" src="assets/img/tham_my_nhan_khoa.jpg" alt="Thẩm mỹ nhãn khoa">
+                        </div>
+                        <div class="col-6">
+                            <img class="w-100 rounded-4" src="assets/img/cap_cuu.jpg" alt="Cấp cứu nhãn khoa">
+                        </div>
+                        <div class="col-6">
+                            <img class="w-100 rounded-4" src="assets/img/ghep_giac_mac.jpg" alt="Ghép giác mạc">
+                        </div>
+                    </div>
+
+                    <!-- Tin tức section -->
+                    <div class="mt-4 mt-md-3 mb-3 text-center text-md-start">
+                        <h5 class="text-primary fw-bold pb-2 d-inline-block border-bottom">Tin tức mới
+                        </h5>
+                    </div>
+                    <div class="row g-4">
+                        <article class="col-lg-12 col-md-4 col-12">
+                            <a href="#">
+                                <div class="row gx-3">
+                                    <div class="col-lg-4 col-md-12 col-4 thumbnail">
+                                        <img class="rounded-3 w-100" src="assets/img/tin-tuc-1.jpeg" alt="Áp dụng thành công
+                                        phương pháp đặt PGI cho BN Glaucoma nặng">
+                                    </div>
+                                    <div class="col-lg-8 col-md-12 col-8">
+                                        <div class="title text-md-center text-lg-start text-start">
+                                            <span class="fw-medium max-lines-2 tablet-all-lines">Áp dụng thành công
+                                                phương pháp đặt PGI cho BN Glaucoma nặng</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="col-lg-12 col-md-4 col-12">
+                            <a href="#">
+                                <div class="row gx-3">
+                                    <div class="col-lg-4 col-md-12 col-4 thumbnail">
+                                        <img class="rounded-3 w-100" src="assets/img/tin-tuc-2.jpg" alt="Bệnh viện Mắt Sài Gòn Đà Lạt - bệnh viện chuyên khoa mắt chất lượng cao
+                                        đầu tiên tại tỉnh Lâm Đồng">
+                                    </div>
+                                    <div class="col-lg-8 col-md-12 col-8">
+                                        <div class="title text-md-center text-lg-start text-start">
+                                            <span class="fw-medium max-lines-2 tablet-all-lines">
+                                                Bệnh viện Mắt Sài Gòn Đà Lạt - bệnh viện chuyên khoa mắt chất lượng
+                                                cao
+                                                đầu tiên tại tỉnh Lâm Đồng
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="col-lg-12 col-md-4 col-12">
+                            <a href="#">
+                                <div class="row gx-3">
+                                    <div class="col-lg-4 col-md-12 col-4 thumbnail">
+                                        <img class="rounded-3 w-100" src="assets/img/tin-tuc-3.jpg"
+                                            alt="Cựa gà trống 2,8 cm đâm sâu vào mặt người đàn ông">
+                                    </div>
+                                    <div class="col-lg-8 col-md-12 col-8">
+                                        <div class="title text-md-center text-lg-start text-start">
+                                            <span class="fw-medium max-lines-2 tablet-all-lines">
+                                                Cựa gà trống 2,8 cm đâm sâu vào mặt người đàn ông
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="col-lg-12 col-md-4 col-12">
+                            <a href="#">
+                                <div class="row gx-3">
+                                    <div class="col-lg-4 col-md-12 col-4 thumbnail">
+                                        <img class="rounded-3 w-100" src="assets/img/tin-tuc-1.jpeg" alt="Áp dụng thành công
+                                        phương pháp đặt PGI cho BN Glaucoma nặng">
+                                    </div>
+                                    <div class="col-lg-8 col-md-12 col-8">
+                                        <div class="title text-md-center text-lg-start text-start">
+                                            <span class="fw-medium max-lines-2 tablet-all-lines">Áp dụng thành công
+                                                phương pháp đặt PGI cho BN Glaucoma nặng</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="col-lg-12 col-md-4 col-12">
+                            <a href="#">
+                                <div class="row gx-3">
+                                    <div class="col-lg-4 col-md-12 col-4 thumbnail">
+                                        <img class="rounded-3 w-100" src="assets/img/tin-tuc-2.jpg" alt="Bệnh viện Mắt Sài Gòn Đà Lạt - bệnh viện chuyên khoa mắt chất lượng cao
+                                        đầu tiên tại tỉnh Lâm Đồng">
+                                    </div>
+                                    <div class="col-lg-8 col-md-12 col-8">
+                                        <div class="title text-md-center text-lg-start text-start">
+                                            <span class="fw-medium max-lines-2 tablet-all-lines">
+                                                Bệnh viện Mắt Sài Gòn Đà Lạt - bệnh viện chuyên khoa mắt chất lượng
+                                                cao
+                                                đầu tiên tại tỉnh Lâm Đồng
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer component -->
+    <div include-html="shared/footer.html?v=194313062025"></div>
+
+    <a id="to-top" class="d-flex justify-content-center align-items-center text-gray bg-primary">
+        <i class="fal fa-chevron-up"></i>
+    </a>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/custom.js?v=144506112025"></script>
+
+    <script>
+        // Swiper initialization from index.blade.php
+        var swiper = new Swiper(".bannerSwipper", {
+            slidesPerView: "auto",
+            spaceBetween: 10,
+            mousewheel: false,
+            loop: true
+        });        
+    </script>
+</body>
+
+</html>

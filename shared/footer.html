@@ -1,0 +1,186 @@
+<!-- Modal Đặt lịch khám -->
+<div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="registrationModalLabel" aria-hidden="true"
+    data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-xl modal-fullscreen-sm-down modal-dialog-centered">
+        <div class="modal-content rounded-4">
+            <button type="button" class="btn-close position-absolute top-0 end-0 m-3" style="z-index: 1;"
+                data-bs-dismiss="modal" aria-label="Đóng"></button>
+            <div class="modal-body px-4 py-5">
+                <div class="d-block">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-lg-6">
+                            <div class="d-flex flex-column align-items-center justify-content-center gap-2 mb-lg-5">
+                                <div class="mb-3 d-lg-none">
+                                    <a href="/">
+                                        <div class="d-flex flex-row align-items-center gap-2">
+                                            <img src="assets/img/logo.png" style="height: 60px;" alt="Logo">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h2 class="fw-bold text-primary">Đặt lịch khám</h2>
+                                <a href="tel:0912345678" class="btn btn-primary rounded-pill">
+                                    <h5
+                                        class="d-flex align-items-center justify-content-center gap-2 text-light m-0 py-1 px-4">
+                                        <i class="fa fa-phone fa-phone-tada fa-flip-horizontal"></i>
+                                        <div>
+                                            <span>Gọi ngay</span>
+                                            <span class="fw-bold">0912345678</span>
+                                        </div>
+                                    </h5>
+                                </a>
+                                <h6 class="fw-bold text-center">
+                                    <p>để được tư vấn và đặt lịch khám.</p>
+                                    <p>Hoặc để lại thông tin chúng tôi sẽ gọi lại hỗ trợ bạn sớm
+                                        nhất.
+                                    </p>
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 px-lg-4">
+                            <form>
+                                <div class="row mb-3">
+                                    <div class="col-12 col-md-6 mb-3 mb-md-0">
+                                        <label class="form-label fw-semibold" for="fullname">
+                                            Họ và tên <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="text" class="form-control" id="fullname" placeholder="Nguyễn Văn A"
+                                            required>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label fw-semibold" for="phone">
+                                            Số điện thoại <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="text" class="form-control" id="phone" placeholder="0901234567"
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold" for="date">
+                                        Ngày hẹn mong muốn <span class="text-danger">*</span>
+                                    </label>
+                                    <input type="date" class="form-control" id="date" placeholder="dd/mm/yyyy" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold" for="note">
+                                        Triệu chứng / ghi chú (Không bắt buộc)
+                                    </label>
+                                    <textarea class="form-control" id="note" rows="3"
+                                        placeholder="Mô tả ngắn gọn triệu chứng hoặc yêu cầu của bạn..."></textarea>
+                                </div>
+                                <div class="text-center mt-4">
+                                    <button type="submit" class="btn btn-primary fw-bold w-100 rounded-pill py-2">
+                                        Gửi thông tin
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="pt-4 border-top">
+    <div class="container">
+        <div class="row gx-4 gy-3">
+            <div class="col-12 col-lg-5">
+                <div class="row g-2">
+                    <div class="col-12 mb-3">
+                        <div class="d-flex justify-content-center justify-content-lg-start">
+                            <div class="align-self-center">
+                                <img src="assets/img/logo.png" alt="logo" style="max-height: 100px; max-width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="col-12">
+                            <span class="fw-bold">Địa chỉ:</span>
+                            <span>Số 335 đường Phú Lợi, Khóm 3, Phường Phú Lợi, Thành phố Cần Thơ</span>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <span class="fw-bold">Số điện thoại:</span>
+                        <a href="tel:0912345678" class="text-black">0912345678</a>
+                    </div>
+                    <div class="col-12">
+                        <span class="fw-bold">Email:</span>
+                        <a href="mailto:matvisisoctrang@gmail.com" class="text-body">matvisisoctrang@gmail.com</a>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex gap-3 mt-2">
+                            <a href="#" title="Theo dõi chúng tôi trên Facebook" style="color: #0862f7;"><i
+                                    class="fab fa-facebook-square" style="font-size: 32px;"></i></a>
+
+                            <a href="https://zalo.me/0912345678" target="_blank" title="Theo dõi chúng tôi trên Zalo">
+                                <img src="assets/svg/zalo-color.svg" alt="Zalo" style="width: 30px; height: 30px;">
+                            </a>
+                            <a href="#" title="Theo dõi chúng tôi trên TikTok">
+                                <img src="assets/svg/tiktok.svg" alt="TikTok" style="width: 34px; height: 34px;">
+                            </a>
+                            <a href="https://www.youtube.com/@visisoctrang" target="_blank"
+                                title="Theo dõi chúng tôi trên YouTube" style="color: #ff0000;">
+                                <i class="fab fa-youtube-square" style="font-size: 32px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-3">
+                <div class="position-relative">
+                    <h5 class="fw-bold">Thông tin</h5>
+                    <ul class="list-unstyled text-decoration-none d-flex flex-column gap-2">
+                        <li>
+                            <a href="#">Giới thiệu</a>
+                        </li>
+                        <li>
+                            <a href="#">Đội ngũ bác sĩ</a>
+                        </li>
+                        <li>
+                            <a href="#">Bệnh về mắt</a>
+                        </li>
+                        <li>
+                            <a href="#">Tin tức</a>
+                        </li>
+                        <li>
+                            <a href="#">Chương trình ưu đãi</a>
+                        </li>
+                        <li>
+                            <a href="#">Chính sách bảo mật</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="position-relative">
+                    <h5 class="fw-bold">Dịch vụ</h5>
+                    <ul class="list-unstyled text-decoration-none d-flex flex-column gap-2">
+                        <li>
+                            <a href="#">Khám mắt tổng quan và chuyên sâu</a>
+                        </li>
+                        <li>
+                            <a href="#">Phẫu thuật Phaco điều trị đục thủy tinh thể</a>
+                        </li>
+                        <li>
+                            <a href="#">Phẫu thuật dịch kính võng mạc</a>
+                        </li>
+                        <li>
+                            <a href="#">Phẫu thuật thẩm mỹ mắt</a>
+                        </li>
+                        <li>
+                            <a href="#">Chẩn đoán theo dõi và điều trị các bệnh lý về đáy mắt</a>
+                        </li>
+                        <li>
+                            <a href="#">Các bệnh về mắt khác</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright -->
+    <div class="container mt-3 text-center">
+        <span class="copyright small text-secondary">Copyright 2025 © Bệnh viện mắt VISI Sóc Trăng. All Rights
+            Reserved.</span>
+    </div>
+</footer>

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bệnh viện mắt VISI Sóc Trăng">
+    <meta name="image" content="assets/img/logo.png">
+    <meta name="author" content="Bệnh viện mắt VISI Sóc Trăng">
+    <meta name="favicon" content="assets/img/favicon.ico">
+    <title>Giới thiệu - Trung Tâm Giáo Dục Nghề Nghiệp Thái
+        Sơn</title>
+
+    <link href="assets/css/app.css?v=194313062025" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link href="assets/css/custom.css?v=194313062025" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="header d-none d-lg-block bg-white shadow-sm sticky-top" id="mainHeader">
+        <!-- Topbar-->
+        <div id="topbar" class="topbar d-none d-lg-flex bg-primary small" style="height: 40px;">
+            <div class="container d-flex justify-content-between align-items-center text-light">
+                <div class="d-flex justify-content-start">
+                    <a href="tel:0912345678" class="nav-link d-flex align-items-center gap-2 border-end pe-3 me-3">
+                        <i class="fal fa-mobile"></i>
+                        <span class="d-none d-xl-block">Hotline:</span>
+                        <span>0912345678</span>
+                    </a>
+                    <a href="https://maps.app.goo.gl/bhtNQEg5MmQvjAo7A" target="_blank"
+                        class="nav-link d-flex align-items-center gap-2">
+                        <i class="fal fa-map-marker-alt"></i>
+                        <span class="d-none d-xl-block">Địa chỉ:</span>
+                        <span>Số 335 đường Phú Lợi, Khóm 3, Phường Phú Lợi, Thành phố Cần Thơ</span>
+                    </a>
+                </div>
+                <nav class="navbar-topbar">
+                    <ul class="navbar-nav flex-row align-items-center" style="gap: 15px;">
+                        <li class="nav-item">
+                            <span>Giờ hoạt động: 7h30 - 16h30 (thứ 2 - thứ 7)</span>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-globe"></i>
+                                <span>ភាសាខ្មែរ</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="infoHeader" style="background-color: transparent;">
+            <div class="container-fluid-lg container-xl py-1">
+                <div class="d-flex align-items-center">
+                    <div class="me-auto">
+                        <a href="/">
+                            <div class="d-flex flex-row align-items-center gap-2">
+                                <img src="assets/img/logo.png" style="height: 60px;" alt="Logo">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="d-flex flex-column flex-xl-row gap-2">
+                        <ul class="navbar-nav flex-row align-items-center w-100 gap-2">
+                            <li class="nav-item fw-bold">
+                                <a class="nav-link text-muted px-2" href="/">
+                                    <span class="py-4">Trang chủ</span>
+                                </a>
+                            </li>
+                            <li class="nav-item fw-bold">
+                                <a class="nav-link active text-muted px-2" href="gioi-thieu.html">
+                                    <span class="py-4">Giới thiệu</span>
+                                </a>
+                            </li>
+                            <li class="nav-item fw-bold">
+                                <a class="nav-link text-muted px-2" href="doi-ngu-bac-si.html">
+                                    <span class="py-4">Đội ngũ bác sĩ</span>
+                                </a>
+                            </li>
+                            <li class="nav-item fw-bold dropdown">
+                                <a class="nav-link dropdown-toggle text-muted px-2" href="dich-vu.html">
+                                    <span class="py-4">Dịch vụ</span>
+                                </a>
+                                <ul class="dropdown-menu p-1" aria-labelledby="navbarDropdownMenuLink_DichVu">
+                                    <li>
+                                        <a class="dropdown-item border-bottom py-3" href="dich-vu-kham-mat.html">
+                                            Khám mắt tổng quát
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item border-bottom py-3" href="dich-vu-phau-thuat.html">
+                                            Phẫu thuật mắt
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item py-3" href="dich-vu-tu-van.html">
+                                            Tư vấn & chăm sóc mắt
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item fw-bold">
+                                <a class="nav-link text-muted px-2" href="tin-tuc.html">
+                                    <span class="py-4">Tin tức</span>
+                                </a>
+                            </li>
+                            <li class="nav-item fw-bold">
+                                <a class="nav-link text-muted px-2" href="lien-he.html">
+                                    <span class="py-4">Liên hệ</span>
+                                </a>
+                            </li>
+                            <li class="nav-item fw-bold ms-auto dropdown dropdown-search">
+                                <a class="nav-link text-muted" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="py-4 px-2">
+                                        <i class="fa fa-search text-muted"></i>
+                                    </span>
+                                </a>
+                                <div class="dropdown-menu p-4" aria-labelledby="navbarDropdownMenuLink"
+                                    style="width: 300px;">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Tìm kiếm..."
+                                            aria-label="Tìm kiếm..." aria-describedby="button-addon2">
+                                        <button class="btn btn-primary" type="button" id="button-addon2">
+                                            <i class="fa fa-search text-white"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="d-flex justify-content-end flex-shrink-1 min-width-0">
+                                    <a href="#registrationModal" class="btn btn-primary fw-bold rounded-pill px-4 py-2"
+                                        data-bs-toggle="modal" data-bs-target="#registrationModal">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="fas fa-stethoscope"></i>
+                                            <span>Đặt lịch khám</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Trigger -->
+    <header class="header d-lg-none d-flex bg-white shadow-sm" style="min-height: 64px;" id="mobileHeader">
+        <div class="main-nav container d-flex align-items-center justify-content-between position-relative">
+            <div class="uptime text-center text-primary" style="font-size: 0.78rem;">
+                <div class="text-secondary" style="margin-bottom: -3.5px;">
+                    <i class="fas fa-stethoscope"></i>
+                    <span>Giờ hoạt động</span>
+                </div>
+                <div class="fw-bold" style="margin-bottom: -3.5px;">7h30 - 16h30</div>
+                <div style="margin-bottom: -3.5px;">(thứ 2 - thứ 7)</div>
+            </div>
+            <div class="position-absolute start-50 translate-middle-x"
+                style="left: 50%; transform: translate(-50%, -50%);">
+                <a href="/" class="d-flex flex-row align-items-center gap-1">
+                    <img class="logo" src="assets/img/logo.png" style="height: 60px;">
+                </a>
+            </div>
+            <div>
+                <button class="navbar-toggler fs-1" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+                    <i class="fal fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header d-flex justify-content-between align-items-center">
+            <div></div>
+            <div id="mobileMenuLabel">
+                <img src="assets/img/logo.png" style="height: 60px;" alt="Logo">
+            </div>
+            <button type="button" class="btn-close text-reset ms-0" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <!-- Search Form -->
+            <div class="input-group flex-nowrap mb-3">
+                <input type="text" class="form-control" placeholder="Tìm kiếm..." aria-label="Tìm kiếm"
+                    aria-describedby="addon-wrapping">
+                <a href="#" class="input-group-text bg-primary border-1 border-primary" id="addon-wrapping">
+                    <i class="fa fa-search text-white"></i>
+                </a>
+            </div>
+
+            <!-- Menu Items -->
+            <ul class="navbar-nav navbar-nav-mobile flex-column position-relative">
+                <li class="nav-item fw-bold">
+                    <a class="nav-link text-muted" href="/">Trang chủ</a>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a class="nav-link text-muted" href="gioi-thieu.html">Giới thiệu</a>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a class="nav-link text-muted" href="doi-ngu-bac-si.html">Đội ngũ bác sĩ</a>
+                </li>
+                <li class="nav-item dropdown fw-bold">
+                    <a class="nav-link text-muted dropdown-toggle" href="#" id="dichVuDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Dịch vụ
+                    </a>
+                    <ul class="dropdown-menu list-unstyled ps-3" aria-labelledby="dichVuDropdown">
+                        <li class="dropdown-item"><a class="text-muted py-2" href="dich-vu-noi-bat.html">Dịch vụ nổi
+                                bật</a></li>
+                        <li class="dropdown-item"><a class="text-muted py-2" href="dich-vu-chuyen-sau.html">Dịch vụ
+                                chuyên sâu</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a class="nav-link text-muted" href="tin-tuc.html">Tin tức</a>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a class="nav-link text-muted" href="lien-he.html">Liên hệ</a>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a class="nav-link text-muted" href="#" data-bs-toggle="modal" data-bs-target="#registrationModal"
+                        onclick="var offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('mobileMenu')); if(offcanvas){offcanvas.hide();}">
+                        Đặt lịch khám
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Social Media and Contact -->
+            <div class="mt-auto pt-4 border-top">
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="#" title="Theo dõi chúng tôi trên Facebook" style="color: #0862f7;"><i
+                            class="fab fa-facebook-square" style="font-size: 32px;"></i></a>
+
+                    <a href="https://zalo.me/0912345678" target="_blank" title="Theo dõi chúng tôi trên Zalo">
+                        <img src="assets/svg/zalo-color.svg" alt="Zalo" style="width: 30px; height: 30px;">
+                    </a>
+                    <a href="#" title="Theo dõi chúng tôi trên TikTok">
+                        <img src="assets/svg/tiktok.svg" alt="TikTok" style="width: 34px; height: 34px;">
+                    </a>
+                    <a href="https://www.youtube.com/@visisoctrang" target="_blank"
+                        title="Theo dõi chúng tôi trên YouTube" style="color: #ff0000;">
+                        <i class="fab fa-youtube-square" style="font-size: 32px;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu bottom mobile -->
+    <div id="menu-bottom-mobile"
+        class="position-fixed bottom-0 start-0 end-0 w-100 d-flex justify-content-around align-items-center p-0 shadow-sm d-lg-none bg-primary"
+        style="z-index: 1200;">
+        <a href="tel:0912345678"
+            class="flex-grow-1 text-white my-1 border-end border-white-25 d-flex align-items-center justify-content-center">
+            <i class="fa fa-phone fa-phone-tada fa-flip-horizontal"></i>
+            <div class="ms-3">
+                <div class="small">Gọi ngay</div>
+                <div class="small">0912345678</div>
+            </div>
+        </a>
+        <a href="https://maps.app.goo.gl/bhtNQEg5MmQvjAo7A" target="_blank"
+            class="flex-grow-1 text-center text-white my-1 border-end border-white-25 d-flex flex-column align-items-center">
+            <i class="fa fa-map-marker-alt"></i>
+            <span class="small">Chỉ đường</span>
+        </a>
+        <a href="https://zalo.me/0912345678" target="_blank"
+            class="flex-grow-1 text-center text-white my-1 d-flex flex-column align-items-center">
+            <img src="assets/svg/zalo.svg" alt="Zalo" style="width: 18px; height: 18px;">
+            <span class="small">Zalo Chat</span>
+        </a>
+    </div>
+
+    <section class="position-relative breadcrumb-image" style="background-image: url('assets/img/visi_soctrang.jpg')">
+        <div class="container py-5">
+            <div class="text-center text-white">
+                <h2 class="fw-bold mb-2">Giới thiệu</h2>
+                <div class="mx-auto">
+                    <h5 class="description mb-0">
+                        Bệnh viện mắt VISI Sóc Trăng - "Mỗi ánh mắt - một niềm tin"
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content from index.blade.php -->
+    <main class="main-content">
+        <div class="container py-5">
+            <div id="about-component" class="container pt-3 pt-md-5">
+                <div class="row g-3 gx-lg-5">
+                    <div class="col-lg-5">
+                        <div class="bg-white h-100 d-flex align-items-center">
+                            <img class="object-fit-cover w-100" src="assets/img/letan.png"
+                                alt="Giới thiệu VISI Sóc Trăng" style="height: 100%;">
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="d-flex justify-content-center justify-content-lg-start">
+                            <h2 class="fw-bold text-primary pb-2 d-none d-lg-block">
+                                Bệnh viện Mắt VISI Sóc Trăng
+                            </h2>
+                        </div>
+                        <div class="d-none d-lg-block border-bottom border-1 border-grey mb-2" style="width: 40px;">
+                        </div>
+                        <div class="description text-muted text-justify" style="line-height: 1.5;">
+                            Bệnh viện Mắt VISI Sóc Trăng là thành viên của tập đoàn y khoa VISI, tự hào mang đến các
+                            dịch vụ
+                            nhãn khoa chất lượng cao, hiện đại cho người dân khu vực Đồng bằng Sông Cửu Long. Với đội
+                            ngũ bác sĩ
+                            giàu kinh nghiệm, trang thiết bị tiên tiến và quy trình chăm sóc tận tâm, chúng tôi cam kết
+                            đáp ứng
+                            mọi nhu cầu về khám, điều trị và phẫu thuật mắt cho khách hàng ở mọi lứa tuổi.<br>
+                            Không chỉ chú trọng đến hiệu quả điều trị, bệnh viện còn đặt lợi ích và sự hài lòng của bệnh
+                            nhân
+                            lên hàng đầu, xây dựng môi trường thân thiện, chuyên nghiệp. Chúng tôi liên tục cập nhật các
+                            kỹ
+                            thuật mới nhất trong lĩnh vực nhãn khoa, hợp tác với các chuyên gia đầu ngành để mang lại
+                            giải pháp
+                            tối ưu cho từng trường hợp. Bệnh viện Mắt VISI Sóc Trăng hướng tới mục tiêu trở thành địa
+                            chỉ tin
+                            cậy, đồng hành cùng cộng đồng trong việc bảo vệ và chăm sóc đôi mắt sáng khỏe cho mọi người.
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <h5 class="text-primary fw-bold text-uppercase">VISION – TẦM NHÌN</h5>
+                        <p>Trở thành đơn vị cung cấp dịch vụ khám chữa bệnh chuyên khoa mắt uy tín được cộng đồng tin
+                            yêu và công nhận.</p>
+                    </div>
+                    <div class="col-12">
+                        <h5 class="text-primary fw-bold text-uppercase">MISSION – SỨ MỆNH</h5>
+                        <p>Cung cấp dịch vụ chăm sóc mắt toàn diện chất lượng cao với chi phí hợp lý.</p>
+                    </div>
+                    <div class="col-12">
+                        <h5 class="text-primary fw-bold text-uppercase">CORE VALUES – GIÁ TRỊ CỐT LÕI</h5>
+                        <div class="d-flex justify-content-center">
+                            <img class="w-50" src="assets/img/gia_tri_cot_loi.png" alt="Giới thiệu VISI Sóc Trăng">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="doctors-component" class="py-4 py-md-5">
+                <h2 class="text-center text-primary fw-bold mb-4">
+                    Đội ngũ chuyên môn
+                </h2>
+                <div class="doctorSwipper swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="h-100 shadow-sm border-0 bg-info bg-opacity-10 rounded-4 p-3">
+                                <img src="assets/img/bs_tran_duc_chanh.png" class="card-img-top rounded-4"
+                                    alt="Bác sĩ nội trú Trần Đức Chánh">
+                                <div class="card-body text-center p-0 mt-3">
+                                    <div class="fw-semibold text-primary">Bác sĩ nội trú</div>
+                                    <h5 class="doctor-name card-title text-uppercase text-primary fw-bold mb-2">Trần Đức
+                                        Chánh
+                                    </h5>
+                                    <div class="text-muted">Giám đốc chuyên môn bệnh viện</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="h-100 shadow-sm border-0 bg-info bg-opacity-10 rounded-4 p-3">
+                                <img src="assets/img/bs_tran_ba_kien.png" class="card-img-top rounded-4"
+                                    alt="Bác sĩ CKII Trần Bá Kiền">
+                                <div class="card-body text-center p-0 mt-3">
+                                    <div class="fw-semibold text-primary">Bác sĩ</div>
+                                    <h5 class="doctor-name card-title text-uppercase text-primary fw-bold mb-2">Trần Bá
+                                        Kiền
+                                        </h6>
+                                        <div class="text-muted">Bác sĩ chuyên khoa II</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="h-100 shadow-sm border-0 bg-info bg-opacity-10 rounded-4 p-3">
+                                <img src="assets/img/bs_mai_thi_ngoc_thien.png" class="card-img-top rounded-4"
+                                    alt="Bác sĩ Mai Thị Ngọc Thiện">
+                                <div class="card-body text-center p-0 mt-3">
+                                    <div class="fw-semibold text-primary">Bác sĩ</div>
+                                    <h5 class="doctor-name card-title text-uppercase text-primary fw-bold mb-2">Mai Thị
+                                        Ngọc
+                                        Thiện
+                                    </h5>
+                                    <div class="text-muted">Bác sĩ chuyên khoa I</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="h-100 shadow-sm border-0 bg-info bg-opacity-10 rounded-4 p-3">
+                                <img src="assets/img/bs_lam_duc_thien.png" class="card-img-top rounded-4"
+                                    alt="Bác sĩ Lâm Đức Thiện">
+                                <div class="card-body text-center p-0 mt-3">
+                                    <div class="fw-semibold text-primary">Bác sĩ</div>
+                                    <h5 class="doctor-name card-title text-uppercase text-primary fw-bold mb-2">Lâm Đức
+                                        Thiện
+                                    </h5>
+                                    <div class="text-muted">Bác sĩ chuyên khoa I</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="h-100 shadow-sm border-0 bg-info bg-opacity-10 rounded-4 p-3">
+                                <img src="assets/img/bs_lam_duc_thien.png" class="card-img-top rounded-4"
+                                    alt="Bác sĩ Lâm Đức Thiện">
+                                <div class="card-body text-center p-0 mt-3">
+                                    <h6 class="text-primary">Bác sĩ</h6>
+                                    <h5 class="doctor-name card-title text-uppercase text-primary fw-bold mb-2">Lâm Đức
+                                        Thiện
+                                    </h5>
+                                    <div class="text-muted">Bác sĩ chuyên khoa I</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination out-of-view position-relative mt-2"></div>
+                    <div class="d-none d-lg-block">
+                        <div class="swiper-button-next rounded-pill bg-white">
+                        </div>
+                        <div class="swiper-button-prev rounded-pill bg-white">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer component -->
+    <div include-html="shared/footer.html?v=194313062025"></div>
+
+    <a id="to-top" class="d-flex justify-content-center align-items-center text-gray bg-primary">
+        <i class="fal fa-chevron-up"></i>
+    </a>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/custom.js?v=144506112025"></script>
+
+    <script>
+        // Swiper initialization from index.blade.php
+
+        var doctorSwiper = new Swiper(".doctorSwipper", {
+            mousewheel: false,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                // when window width is >= 0px
+                0: {
+                    slidesPerView: 2,
+                    spaceBetween: 15,
+                },
+                // when window width is >= 576px
+                576: {
+                    slidesPerView: 2,
+                    spaceBetween: 25,
+                },
+                // when window width is >= 768px
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 25,
+                },
+                // when window width is >= 1200px
+                1200: {
+                    slidesPerView: 4,
+                    spaceBetween: 25,
+                }
+            }
+        });    
+    </script>
+</body>
+
+</html>

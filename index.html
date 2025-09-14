@@ -1,27 +1,903 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta http-equiv="content-language" content="vi">
-        <title>Welcome to my website | Đỗ Thanh Đức website</title>
-        <meta name="description" content="Đỗ Thanh Đức website">
-        <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
-        <style>
-            .center{
-                text-align: center;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="center" style="margin-top: 100px;">
-            <img src="images/logo.png" alt="Đỗ Thanh Đức website" width="120" height="auto"/>
-            <h1>Welcome to my website</h1>
-        </div>
-        <div class="center">
-                <p><strong>More</strong></p>
-                <div>
-                    <a href="cellphones-deal.html">CellphoneS Deal</a>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#bf2642">
+    <meta name="description" content="Bệnh viện mắt VISI Sóc Trăng">
+    <meta name="image" content="assets/img/logo.png">
+    <meta name="author" content="Bệnh viện mắt VISI Sóc Trăng">
+    <meta name="favicon" content="assets/img/favicon.ico">
+    <title>Bệnh viện mắt VISI Sóc Trăng</title>
+
+    <link href="assets/css/app.css?v=170209092025" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link href="assets/css/custom.css?v=15370082025" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header d-none d-lg-block bg-white shadow-sm sticky-top" id="mainHeader">
+        <!-- Topbar-->
+        <div id="topbar" class="topbar d-none d-lg-flex bg-primary small" style="height: 40px;">
+            <div class="container d-flex justify-content-between align-items-center text-light">
+                <div class="d-flex justify-content-start">
+                    <a href="tel:0912345678" class="nav-link d-flex align-items-center gap-2 border-end pe-3 me-3">
+                        <i class="fal fa-mobile"></i>
+                        <span class="d-none d-xl-block">Hotline:</span>
+                        <span>0912345678</span>
+                    </a>
+                    <a href="https://maps.app.goo.gl/bhtNQEg5MmQvjAo7A" target="_blank"
+                        class="nav-link d-flex align-items-center gap-2">
+                        <i class="fal fa-map-marker-alt"></i>
+                        <span class="d-none d-xl-block">Địa chỉ:</span>
+                        <span>Số 335 đường Phú Lợi, Khóm 3, Phường Phú Lợi, Thành phố Cần Thơ</span>
+                    </a>
                 </div>
+                <nav class="navbar-topbar">
+                    <ul class="navbar-nav flex-row align-items-center" style="gap: 15px;">
+                        <li class="nav-item">
+                            <span>Giờ hoạt động: 7h30 - 16h30 (thứ 2 - thứ 7)</span>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-globe"></i>
+                                <span>ភាសាខ្មែរ</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-    </body>
+        <div id="infoHeader" style="background-color: transparent;">
+            <div class="container-fluid-lg container-xl py-1">
+                <div class="d-flex align-items-center">
+                    <div class="me-auto">
+                        <a href="/">
+                            <div class="d-flex flex-row align-items-center gap-2">
+                                <img src="assets/img/logo.png" style="height: 60px;" alt="Logo">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="d-flex flex-column flex-xl-row gap-2">
+                        <ul class="navbar-nav flex-row align-items-center w-100 gap-2 gap-lg-1 gap-xl-2">
+                            <li class="nav-item fw-bold">
+                                <a class="nav-link active text-muted px-2" href="/">
+                                    <span class="py-4">Trang chủ</span>
+                                </a>
+                            </li>
+                            <li class="nav-item fw-bold">
+                                <a class="nav-link text-muted px-2" href="gioi-thieu.html">
+                                    <span class="py-4">Giới thiệu</span>
+                                </a>
+                            </li>
+                            <li class="nav-item fw-bold">
+                                <a class="nav-link text-muted px-2" href="doi-ngu-bac-si.html">
+                                    <span class="py-4">Đội ngũ bác sĩ</span>
+                                </a>
+                            </li>
+                            <li class="nav-item fw-bold dropdown">
+                                <a class="nav-link dropdown-toggle text-muted px-2" href="dich-vu.html">
+                                    <span class="py-4">Dịch vụ</span>
+                                </a>
+                                <ul class="dropdown-menu p-1" aria-labelledby="navbarDropdownMenuLink_DichVu">
+                                    <li>
+                                        <a class="dropdown-item border-bottom py-3" href="dich-vu-kham-mat.html">
+                                            Khám mắt tổng quát
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item border-bottom py-3" href="dich-vu-phau-thuat.html">
+                                            Phẫu thuật mắt
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item py-3" href="dich-vu-tu-van.html">
+                                            Tư vấn & chăm sóc mắt
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item fw-bold">
+                                <a class="nav-link text-muted px-2" href="tin-tuc.html">
+                                    <span class="py-4">Tin tức</span>
+                                </a>
+                            </li>
+                            <li class="nav-item fw-bold">
+                                <a class="nav-link text-muted px-2" href="lien-he.html">
+                                    <span class="py-4">Liên hệ</span>
+                                </a>
+                            </li>
+                            <li class="nav-item fw-bold ms-auto dropdown dropdown-search">
+                                <a class="nav-link text-muted" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="py-4 px-2">
+                                        <i class="fa fa-search text-muted"></i>
+                                    </span>
+                                </a>
+                                <div class="dropdown-menu p-4" aria-labelledby="navbarDropdownMenuLink"
+                                    style="width: 300px;">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Tìm kiếm..."
+                                            aria-label="Tìm kiếm..." aria-describedby="button-addon2">
+                                        <button class="btn btn-primary" type="button" id="button-addon2">
+                                            <i class="fa fa-search text-white"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="d-flex justify-content-end flex-shrink-1 min-width-0">
+                                    <a href="#registrationModal" class="btn btn-primary fw-bold rounded-pill px-4 py-2"
+                                        data-bs-toggle="modal" data-bs-target="#registrationModal">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="fas fa-stethoscope"></i>
+                                            <span>Đặt lịch khám</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Trigger -->
+    <header class="header d-lg-none d-flex bg-white shadow-sm" style="min-height: 64px;" id="mobileHeader">
+        <div class="main-nav container d-flex align-items-center justify-content-between position-relative">
+            <div class="uptime text-center text-primary" style="font-size: 0.78rem;">
+                <div class="text-secondary" style="margin-bottom: -3.5px;">
+                    <i class="fas fa-stethoscope"></i>
+                    <span>Giờ hoạt động</span>
+                </div>
+                <div class="fw-bold" style="margin-bottom: -3.5px;">7h30 - 16h30</div>
+                <div style="margin-bottom: -3.5px;">(thứ 2 - thứ 7)</div>
+            </div>
+            <div class="position-absolute start-50 translate-middle-x"
+                style="left: 50%; transform: translate(-50%, -50%);">
+                <a href="/" class="d-flex flex-row align-items-center gap-1">
+                    <img class="logo" src="assets/img/logo.png" style="height: 60px;">
+                </a>
+            </div>
+            <div>
+                <button class="navbar-toggler fs-1" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+                    <i class="fal fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header d-flex justify-content-between align-items-center">
+            <div></div>
+            <div id="mobileMenuLabel">
+                <img src="assets/img/logo.png" style="height: 60px;" alt="Logo">
+            </div>
+            <button type="button" class="btn-close text-reset ms-0" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <!-- Search Form -->
+            <div class="input-group flex-nowrap mb-3">
+                <input type="text" class="form-control" placeholder="Tìm kiếm..." aria-label="Tìm kiếm"
+                    aria-describedby="addon-wrapping">
+                <a href="#" class="input-group-text bg-primary border-1 border-primary" id="addon-wrapping">
+                    <i class="fa fa-search text-white"></i>
+                </a>
+            </div>
+
+            <!-- Menu Items -->
+            <ul class="navbar-nav navbar-nav-mobile flex-column position-relative">
+                <li class="nav-item fw-bold">
+                    <a class="nav-link text-muted" href="/">Trang chủ</a>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a class="nav-link text-muted" href="gioi-thieu.html">Giới thiệu</a>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a class="nav-link text-muted" href="doi-ngu-bac-si.html">Đội ngũ bác sĩ</a>
+                </li>
+                <li class="nav-item dropdown fw-bold">
+                    <a class="nav-link text-muted dropdown-toggle" href="#" id="dichVuDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Dịch vụ
+                    </a>
+                    <ul class="dropdown-menu list-unstyled ps-3" aria-labelledby="dichVuDropdown">
+                        <li class="dropdown-item"><a class="text-muted py-2" href="dich-vu-noi-bat.html">Dịch vụ nổi
+                                bật</a></li>
+                        <li class="dropdown-item"><a class="text-muted py-2" href="dich-vu-chuyen-sau.html">Dịch vụ
+                                chuyên sâu</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a class="nav-link text-muted" href="tin-tuc.html">Tin tức</a>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a class="nav-link text-muted" href="lien-he.html">Liên hệ</a>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a class="nav-link text-muted" href="#" data-bs-toggle="modal" data-bs-target="#registrationModal"
+                        onclick="var offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('mobileMenu')); if(offcanvas){offcanvas.hide();}">
+                        Đặt lịch khám
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Social Media and Contact -->
+            <div class="mt-auto pt-4 border-top">
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="#" title="Theo dõi chúng tôi trên Facebook" style="color: #0862f7;"><i
+                            class="fab fa-facebook-square" style="font-size: 32px;"></i></a>
+
+                    <a href="https://zalo.me/0912345678" target="_blank" title="Theo dõi chúng tôi trên Zalo">
+                        <img src="assets/svg/zalo-color.svg" alt="Zalo" style="width: 30px; height: 30px;">
+                    </a>
+                    <a href="#" title="Theo dõi chúng tôi trên TikTok">
+                        <img src="assets/svg/tiktok.svg" alt="TikTok" style="width: 34px; height: 34px;">
+                    </a>
+                    <a href="https://www.youtube.com/@visisoctrang" target="_blank"
+                        title="Theo dõi chúng tôi trên YouTube" style="color: #ff0000;">
+                        <i class="fab fa-youtube-square" style="font-size: 32px;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu bottom mobile -->
+    <div id="menu-bottom-mobile"
+        class="position-fixed bottom-0 start-0 end-0 w-100 d-flex justify-content-around align-items-center p-0 shadow-sm d-lg-none bg-primary"
+        style="z-index: 1200;">
+        <a href="tel:0912345678"
+            class="flex-grow-1 text-white my-1 border-end border-white-25 d-flex align-items-center justify-content-center">
+            <i class="fa fa-phone fa-phone-tada fa-flip-horizontal"></i>
+            <div class="ms-3">
+                <div class="small">Gọi ngay</div>
+                <div class="small">0912345678</div>
+            </div>
+        </a>
+        <a href="https://maps.app.goo.gl/bhtNQEg5MmQvjAo7A" target="_blank"
+            class="flex-grow-1 text-center text-white my-1 border-end border-white-25 d-flex flex-column align-items-center">
+            <i class="fa fa-map-marker-alt"></i>
+            <span class="small">Chỉ đường</span>
+        </a>
+        <a href="https://zalo.me/0912345678" target="_blank"
+            class="flex-grow-1 text-center text-white my-1 d-flex flex-column align-items-center">
+            <img src="assets/svg/zalo.svg" alt="Zalo" style="width: 18px; height: 18px;">
+            <span class="small">Zalo Chat</span>
+        </a>
+    </div>
+
+    <!-- Main Content from index.blade.php -->
+    <div id="banner-component" class="banner swiper bannerSwipper w-100">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="slide-content w-100 d-flex align-items-center justify-content-center position-relative">
+                    <img src="assets/img/slide-1.jpg" alt="Banner" class="w-100">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide-content w-100 d-flex align-items-center justify-content-center position-relative">
+                    <img src="assets/img/slide-2.jpg" alt="Banner" class="w-100">
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="d-none d-lg-block">
+            <div class="swiper-button-next auto-hide rounded-pill bg-white">
+            </div>
+            <div class="swiper-button-prev auto-hide rounded-pill bg-white">
+            </div>
+        </div>
+    </div>
+
+    <div id="about-component" class="container pt-3 pt-md-5">
+        <div class="row g-3 gx-lg-5">
+            <div class="col-lg-5">
+                <div class="bg-white h-100 d-flex align-items-center">
+                    <img class="object-fit-cover w-100" src="assets/img/letan.png" alt="Giới thiệu VISI Sóc Trăng"
+                        style="height: 100%;">
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="d-flex justify-content-center justify-content-lg-start">
+                    <h2 class="fw-bold text-primary pb-2 d-none d-lg-block">
+                        Bệnh viện Mắt VISI Sóc Trăng
+                    </h2>
+                </div>
+                <div class="d-none d-lg-block border-bottom border-1 border-grey mb-2" style="width: 40px;">
+                </div>
+                <div class="description text-muted text-justify" style="line-height: 1.5;">
+                    Bệnh viện Mắt VISI Sóc Trăng là thành viên của tập đoàn y khoa VISI, tự hào mang đến các dịch vụ
+                    nhãn khoa chất lượng cao, hiện đại cho người dân khu vực Đồng bằng Sông Cửu Long. Với đội ngũ bác sĩ
+                    giàu kinh nghiệm, trang thiết bị tiên tiến và quy trình chăm sóc tận tâm, chúng tôi cam kết đáp ứng
+                    mọi nhu cầu về khám, điều trị và phẫu thuật mắt cho khách hàng ở mọi lứa tuổi.<br>
+                    Không chỉ chú trọng đến hiệu quả điều trị, bệnh viện còn đặt lợi ích và sự hài lòng của bệnh nhân
+                    lên hàng đầu, xây dựng môi trường thân thiện, chuyên nghiệp. Chúng tôi liên tục cập nhật các kỹ
+                    thuật mới nhất trong lĩnh vực nhãn khoa, hợp tác với các chuyên gia đầu ngành để mang lại giải pháp
+                    tối ưu cho từng trường hợp. Bệnh viện Mắt VISI Sóc Trăng hướng tới mục tiêu trở thành địa chỉ tin
+                    cậy, đồng hành cùng cộng đồng trong việc bảo vệ và chăm sóc đôi mắt sáng khỏe cho mọi người.
+                </div>
+                <div class=" d-flex justify-content-center justify-content-lg-start">
+                    <a href=" #" class="btn btn-primary rounded-pill px-4 py-2 mt-3 fw-bold">
+                        Xem chi tiết
+                        <i class="fa fa-chevron-right ps-2 small"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="row text-center justify-content-center py-4 gy-3">
+                    <div class="col-12 col-lg-4">
+                        <div class="row g-0">
+                            <div class="col-12 d-flex flex-column align-items-center h-100">
+                                <div class="bg-primary rounded-circle mb-3 p-2 p-lg-4">
+                                    <div class="d-flex align-items-center justify-content-center m-1"
+                                        style="width: auto; height: 100%; max-width: 60px;">
+                                        <svg xmlns:dc="http://purl.org/dc/elements/1.1/"
+                                            xmlns:cc="http://creativecommons.org/ns#"
+                                            xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                                            xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                                            xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1"
+                                            viewBox="0 0 48 48" x="0px" y="0px" preserveAspectRatio="none" width="100%"
+                                            height="100%" class="" fill="rgba(255, 255, 255, 1)">
+                                            <g transform="translate(0,-1004.3622)">
+                                                <path
+                                                    style="color: rgb(0, 0, 0); font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: medium; line-height: normal; font-family: sans-serif; text-indent: 0px; text-align: start; text-decoration: none solid rgb(0, 0, 0); letter-spacing: normal; word-spacing: normal; text-transform: none; direction: ltr; writing-mode: lr-tb; baseline-shift: baseline; text-anchor: start; white-space: normal; clip-rule: nonzero; display: inline; overflow: visible; visibility: visible; opacity: 1; isolation: auto; mix-blend-mode: normal; color-interpolation: srgb; color-interpolation-filters: linearrgb; fill-opacity: 1; fill-rule: nonzero; stroke: none; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0; stroke-opacity: 1; color-rendering: auto; image-rendering: auto; shape-rendering: auto; text-rendering: auto;"
+                                                    d="M 24 0 C 10.751088 0 0 10.7511 0 24 C 0 37.2489 10.751088 48 24 48 C 37.248912 48 48 37.2489 48 24 C 48 10.7511 37.248912 0 24 0 z M 24 1 C 36.708472 1 47 11.2916 47 24 C 47 36.7085 36.708472 47 24 47 C 11.291528 47 1 36.7085 1 24 C 1 11.2916 11.291528 1 24 1 z M 25.501953 8.6328125 C 25.014863 8.6326125 24.527123 8.8178 24.158203 9.1875 C 23.421453 9.9254 23.420723 11.135647 24.158203 11.873047 C 24.896053 12.610947 26.107863 12.609547 26.845703 11.873047 C 27.356013 11.362747 27.504154 10.627816 27.308594 9.9785156 C 27.696194 9.9535156 28.079674 10.067516 28.365234 10.353516 L 31.433594 13.421875 C 32.314954 14.772875 32.368042 16.5149 31.607422 18 L 22.861328 18 L 21.789062 16.929688 C 21.503293 16.643888 21.388613 16.258994 21.414062 15.871094 C 22.064003 16.066694 22.798064 15.918103 23.308594 15.408203 C 24.046454 14.670303 24.046444 13.460456 23.308594 12.722656 C 22.939664 12.353756 22.453877 12.170122 21.966797 12.169922 C 21.479717 12.169822 20.991967 12.353056 20.623047 12.722656 C 19.987077 13.359756 19.902724 14.346878 20.365234 15.080078 C 20.045084 16.002978 20.218866 17.054844 20.941406 17.777344 L 21.164062 18 L 15.007812 18 C 13.908473 18 13.007812 18.9007 13.007812 20 L 13.007812 27 L 11.007812 27 C 9.908472 27 9.0078125 27.9007 9.0078125 29 C 9.0078125 30.0994 9.908472 31 11.007812 31 L 13.007812 31 C 13.007812 31.3657 13.115543 31.7041 13.289062 32 L 10.558594 32 C 10.320754 31.9999 10.115759 32.167291 10.068359 32.400391 C 10.029759 32.591791 10.007812 32.7933 10.007812 33 C 10.007812 33.7709 10.308912 34.4679 10.789062 35 L 8.875 35 A 0.50004994 0.50004994 0 0 0 8.8261719 35 A 0.50059574 0.50059574 0 0 0 8.875 36 L 39.140625 36 A 0.50004994 0.50004994 0 1 0 39.140625 35 L 37.226562 35 C 37.706702 34.4679 38.007812 33.7709 38.007812 33 C 38.007812 32.7933 37.985766 32.591791 37.947266 32.400391 C 37.899866 32.167291 37.694871 31.9999 37.457031 32 L 34.726562 32 C 34.900073 31.7041 35.007812 31.3657 35.007812 31 L 35.007812 29 L 35.507812 29 C 36.607163 29 37.507812 28.0994 37.507812 27 C 37.507812 26.5028 37.335846 26.052566 37.003906 25.634766 C 36.829046 25.414566 36.604105 25.172866 36.328125 24.884766 C 36.509015 24.464566 36.471901 23.955244 36.025391 23.527344 L 35.007812 22.509766 L 35.007812 21.421875 C 35.283113 20.977575 35.510198 20.505419 35.673828 20.011719 C 35.875058 19.404619 35.987783 18.768894 36.001953 18.121094 C 36.022653 17.560894 35.698401 17.134453 35.269531 16.939453 C 35.076851 15.880153 34.585151 14.874253 33.775391 14.064453 L 29.214844 9.5039062 C 28.703564 8.9926062 28.024883 8.750025 27.345703 8.765625 C 27.063993 8.775625 26.784162 8.8336344 26.513672 8.9277344 C 26.205972 8.7344344 25.854433 8.6329125 25.501953 8.6328125 z M 25.501953 9.6171875 L 25.501953 9.6210938 C 25.731013 9.6212937 25.960822 9.7110719 26.138672 9.8886719 C 26.494372 10.244372 26.494382 10.802503 26.138672 11.158203 C 25.782972 11.513903 25.220934 11.515303 24.865234 11.158203 C 24.509534 10.802503 24.509534 10.240466 24.865234 9.8847656 C 25.043074 9.7068656 25.272883 9.6169875 25.501953 9.6171875 z M 21.966797 13.154297 L 21.966797 13.158203 C 22.195867 13.158403 22.423703 13.247128 22.601562 13.423828 C 22.957252 13.779528 22.957273 14.337659 22.601562 14.693359 C 22.245863 15.049059 21.685788 15.050459 21.330078 14.693359 C 20.974388 14.337659 20.974388 13.775622 21.330078 13.419922 C 21.507928 13.242122 21.737727 13.154097 21.966797 13.154297 z M 33.089844 15.105469 C 33.592354 15.671269 33.925659 16.334516 34.074219 17.041016 C 34.002519 17.089016 33.928401 17.131066 33.863281 17.197266 C 33.635471 17.428666 33.506396 17.739753 33.503906 18.064453 C 33.503866 18.064453 33.503936 18.064219 33.503906 18.074219 C 33.344366 18.033219 33.179752 18.003906 33.007812 18.003906 L 32.705078 18.003906 C 33.082258 17.073806 33.216444 16.075275 33.089844 15.109375 L 33.089844 15.105469 z M 15.007812 19 L 33.007812 19 C 33.570482 19 34.007812 19.4374 34.007812 20 L 34.007812 28 L 34.007812 29 L 34.007812 31 C 34.007812 31.5627 33.570482 32 33.007812 32 L 33 32 L 33 21 C 33 20.4547 32.54536 20 32 20 L 16 20 C 15.45464 20 15 20.4547 15 21 L 15 30 L 14.007812 30 L 14.007812 20 C 14.007812 19.4374 14.445163 19 15.007812 19 z M 16 21 L 32 21 L 32 32 L 23.708984 32 C 23.735284 31.935 23.765963 31.873341 23.789062 31.806641 C 24.434313 29.941541 23.616061 27.875031 21.869141 26.957031 C 21.432401 26.727631 20.968853 26.586897 20.501953 26.529297 C 19.101223 26.356597 17.664589 26.934953 16.787109 28.126953 C 16.369899 28.693653 16.130938 29.3395 16.048828 30 L 16 30 L 16 21 z M 35.607422 25.599609 C 35.790462 25.793509 36.117613 26.126059 36.220703 26.255859 C 36.475403 26.576459 36.507812 26.6663 36.507812 27 C 36.507812 27.5627 36.070453 28 35.507812 28 L 35.007812 28 L 35.007812 25.681641 C 35.214442 25.705641 35.420512 25.681609 35.607422 25.599609 z M 19.851562 27.5 C 20.374742 27.473 20.910857 27.58395 21.404297 27.84375 C 22.720037 28.53515 23.32974 30.075769 22.84375 31.480469 C 22.69281 31.916869 22.450901 32.295369 22.144531 32.605469 A 0.50005 0.50005 0 1 0 22.855469 33.308594 C 22.946969 33.215594 23.017009 33.1019 23.099609 33 L 33.007812 33 L 37.007812 33 C 37.007812 34.1167 36.124463 35 35.007812 35 L 13.007812 35 C 11.891182 35 11.007812 34.1167 11.007812 33 L 15.007812 33 L 16.908203 33 C 16.997003 33.1102 17.077668 33.226125 17.179688 33.328125 A 0.50005 0.50005 0 1 0 17.886719 32.621094 C 16.835619 31.569994 16.710457 29.917803 17.591797 28.720703 C 18.142537 27.972603 18.979572 27.5452 19.851562 27.5 z M 11.007812 28 L 13.007812 28 L 13.007812 30 L 11.007812 30 C 10.445182 30 10.007812 29.5627 10.007812 29 C 10.007812 28.4374 10.445183 28 11.007812 28 z M 20.007812 28.498047 A 2 2 0 0 0 18.007812 30.498047 A 2 2 0 0 0 20.007812 32.498047 A 2 2 0 0 0 22.007812 30.498047 A 2 2 0 0 0 20.007812 28.498047 z M 14.007812 31 L 16.054688 31 C 16.097987 31.3421 16.18204 31.6774 16.3125 32 L 15.007812 32 C 14.445163 32 14.007813 31.5627 14.007812 31 z M 20.792969 33.396484 L 20.792969 33.400391 A 0.50005 0.50005 0 0 0 20.771484 33.400391 A 0.50005 0.50005 0 0 0 20.769531 33.400391 A 0.50005 0.50005 0 0 0 20.759766 33.400391 A 0.50005 0.50005 0 0 0 20.675781 33.414062 C 20.287351 33.503062 19.877331 33.517553 19.462891 33.439453 A 0.50005 0.50005 0 1 0 19.28125 34.421875 C 19.83162 34.523375 20.381871 34.507672 20.900391 34.388672 A 0.50005 0.50005 0 0 0 20.792969 33.396484 z M 28.958984 37 A 0.50059574 0.50059574 0 0 0 29.007812 38 L 34.007812 38 A 0.50004994 0.50004994 0 1 0 34.007812 37 L 29.007812 37 A 0.50004994 0.50004994 0 0 0 28.958984 37 z M 35.958984 37 A 0.50059574 0.50059574 0 0 0 36.007812 38 L 37.5 38 A 0.50004994 0.50004994 0 1 0 37.5 37 L 36.007812 37 A 0.50004994 0.50004994 0 0 0 35.958984 37 z "
+                                                    transform="translate(0,1004.3622)"></path>
+                                            </g>
+                                            <style type="text/css">
+                                                .st0 {
+                                                    fill: #030102;
+                                                }
+                                            </style>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <h5 class="fw-bold text-primary mb-2">Trang thiết bị, máy móc hiện đại</h5>
+                                <div class="text-muted">
+                                    Bệnh viện đầu tư các thiết bị y khoa tân tiến bậc nhất thế giới từ USA, Đức, Nhật
+                                    Bản,…
+                                    nhằm tối ưu hiệu quả điều trị và tăng trải nghiệm khách hàng.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="row g-0">
+                            <div class="col-12 d-flex flex-column align-items-center h-100">
+                                <div class="bg-primary rounded-circle mb-3 p-2 p-lg-4">
+                                    <div class="d-flex align-items-center justify-content-center m-1"
+                                        style="width: auto; height: 100%; max-width: 60px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px"
+                                            viewBox="0 0 100 100" enable-background="new 0 0 100 100"
+                                            xml:space="preserve" preserveAspectRatio="none" width="100%" height="100%"
+                                            class="" fill="rgba(255, 255, 255, 1)">
+                                            <g>
+                                                <path
+                                                    d="M41.934,95c5.377,0,10.754,0,16.132,0c-1.774-10.647-3.55-21.295-5.324-31.942   c0.849-0.579,1.555-1.23,2.129-2.095c0.352-0.528,0.606-1.062,0.723-1.695c0.072-0.395,0.112-0.738-0.098-1.119   c-0.855-1.557-4.15-1.865-5.496-1.865s-4.64,0.309-5.496,1.864c-0.21,0.382-0.17,0.726-0.098,1.12   c0.115,0.633,0.37,1.166,0.721,1.695c0.575,0.864,1.281,1.516,2.13,2.095C45.483,73.705,43.708,84.353,41.934,95z">
+                                                </path>
+                                            </g>
+                                            <g>
+                                                <path
+                                                    d="M31.412,62.783l2.567,12.836L37.055,91H13.696c0.302-7.087,3.205-13.707,8.252-18.754L31.412,62.783    M33.868,54.67c-4.917,4.916-9.833,9.832-14.749,14.748c-6.05,6.051-9.45,14.257-9.45,22.814c0,0.923,0,1.845,0,2.768   c10.755,0,21.509,0,32.264,0C39.246,81.557,36.557,68.113,33.868,54.67L33.868,54.67z">
+                                                </path>
+                                            </g>
+                                            <g>
+                                                <path
+                                                    d="M68.589,62.783l9.463,9.463c5.047,5.047,7.95,11.667,8.252,18.754H62.945L68.589,62.783 M66.132,54.67   C63.443,68.113,60.755,81.557,58.066,95c10.754,0,21.509,0,32.264,0c0-0.923,0-1.845,0-2.768c0-8.558-3.399-16.764-9.45-22.814   C75.964,64.502,71.048,59.586,66.132,54.67L66.132,54.67z">
+                                                </path>
+                                            </g>
+                                            <polygon
+                                                points="80.231,76.868 76.198,76.868 76.198,72.835 72.198,72.835 72.198,76.868 68.165,76.868   68.165,80.868 72.198,80.868 72.198,84.901 76.198,84.901 76.198,80.868 80.231,80.868 ">
+                                            </polygon>
+                                            <path
+                                                d="M66.225,26.637c-0.738-0.829-1.563-1.198-2.674-1.198h-7.23c-0.712,0-1.687,0-2.631,0.694  c-0.672,0.492-1.088,1.098-1.313,1.887h-4.76c-0.124-0.459-0.343-0.925-0.75-1.382c-0.738-0.829-1.563-1.199-2.674-1.199h-7.241  c-0.708,0-1.676,0-2.623,0.694c-0.679,0.499-1.101,1.109-1.329,1.921c-0.132,0.473-0.132,0.908-0.132,1.302v1.933  c0,0.941,0,2.007,0.917,3.027c0.738,0.822,1.559,1.188,2.664,1.188h7.135c0,0,0.092,0,0.092,0c0.713,0,1.689,0,2.636-0.695  c0.7-0.515,1.127-1.146,1.347-1.986c0.115-0.443,0.114-0.851,0.114-1.252V30.02h4.453v1.269c0,0.937,0,1.998,0.906,3.017  c0.739,0.83,1.564,1.199,2.675,1.199h7.135c0,0,0.092,0,0.093,0c0.713,0,1.688,0,2.635-0.694c0.7-0.514,1.129-1.146,1.347-1.986  c0.115-0.444,0.115-0.852,0.115-1.253v-1.917C67.132,28.717,67.132,27.655,66.225,26.637z M45.773,31.614  c0,0.274,0,0.512-0.05,0.707c-0.104,0.397-0.265,0.635-0.595,0.877c-0.376,0.276-0.749,0.307-1.452,0.307h-7.228  c-0.534,0-0.82-0.127-1.176-0.524c-0.388-0.432-0.405-0.853-0.405-1.691v-1.943c0-0.292,0-0.544,0.058-0.752  c0.107-0.383,0.267-0.613,0.587-0.849c0.376-0.276,0.745-0.307,1.438-0.307h7.241c0.537,0,0.824,0.128,1.181,0.529  c0.383,0.431,0.4,0.852,0.4,1.687V31.614z M65.132,31.614c0,0.274,0,0.511-0.051,0.708c-0.104,0.397-0.265,0.634-0.595,0.877  c-0.377,0.276-0.749,0.307-1.451,0.307h-7.228c-0.537,0-0.824-0.129-1.181-0.529c-0.384-0.431-0.4-0.852-0.4-1.687V29.33  c0-0.274,0-0.511,0.051-0.708c0.104-0.396,0.264-0.634,0.595-0.876c0.376-0.276,0.747-0.307,1.448-0.307h7.23  c0.537,0,0.824,0.128,1.181,0.529c0.384,0.43,0.4,0.851,0.4,1.687V31.614z">
+                                            </path>
+                                            <path
+                                                d="M75.99,27.756c-0.681-2.658-2.372-4.325-4.437-4.417C70.502,12.139,61.235,5,50,5  c-11.235,0-20.501,7.139-21.554,18.339c-2.064,0.093-3.756,1.76-4.436,4.417c-0.68,2.653-0.245,5.42,0.075,6.834  c0.461,2.04,1.144,3.698,2.148,5.22c0.752,1.139,2.263,2.976,4.354,3.316C34.452,51.398,41.942,56.67,50,56.67  c8.059,0,15.549-5.271,19.413-13.544c2.091-0.341,3.603-2.178,4.354-3.317c1.002-1.518,1.685-3.176,2.148-5.219  C76.235,33.176,76.67,30.409,75.99,27.756z M72.015,33.706c-0.354,1.558-0.857,2.796-1.585,3.899  c-0.705,1.068-1.423,1.569-1.732,1.569c-0.002,0-0.004,0-0.006,0l-1.739-0.519l-0.685,1.682C63.841,46.299,58.293,52.67,50,52.67  c-8.292,0-13.84-6.371-16.267-12.333l-0.726-1.674l-1.739,0.518c-0.265,0-0.987-0.5-1.696-1.574  c-0.73-1.106-1.233-2.345-1.585-3.899c-0.409-1.808-0.446-3.615-0.102-4.959c0.246-0.959,0.639-1.383,0.739-1.426  c0.001,0,0.155,0.003,0.48,0.216l2.581,1.7l0.493-3.051c0.199-1.233,0.473-2.403,0.839-3.578c0.555-1.786,1.934-3.24,3.688-3.889  c8.54-3.158,18.053-3.158,26.589,0c1.755,0.649,3.134,2.103,3.689,3.889c0.364,1.171,0.639,2.342,0.839,3.579l0.494,3.05l2.581-1.7  c0.313-0.207,0.467-0.216,0.464-0.219c0.116,0.048,0.509,0.473,0.754,1.43C72.46,30.093,72.423,31.9,72.015,33.706z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <h5 class="fw-bold text-primary mb-2">Đội ngũ bác sĩ giàu kinh nghiệm</h5>
+                                <div class="text-muted">
+                                    Hơn 70% đội ngũ bác sĩ trong hệ thống đều tốt nghiệp sau đại học (nội trú, CKI,
+                                    CKII,
+                                    Thạc sĩ, Tiến sĩ…) và hơn 30% đội ngũ quản trị từ thạc sĩ trở lên.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="row g-0">
+                            <div class="col-12 d-flex flex-column align-items-center h-100">
+                                <div class="bg-primary rounded-circle mb-3 p-2 p-lg-4">
+                                    <div class="d-flex align-items-center justify-content-center m-1"
+                                        style="width: auto; height: 100%; max-width: 60px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px"
+                                            viewBox="0 0 90 90" enable-background="new 0 0 90 90" xml:space="preserve"
+                                            preserveAspectRatio="none" width="100%" height="100%" class=""
+                                            fill="rgba(255, 255, 255, 1)">
+                                            <path
+                                                d="M53.623,64.798c-5.135,4.203-11.694,6.729-18.832,6.729c-16.426,0-29.789-13.363-29.789-29.789  c0-16.427,13.363-29.79,29.789-29.79c9.547,0,18.051,4.519,23.507,11.521c0.916-0.985,1.932-1.877,3.027-2.664  C55.127,12.963,45.538,7.916,34.791,7.916C16.144,7.916,0.97,23.087,0.97,41.737c0,18.647,15.174,33.82,33.821,33.82  c6.966,0,13.447-2.119,18.832-5.743V64.798z">
+                                            </path>
+                                            <path
+                                                d="M34.935,49.127l-3.1,5.593c-0.287,0.517-0.83,0.831-1.41,0.831c-0.076,0-0.152-0.007-0.229-0.02  c-0.662-0.092-1.197-0.586-1.344-1.238l-2.35-10.413l-2.195,4.184c-0.279,0.531-0.828,0.863-1.428,0.863h-5.557  c3.283,5.673,9.273,10.947,16.662,13.443c7.3-2.468,13.23-7.645,16.536-13.243H34.935z">
+                                            </path>
+                                            <path
+                                                d="M21.904,45.7l3.78-7.197c0.313-0.598,0.966-0.939,1.638-0.85c0.67,0.089,1.214,0.586,1.362,1.244  l2.383,10.557l1.508-2.721c0.284-0.513,0.824-0.83,1.41-0.83h18.129c2.212-5.563,1.67-11.108-2.847-14.48  c-8.37-6.246-15.282,2.625-15.282,2.625s-6.912-8.871-15.284-2.625c-4.462,3.332-5.045,8.783-2.925,14.277H21.904z">
+                                            </path>
+                                            <path
+                                                d="M72.993,21.081c-8.861,0-16.041,7.181-16.041,16.039c0,8.857,7.18,16.038,16.041,16.038  c8.857,0,16.036-7.181,16.036-16.038C89.029,28.262,81.851,21.081,72.993,21.081z M59.798,31.999  c0.579-1.484,1.39-2.848,2.403-4.039h4.255c-0.176,0.746-0.232,1.531-0.139,2.337c0.072,0.6,0.227,1.167,0.44,1.702H59.798z   M73.601,34.624c-2.829,0.334-5.391-1.686-5.728-4.513c-0.335-2.826,1.684-5.39,4.509-5.726c2.828-0.335,5.39,1.684,5.726,4.51  C78.444,31.722,76.425,34.286,73.601,34.624z M79.233,31.999c0.404-1.01,0.569-2.133,0.433-3.289  c-0.03-0.256-0.079-0.505-0.136-0.75h4.251c1.016,1.191,1.828,2.555,2.403,4.039H79.233z">
+                                            </path>
+                                            <circle cx="72.991" cy="29.503" r="1.903"></circle>
+                                            <path
+                                                d="M65.651,63.645l5.314,4.029l-2.358-12.067h-3.885l2.61,5.842c0.146,0.326,0.06,0.71-0.214,0.94  L65.651,63.645z">
+                                            </path>
+                                            <path
+                                                d="M79.601,55.606h-3.887l-2.356,12.067l5.313-4.029l-1.465-1.256c-0.274-0.23-0.36-0.614-0.215-0.94  L79.601,55.606z">
+                                            </path>
+                                            <polygon points="70.251,55.606 72.161,65.389 74.072,55.606 "></polygon>
+                                            <path
+                                                d="M83.035,55.606h-0.334h-1.335l-2.657,5.95l1.771,1.512c0.184,0.157,0.287,0.392,0.28,0.637  c-0.007,0.242-0.123,0.472-0.318,0.618l-7.476,5.671v12.09h5.191h4.874c2.925,0,5.29-2.367,5.29-5.293V60.897  C88.324,57.975,85.959,55.606,83.035,55.606z M85.044,75.629h-2.397v2.395h-3.251v-2.395h-2.397v-3.253h2.397v-2.396h3.251v2.396  h2.397V75.629z">
+                                            </path>
+                                            <path
+                                                d="M71.356,69.994l-7.475-5.671c-0.195-0.146-0.312-0.376-0.318-0.618c-0.007-0.245,0.098-0.479,0.282-0.637  l1.771-1.512l-2.66-5.95h-0.01c-2.924,0-5.292,2.368-5.292,5.291v15.894c0,2.926,2.368,5.293,5.294,5.293h4.873h3.535V69.994z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <h5 class="fw-bold text-primary mb-2">Quy trình khám
+                                    chuyên
+                                    nghiệp</h5>
+                                <div class="text-muted">
+                                    Quy trình khám bệnh theo tiêu chuẩn Singapore mang đến sự tiện lợi và hài lòng
+                                    cho
+                                    khách
+                                    hàng.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="doctors-component" class="container py-4 py-md-5">
+        <h2 class="text-center text-primary fw-bold mb-4">
+            Đội ngũ chuyên môn
+        </h2>
+        <div class="doctorSwipper swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="h-100 shadow-sm border-0 bg-info bg-opacity-10 rounded-4 p-3">
+                        <img src="assets/img/bs_tran_duc_chanh.png" class="card-img-top rounded-4"
+                            alt="Bác sĩ nội trú Trần Đức Chánh">
+                        <div class="card-body text-center p-0 mt-3">
+                            <div class="fw-semibold text-primary">Bác sĩ nội trú</div>
+                            <h5 class="doctor-name card-title text-uppercase text-primary fw-bold mb-2">Trần Đức Chánh
+                            </h5>
+                            <div class="text-muted">Giám đốc chuyên môn bệnh viện</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="h-100 shadow-sm border-0 bg-info bg-opacity-10 rounded-4 p-3">
+                        <img src="assets/img/bs_tran_ba_kien.png" class="card-img-top rounded-4"
+                            alt="Bác sĩ CKII Trần Bá Kiền">
+                        <div class="card-body text-center p-0 mt-3">
+                            <div class="fw-semibold text-primary">Bác sĩ</div>
+                            <h5 class="doctor-name card-title text-uppercase text-primary fw-bold mb-2">Trần Bá Kiền
+                                </h6>
+                                <div class="text-muted">Bác sĩ chuyên khoa II</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="h-100 shadow-sm border-0 bg-info bg-opacity-10 rounded-4 p-3">
+                        <img src="assets/img/bs_mai_thi_ngoc_thien.png" class="card-img-top rounded-4"
+                            alt="Bác sĩ Mai Thị Ngọc Thiện">
+                        <div class="card-body text-center p-0 mt-3">
+                            <div class="fw-semibold text-primary">Bác sĩ</div>
+                            <h5 class="doctor-name card-title text-uppercase text-primary fw-bold mb-2">Mai Thị Ngọc
+                                Thiện
+                            </h5>
+                            <div class="text-muted">Bác sĩ chuyên khoa I</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="h-100 shadow-sm border-0 bg-info bg-opacity-10 rounded-4 p-3">
+                        <img src="assets/img/bs_lam_duc_thien.png" class="card-img-top rounded-4"
+                            alt="Bác sĩ Lâm Đức Thiện">
+                        <div class="card-body text-center p-0 mt-3">
+                            <div class="fw-semibold text-primary">Bác sĩ</div>
+                            <h5 class="doctor-name card-title text-uppercase text-primary fw-bold mb-2">Lâm Đức Thiện
+                            </h5>
+                            <div class="text-muted">Bác sĩ chuyên khoa I</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="h-100 shadow-sm border-0 bg-info bg-opacity-10 rounded-4 p-3">
+                        <img src="assets/img/bs_lam_duc_thien.png" class="card-img-top rounded-4"
+                            alt="Bác sĩ Lâm Đức Thiện">
+                        <div class="card-body text-center p-0 mt-3">
+                            <h6 class="text-primary">Bác sĩ</h6>
+                            <h5 class="doctor-name card-title text-uppercase text-primary fw-bold mb-2">Lâm Đức Thiện
+                            </h5>
+                            <div class="text-muted">Bác sĩ chuyên khoa I</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination out-of-view position-relative mt-2"></div>
+            <div class="d-none d-lg-block">
+                <div class="swiper-button-next rounded-pill bg-white">
+                </div>
+                <div class="swiper-button-prev rounded-pill bg-white">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="services-component" class="py-4 pb-5"
+        style="background-image: radial-gradient(circle, #ddd 1px, transparent 1px); background-size: 22px 22px;">
+        <div class="container">
+            <h2 class="text-center text-primary fw-bold mb-4">
+                Dịch vụ của chúng tôi
+            </h2>
+            <div class="row g-3 g-md-4 justify-content-center">
+                <div class="col-6 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="assets/img/phaco_khongdau.jpg" class="card-img-top rounded-4" alt="PHACO không đau">
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="assets/img/tat_khuc_xa.jpg" class="card-img-top rounded-4" alt="Điều trị tật khúc xạ">
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="assets/img/glo_com.jpg" class="card-img-top rounded-4" alt="Điều trị Glô-côm">
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="assets/img/nhan_nhi.jpg" class="card-img-top rounded-4" alt="Phẫu thuật nhãn nhi">
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="assets/img/day_mat.jpg" class="card-img-top rounded-4" alt="Phẫu thuật đáy mắt">
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="assets/img/tham_my_nhan_khoa.jpg" class="card-img-top rounded-4"
+                            alt="Thẩm mỹ nhãn khoa">
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="assets/img/cap_cuu.jpg" class="card-img-top rounded-4" alt="Cấp cứu nhãn khoa">
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="assets/img/ghep_giac_mac.jpg" class="card-img-top rounded-4" alt="Ghép giác mạc">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="news-component" class="container py-4 py-md-5">
+        <div class="mb-4 d-flex justify-content-center">
+            <h2 class="fw-bold text-primary pb-2">
+                Kiến thức các bệnh về mắt
+            </h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="d-flex flex-column gap-2">
+                        <img src="assets/img/viem_ket_giac_mac.png" class="card-img-top rounded-4"
+                            alt="Viêm kết giác mạc">
+                        <h6 class="fw-bold max-lines-3 mb-0">Viêm
+                            kết
+                            giác
+                            mạc</h6>
+                        <div class="border-bottom border-1 border-grey" style="width: 40px;">
+                        </div>
+                        <div class="text-muted max-lines-4 text-align-justify">
+                            Viêm kết giác mạc là tình trạng viêm lớp màng ngoài của mắt, do vi khuẩn, virus
+                            hoặc
+                            dị
+                            ứng
+                            gây ra. Triệu chứng: đỏ mắt, cộm, chảy nước mắt, nhạy sáng.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="d-flex flex-column gap-2">
+                        <img src="assets/img/tang_nhan_ap.jpg" class="card-img-top rounded-4"
+                            alt="Tăng nhãn áp Glaucoma">
+                        <h6 class="fw-bold max-lines-3 mb-0"
+                            style="line-height: 1.5;">Tăng nhãn áp Glaucoma</h6>
+                        <div class="border-bottom border-1 border-grey" style="width: 40px;">
+                        </div>
+                        <div class="text-muted max-lines-4 text-align-justify">
+                            Glaucoma là bệnh làm tăng áp lực trong mắt, có thể gây tổn thương thần kinh thị
+                            giác
+                            và
+                            mù
+                            lòa. Triệu chứng: nhìn mờ, đau mắt, mất thị lực ngoại vi.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="d-flex flex-column gap-2">
+                        <img src="assets/img/thoai_hoa_diem_vang.jpg" class="card-img-top rounded-4"
+                            alt="Thoái hóa điểm vàng - Đáy mắt">
+                        <h6 class="fw-bold max-lines-3 mb-0"
+                            style="line-height: 1.5;">Thoái hóa điểm vàng - Đáy mắt</h6>
+                        <div class="border-bottom border-1 border-grey" style="width: 40px;">
+                        </div>
+                        <div class="text-muted max-lines-4 text-align-justify">
+                            Thoái hóa điểm vàng làm giảm thị lực trung tâm, thường gặp ở người lớn tuổi. Dấu
+                            hiệu:
+                            nhìn
+                            mờ, biến dạng hình ảnh, khó đọc sách.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="d-flex flex-column gap-2">
+                        <img src="assets/img/tat_khuc_xa.png" class="card-img-top rounded-4" alt="Tật khúc xạ">
+                        <h6 class="fw-bold max-lines-3 mb-0"
+                            style="line-height: 1.5;">Tật khúc xạ</h6>
+                        <div class="border-bottom border-1 border-grey" style="width: 40px;">
+                        </div>
+                        <div class="text-muted max-lines-4 text-align-justify">
+                            Tật khúc xạ gồm cận thị, viễn thị, loạn thị, khiến nhìn xa/gần bị mờ. Triệu
+                            chứng:
+                            nhìn
+                            mờ,
+                            nhức mỏi mắt, phải nheo mắt.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="d-flex flex-column gap-2">
+                        <img src="assets/img/mat_lac.jpg" class="card-img-top rounded-4" alt="Mắt lác">
+                        <h6 class="fw-bold max-lines-3 mb-0"
+                            style="line-height: 1.5;">Mắt lác</h6>
+                        <div class="border-bottom border-1 border-grey" style="width: 40px;">
+                        </div>
+                        <div class="text-muted max-lines-4 text-align-justify">
+                            Mắt lác là tình trạng hai mắt không thẳng hàng. Gây nhìn đôi, khó tập trung, ảnh
+                            hưởng
+                            thị
+                            lực và thẩm mỹ.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="d-flex flex-column gap-2">
+                        <img src="assets/img/duc_thuy_tinh_the.jpg" class="card-img-top rounded-4"
+                            alt="Đục thủy tinh thể">
+                        <h6 class="fw-bold max-lines-3 mb-0"
+                            style="line-height: 1.5;">Đục thủy tinh thể</h6>
+                        <div class="border-bottom border-1 border-grey" style="width: 40px;">
+                        </div>
+                        <div class="text-muted max-lines-4 text-align-justify">
+                            Đục thủy tinh thể khiến thủy tinh thể bị mờ, nhìn mờ, lóa sáng, đặc biệt khi
+                            trời
+                            nắng
+                            hoặc
+                            về đêm.
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="register-component" class="bg-primary py-5">
+        <div class="container">
+            <div class="row g-0 align-items-center">
+                <div class="col-lg-6">
+                    <div class="d-flex flex-column align-items-center justify-content-center gap-2 mb-lg-5">
+                        <h2 class="fw-bold text-white">Đặt lịch khám</h2>
+                        <a href="tel:0912345678" class="btn btn-info rounded-pill">
+                            <h5 class="d-flex align-items-center justify-content-center gap-2 text-light m-0 py-1 px-4">
+                                <i class="fa fa-phone fa-phone-tada fa-flip-horizontal"></i>
+                                <div>
+                                    <span>Gọi ngay</span>
+                                    <span class="fw-bold">0912345678</span>
+                                </div>
+                            </h5>
+                        </a>
+                        <h5 class="text-center">
+                            <p class="text-white">để được tư vấn và đặt lịch khám.</p>
+                            <p class="text-white">Hoặc để lại thông tin chúng tôi sẽ gọi lại hỗ trợ bạn sớm
+                                nhất.
+                            </p>
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-lg-4">
+                    <div class="card shadow p-lg-3 rounded-4">
+                        <div class="card-body">
+                            <form>
+                                <div class="row mb-3">
+                                    <div class="col-12 col-md-6 mb-3 mb-md-0">
+                                        <label class="form-label fw-semibold" for="fullname">
+                                            Họ và tên <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="text" class="form-control" id="fullname" placeholder="Nguyễn Văn A"
+                                            required>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label fw-semibold" for="phone">
+                                            Số điện thoại <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="text" class="form-control" id="phone" placeholder="0901234567"
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold" for="date">
+                                        Ngày hẹn mong muốn <span class="text-danger">*</span>
+                                    </label>
+                                    <input type="date" class="form-control" id="date" placeholder="dd/mm/yyyy" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold" for="note">
+                                        Triệu chứng / ghi chú (Không bắt buộc)
+                                    </label>
+                                    <textarea class="form-control" id="note" rows="3"
+                                        placeholder="Mô tả ngắn gọn triệu chứng hoặc yêu cầu của bạn..."></textarea>
+                                </div>
+                                <div class="text-center mt-4">
+                                    <button type="submit" class="btn btn-primary fw-bold w-100 rounded-pill py-2">
+                                        Gửi thông tin
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="map-component">
+        <div class="container my-5">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img class="map-image object-fit-cover w-100" src="assets/img/visi_soctrang.jpg"
+                        alt="VISI Sóc Trăng" style="height: 300px;">
+                </div>
+                <div class="col-md-8">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31471.646723740676!2d105.961473!3d9.599071!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0530000392f13%3A0x20e1c38529fb861!2zQuG7hk5IIFZJ4buGTiBN4bquVCBWSVNJIFPDk0MgVFLEgk5H!5e0!3m2!1svi!2sus!4v1756882003523!5m2!1svi!2sus"
+                        class="map-object" width="100%" height="300" style="border: 0" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer component -->
+    <div include-html="shared/footer.html?v=15370082025"></div>
+
+    <a id="to-top" class="d-flex justify-content-center align-items-center text-gray bg-primary">
+        <i class="fal fa-chevron-up"></i>
+    </a>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/custom.js?v=20082025"></script>
+
+    <script>
+
+        let firstScroll = true;
+
+        window.addEventListener('wheel', function (e) {
+            if (firstScroll && window.scrollY === 0 && e.deltaY > 0) {
+                e.preventDefault(); // chặn scroll mặc định
+                window.scrollTo({ top: 40, behavior: "smooth" });
+                firstScroll = false;
+            } else if (window.scrollY === 0) {
+                firstScroll = true;
+            }
+        }, { passive: false });
+
+        // Swiper initialization from index.blade.php
+        var bannerSwiper = new Swiper(".bannerSwipper", {
+            slidesPerView: "auto",
+            spaceBetween: 0,
+            mousewheel: false,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        var doctorSwiper = new Swiper(".doctorSwipper", {
+            mousewheel: false,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                // when window width is >= 0px
+                0: {
+                    slidesPerView: 2,
+                    spaceBetween: 15,
+                },
+                // when window width is >= 576px
+                576: {
+                    slidesPerView: 2,
+                    spaceBetween: 25,
+                },
+                // when window width is >= 768px
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 25,
+                },
+                // when window width is >= 1200px
+                1200: {
+                    slidesPerView: 4,
+                    spaceBetween: 25,
+                }
+            }
+        });
+    </script>
+</body>
+
 </html>
