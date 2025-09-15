@@ -12010,6 +12010,15 @@ a#to-top.cd-fade-out {
     opacity: 1;
 }
 
+.float-icon-hotline {
+  position: fixed;
+  width: 42px;
+  height: auto;
+  bottom: 100px;
+  right: 20px;
+  z-index: 1050;
+}
+
 .dropdown-menu {
     overflow-y: auto
 }
